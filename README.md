@@ -27,9 +27,6 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot1.PNG)
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot2.PNG)
-
 
 
 ##### 3. Can use storyboard customize the color to fit your app.
