@@ -92,7 +92,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step3.png)
 
-**Step 4.** Configure with your interactive UI parts,  for example below image show a switch button to turn the passcode on/off,  and a button for change passcode.
+**Step 4.** Configure with your interactive UI parts,  set appropriate `securityType`, then call `presentAuthViewController`. For example below image show a switch button to turn the passcode on/off, when the switch turn on, the `securityType` is `INPUT_TWICE`, when turn off, the `securityType` is `INPUT_ONCE`. A button for change passcode, the `securityType` is `INPUT_THREE`.
 
 ```
 - (IBAction)changePassword:(id)sender {
