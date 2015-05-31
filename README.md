@@ -1,10 +1,10 @@
 # SmileTouchID
-A library for integrate Touch ID &amp; passcode conveniently.
+A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
 #What can it do for you?
 
 
-##### 1. Handle all complicated things about Touch ID & Input Passcode. You just need to write a few simple code to integrate Touch ID & Input Passcode to your app.
+##### 1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.
 For example, 
 handle the device that not support Touch ID, 
 
@@ -112,4 +112,13 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
 
 
-**Step 5.** Build your project :)
+**Step 5.** Build your project, very simple :)
+
+# Contact
+
+* If you have some advice or find some issue, please contact me.
+* Email [me](liu044100@gmail.com)
+
+# License
+
+SmileTouchID is available under the MIT license. See the LICENSE file for more info.
