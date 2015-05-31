@@ -149,6 +149,9 @@ The delegate name is `AuthenticatorDelegate`. It has four optional method.
 * If you have some advice or find some issue, please contact me.
 * Email [me](liu044100@gmail.com)
 
+# Thanks
+Thanks for raywenderlich's tutorial about [securing iOS User Data](http://www.raywenderlich.com/92667/securing-ios-data-keychain-touch-id-1password), I am inspired by this tutorial.
+
 # License
 
 SmileTouchID is available under the MIT license. See the LICENSE file for more info.
