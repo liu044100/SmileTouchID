@@ -28,3 +28,5 @@ if ([SmileAuthenticator hasPassword]) {
 ##### 4. Can change to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo66.png)
 
+
+#How to use it?
