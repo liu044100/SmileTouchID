@@ -18,6 +18,7 @@ if ([SmileAuthenticator hasPassword]) {
     }
 ```
 
+
 ##### 2. Get elegant animation automatically.
 
 
@@ -25,9 +26,11 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
 
+
 ##### 3. Can use storyboard customize the color to fit your app.
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo44.png)
+
 
 
 ##### 4. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
