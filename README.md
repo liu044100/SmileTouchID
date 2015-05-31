@@ -32,6 +32,7 @@ if ([SmileAuthenticator hasPassword]) {
 #How to use it for your project?
 
 **Step 1.** Drop the fold `SmileAuth` to your project.
+
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step1.png)
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add `[SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;` to `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`
