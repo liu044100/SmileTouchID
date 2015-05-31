@@ -18,21 +18,19 @@ if ([SmileAuthenticator hasPassword]) {
     }
 ```
 
-##### 2. Automatically handle the device that not support Touch ID.
-
-##### 3. Get elegant animation automatically.
+##### 2. Get elegant animation automatically.
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif)
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
 
-##### 4. Can use storyboard customize the color to fit your app.
+##### 3. Can use storyboard customize the color to fit your app.
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo44.png)
 
 
-##### 5. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
+##### 4. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo66.png)
 
 
