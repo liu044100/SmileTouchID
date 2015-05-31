@@ -45,16 +45,16 @@ if ([SmileAuthenticator hasPassword]) {
 The main class is the `SmileAuthenticator`. It has a property `SecurityType` that has four types： `INPUT_ONCE`, `INPUT_TWICE`, `INPUT_THREE`, `INPUT_TOUCHID`. The reason for this name is that show the user input times.
 
 
-`INPUT_ONCE`: For the user turn the passcode switch off, user need input their passcode only one time for turn the password off.
+**`INPUT_ONCE`:** For the user turn the passcode switch off, user need input their passcode only one time for turn the password off.
 
 
-`INPUT_TWICE`: For the user turn the password switch on, user need input their password once and re-enter their password one more time for confirm it to match each other.
+**`INPUT_TWICE`:** For the user turn the password switch on, user need input their password once and re-enter their password one more time for confirm it to match each other.
 
 
-`INPUT_THREE`: For the user change the password, user need input their old passcode one time, then input their new passcode one time and re-enter one time for confirm, a total of three times.
+**`INPUT_THREE`:** For the user change the password, user need input their old passcode one time, then input their new passcode one time and re-enter one time for confirm, a total of three times.
 
 
-`INPUT_TOUCHID`: For the user open the app, user can use touch ID or input passcode to unlock to access.
+**`INPUT_TOUCHID`:** For the user open the app, user can use touch ID or input passcode to unlock to access.
 
 
 #How to use it for your project?
