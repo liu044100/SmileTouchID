@@ -111,8 +111,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
             [self.rootVC.presentedViewController dismissViewControllerAnimated:YES completion:nil];
         }
         
-        if ([self.delegate respondsToSelector:@selector(AuthenticatorPresent)]) {
-            [self.delegate AuthenticatorPresent];
+        if ([self.delegate respondsToSelector:@selector(AuthViewControllerPresented)]) {
+            [self.delegate AuthViewControllerPresented];
         }
         
         _isShowLogin = YES;
@@ -126,8 +126,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)authViewControllerDismissed{
-    if ([self.delegate respondsToSelector:@selector(AuthenticatorDimssed)]) {
-        [self.delegate AuthenticatorDimssed];
+    if ([self.delegate respondsToSelector:@selector(AuthViewControllerDismssed)]) {
+        [self.delegate AuthViewControllerDismssed];
     }
     
     _isAuthenticated = true;
