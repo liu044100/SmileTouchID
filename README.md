@@ -7,15 +7,11 @@ A Library for configure Touch ID &amp; passcode conveniently
 ##### 1. Handle all complicated things about Touch ID & Input Passcode, you just need to write a few simple code to integrate Touch ID & Input Passcode for your app.
 
 
-
-
 ##### 2. Get elegant animation automatically.
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif)
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
-
-
 
 
 ##### 3. Use storyboard customize the color to fit your app.
