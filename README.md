@@ -128,11 +128,10 @@ Open `SmileAuthenticator.h` , change `kPasswordLength` to customize passcode dig
 The delegate name is `AuthenticatorDelegate`. It has four optional method.
 
 ```
-@protocol AuthenticatorDelegate <NSObject>
 @optional
--(void)AuthenticatorPresent;
+-(void)AuthViewControllerPresented;
 @optional
--(void)AuthenticatorDimssed;
+-(void)AuthViewControllerDismssed;
 @optional
 -(void)userSuccessAuthentication;
 @optional
