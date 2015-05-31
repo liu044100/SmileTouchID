@@ -128,13 +128,18 @@ Open `SmileAuthenticator.h` , change `kPasswordLength` to customize passcode dig
 The delegate name is `AuthenticatorDelegate`. It has four optional method.
 
 ```
+@protocol AuthenticatorDelegate <NSObject>
 @optional
+/*!The method is called when AuthViewController be presented*/
 -(void)AuthViewControllerPresented;
 @optional
+/*!The method is called when AuthViewController be dismissed*/
 -(void)AuthViewControllerDismssed;
 @optional
+/*!The method is called when user success authentication by using Touch ID & Passcode*/
 -(void)userSuccessAuthentication;
 @optional
+/*!The method is called when AuthViewController be failed*/
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount;
 @end
 ```
