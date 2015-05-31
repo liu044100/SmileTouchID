@@ -38,3 +38,15 @@ if ([SmileAuthenticator hasPassword]) {
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add `[SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;` to `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step2.png)
+
+**Step 3.** In your project root view controller,  add below line to `viewDidAppear:`.
+
+```
+if ([SmileAuthenticator hasPassword]) {
+        [SmileAuthenticator sharedInstance].securityType = INPUT_TOUCHID;
+        [[SmileAuthenticator sharedInstance] presentAuthViewController];
+    }
+```
+
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step3.png)
