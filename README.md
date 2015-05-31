@@ -19,6 +19,6 @@ A Library for configure Touch ID &amp; passcode conveniently
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo4.png)
 
 
-##### 4. You can change to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
+##### 4. Can change to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo6.png)
 
