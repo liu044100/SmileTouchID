@@ -1,5 +1,5 @@
 # SmileTouchID
-A Library for configure Touch ID &amp; passcode conveniently
+A Library for integrate Touch ID &amp; passcode conveniently
 
 #What can it do for you?
 
