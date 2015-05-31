@@ -6,6 +6,12 @@ A Library for integrate Touch ID &amp; passcode conveniently
 
 ##### 1. Handle all complicated things about Touch ID & Input Passcode, you just need to write a few simple code to integrate Touch ID & Input Passcode for your app.
 
+```
+if ([SmileAuthenticator hasPassword]) {
+        [SmileAuthenticator sharedInstance].securityType = INPUT_TOUCHID;
+        [[SmileAuthenticator sharedInstance] presentAuthViewController];
+    }
+```
 
 ##### 2. Get elegant animation automatically.
 
