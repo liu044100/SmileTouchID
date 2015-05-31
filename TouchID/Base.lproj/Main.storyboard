@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mnh-gi-U9y">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Main VC-->
+        <scene sceneID="eIR-e2-eCg">
+            <objects>
+                <viewController id="sh3-I4-VqR" userLabel="Main VC" customClass="SmileMainVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OwH-67-DKI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ibZ-Qt-fYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gzM-mZ-qUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Data In Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-Eq-xWf">
+                                <rect key="frame" x="184" y="130" width="233" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-N7-Igs">
+                                <rect key="frame" x="276" y="185" width="51" height="31"/>
+                                <color key="onTintColor" red="0.98039215690000003" green="0.33227113829999999" blue="0.60447057520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="passwordSwitch:" destination="sh3-I4-VqR" eventType="valueChanged" id="8ZF-xd-pyz"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBR-u2-uVR">
+                                <rect key="frame" x="178" y="190" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drB-62-9ZW">
+                                <rect key="frame" x="237" y="246" width="126" height="30"/>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.3322711383080782" blue="0.60447057520301239" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePassword:" destination="sh3-I4-VqR" eventType="touchUpInside" id="bCm-LT-bgd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="drB-62-9ZW" secondAttribute="centerX" id="5eu-3g-jjC"/>
+                            <constraint firstItem="RQe-N7-Igs" firstAttribute="top" secondItem="JqG-Eq-xWf" secondAttribute="bottom" constant="19" id="HsL-OQ-syg"/>
+                            <constraint firstAttribute="centerX" secondItem="JqG-Eq-xWf" secondAttribute="centerX" id="NDu-VH-zKv"/>
+                            <constraint firstItem="drB-62-9ZW" firstAttribute="top" secondItem="RQe-N7-Igs" secondAttribute="bottom" constant="30" id="PNt-Xf-m0q"/>
+                            <constraint firstItem="RQe-N7-Igs" firstAttribute="centerY" secondItem="sBR-u2-uVR" secondAttribute="centerY" id="Sol-gu-sGD"/>
+                            <constraint firstItem="JqG-Eq-xWf" firstAttribute="top" secondItem="OwH-67-DKI" secondAttribute="bottom" constant="66" id="Xnt-9A-WX4"/>
+                            <constraint firstAttribute="centerX" secondItem="RQe-N7-Igs" secondAttribute="centerX" id="sso-b3-isI"/>
+                            <constraint firstItem="RQe-N7-Igs" firstAttribute="leading" secondItem="sBR-u2-uVR" secondAttribute="trailing" constant="22" id="x1d-E3-4vC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fRM-rf-t3a"/>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="drB-62-9ZW" id="qd7-Uu-XCb"/>
+                        <outlet property="mySwitch" destination="RQe-N7-Igs" id="zHW-I6-mX5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVh-GI-7Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="-344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wlG-qu-JxC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mnh-gi-U9y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BvB-t3-Nmg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sh3-I4-VqR" kind="relationship" relationship="rootViewController" id="ukU-0N-RQ0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvZ-hF-e9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="-344"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.98039215690000003" green="0.33227113829999999" blue="0.60447057520000003" alpha="1" colorSpace="calibratedRGB"/>
+</document>
