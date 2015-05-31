@@ -20,12 +20,15 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 2. Get elegant animation automatically.
+##### 2. Get elegant animation automatically and adaptive UI.
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif)
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot1.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot2.png)
 
 
 
@@ -87,3 +90,5 @@ if ([SmileAuthenticator hasPassword]) {
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
 
+
+**Step 5.** Build your project :)
