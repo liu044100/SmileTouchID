@@ -31,6 +31,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 ##### 3. Can use storyboard customize the color to fit your app.
 
+
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo44.png)
 
 
@@ -113,6 +114,28 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 **Step 5.** Build your project, very simple :)
+
+#About Customization & Delegate callback
+
+Open `SmileSettingVC.storyboard` customize the color.
+Open `SmileAuthenticator.h` , change `kPasswordLength` to customize passcode digit.
+
+`SmileAuthenticator` has a delegate that can get more information about the process of authentication.
+
+The delegate name is `AuthenticatorDelegate`. It has four optionl method.
+
+```
+@protocol AuthenticatorDelegate <NSObject>
+@optional
+-(void)AuthenticatorPresent;
+@optional
+-(void)AuthenticatorDimssed;
+@optional
+-(void)userSuccessAuthentication;
+@optional
+-(void)userFailAuthenticationWithCount:(NSInteger)failCount;
+@end
+```
 
 # Contact
 
