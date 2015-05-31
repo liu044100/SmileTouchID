@@ -14,7 +14,11 @@ A Library for configure Touch ID &amp; passcode conveniently
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
 
-##### 3. Use storyboard to customize the color to fit your app.
+##### 3. Use storyboard customize the color to fit your app.
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo4.png)
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo5.png)
+
+
+##### 4. You can change to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo6.png)
+
