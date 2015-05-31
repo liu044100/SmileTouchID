@@ -59,6 +59,7 @@ The main class is the `SmileAuthenticator`. It has a property `SecurityType` tha
 
 **`INPUT_TOUCHID`:** For the user open the app, user can use touch ID or input passcode to unlock.
 
+
 Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present view for authentication.
 
 
