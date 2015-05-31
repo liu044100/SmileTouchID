@@ -118,11 +118,12 @@ if ([SmileAuthenticator hasPassword]) {
 #About Customization & Delegate callback
 
 Open `SmileSettingVC.storyboard` customize the color.
+
 Open `SmileAuthenticator.h` , change `kPasswordLength` to customize passcode digit.
 
 `SmileAuthenticator` has a delegate that can get more information about the process of authentication.
 
-The delegate name is `AuthenticatorDelegate`. It has four optionl method.
+The delegate name is `AuthenticatorDelegate`. It has four optional method.
 
 ```
 @protocol AuthenticatorDelegate <NSObject>
