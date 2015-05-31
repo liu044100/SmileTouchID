@@ -42,6 +42,13 @@ if ([SmileAuthenticator hasPassword]) {
 
 #Theoretical Introduction
 
+The main class is the `SmileAuthenticator`. It has a property `SecurityType` that has four types： `INPUT_ONCE`, `INPUT_TWICE`, `INPUT_THREE`, `INPUT_TOUCHID`.
+
+
+`INPUT_ONCE`,
+
+
+
 #How to use it for your project?
 
 **Step 1.** Drop the fold `SmileAuth` to your project.
