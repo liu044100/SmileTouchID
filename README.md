@@ -54,7 +54,7 @@ The main class is the `SmileAuthenticator`. It has a property `SecurityType` tha
 **`INPUT_THREE`:** For the user change the password, user need input their old passcode one time, then input their new passcode one time and re-enter one time for confirm, a total of three times.
 
 
-**`INPUT_TOUCHID`:** For the user open the app, user can use touch ID or input passcode to unlock to access.
+**`INPUT_TOUCHID`:** For the user open the app, user can use touch ID or input passcode to unlock.
 
 
 #How to use it for your project?
@@ -82,3 +82,8 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step3.png)
+
+**Step 4.** Configure with your interactive UI parts,  for example below image show a switch button to turn the passcode on/off,  and a button for change passcode.
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
+
