@@ -5,7 +5,10 @@ A library for integrate Touch ID &amp; passcode conveniently
 
 
 ##### 1. Handle all complicated things about Touch ID & Input Passcode. 
-e.g., handle the device that not support Touch ID, handle the whole process about securing the app (the user change passcode or turn passcode off),   you just need to write a few simple code to integrate Touch ID & Input Passcode for your app.
+For example, 
+handle the device that not support Touch ID, 
+handle the whole process about securing the app (the user change passcode or turn passcode off),
+you just need to write a few simple code to integrate Touch ID & Input Passcode for your app.
 
 ```
 if ([SmileAuthenticator hasPassword]) {
