@@ -1,5 +1,5 @@
 # SmileTouchID
-A Library for integrate Touch ID &amp; passcode conveniently
+A project for integrate Touch ID &amp; passcode conveniently
 
 #What can it do for you?
 
@@ -29,4 +29,11 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo66.png)
 
 
-#How to use it?
+#How to use it for your project?
+
+##### Step 1. Drop the fold `SmileAuth` to your project.
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step1.png)
+
+##### Step 2. Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add `[SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;` to `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step2.png)
