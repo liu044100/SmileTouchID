@@ -4,7 +4,7 @@ A library for integrate Touch ID &amp; passcode conveniently.
 #What can it do for you?
 
 
-##### 1. Handle all complicated things about Touch ID & Input Passcode. You just need to write a few simple code to integrate Touch ID & Input Passcode for your app.
+##### 1. Handle all complicated things about Touch ID & Input Passcode. You just need to write a few simple code to integrate Touch ID & Input Passcode to your app.
 For example, 
 handle the device that not support Touch ID, 
 
