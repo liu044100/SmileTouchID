@@ -11,7 +11,7 @@
 #import "KeychainWrapper.h"
 #import "SmileSettingVC.h"
 
-#define kPasswordLength 7
+#define kPasswordLength 4
 
 #define DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 typedef void(^AuthCompletionBlock)();
