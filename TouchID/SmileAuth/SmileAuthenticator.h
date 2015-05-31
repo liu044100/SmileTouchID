@@ -71,7 +71,6 @@ typedef NS_ENUM(int, SecurityType) {
 
 
 @protocol AuthenticatorDelegate <NSObject>
-
 @optional
 /*!The method is called when AuthViewController be presented*/
 -(void)AuthViewControllerPresented;
@@ -82,6 +81,6 @@ typedef NS_ENUM(int, SecurityType) {
 /*!The method is called when user success authentication by using Touch ID & Passcode*/
 -(void)userSuccessAuthentication;
 @optional
-/*!The method is called when AuthViewController be failed*/
+/*!The method is called when authentication failed*/
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount;
 @end
