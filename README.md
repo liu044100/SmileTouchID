@@ -27,8 +27,8 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot1.png)
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot2.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot1.PNG)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo_shot2.PNG)
 
 
 
@@ -40,6 +40,9 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 ##### 4. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
+
+
+
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo66.png)
 
 
@@ -58,6 +61,8 @@ The main class is the `SmileAuthenticator`. It has a property `SecurityType` tha
 
 
 **`INPUT_TOUCHID`:** For the user open the app, user can use touch ID or input passcode to unlock.
+
+Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present view for authentication.
 
 
 #How to use it for your project?
@@ -87,6 +92,24 @@ if ([SmileAuthenticator hasPassword]) {
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step3.png)
 
 **Step 4.** Configure with your interactive UI parts,  for example below image show a switch button to turn the passcode on/off,  and a button for change passcode.
+
+```
+- (IBAction)changePassword:(id)sender {
+    [SmileAuthenticator sharedInstance].securityType = INPUT_THREE;
+    [[SmileAuthenticator sharedInstance] presentAuthViewController];
+}
+
+- (IBAction)passwordSwitch:(UISwitch*)passwordSwitch {
+    if (passwordSwitch.on) {
+        [SmileAuthenticator sharedInstance].securityType = INPUT_TWICE;
+    } else {
+        [SmileAuthenticator sharedInstance].securityType = INPUT_ONCE;
+    }
+    
+    [[SmileAuthenticator sharedInstance] presentAuthViewController];
+}
+
+```
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
 
