@@ -7,8 +7,9 @@ A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
 
 ##### 1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.
-For example, 
-handle the device that not support Touch ID, 
+
+
+For example, handle the device that not support Touch ID, instead of Touch ID, use Passcode for authentication.
 
 handle the whole process about securing the app (the user change passcode or turn passcode off),
 
