@@ -267,6 +267,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 
 +(BOOL)hasPassword {
+
     if ([(NSString*)[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey] length] > 0) {
         return YES;
     }
@@ -275,6 +276,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 +(BOOL)isSamePassword:(NSString *)userInput{
+    
     if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]]) {
         return YES;
     }
@@ -289,7 +291,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 +(void)clearPassword{
-    
     [[SmileAuthenticator sharedInstance].keychainWrapper resetKeychainItem];
 }
 
