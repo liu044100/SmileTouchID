@@ -1,7 +1,7 @@
 # SmileTouchID
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/promo.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/promo_s.png)
 
 #What can it do for you?
 
