@@ -142,15 +142,11 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)appDidEnterBackground:(NSNotification*)notification{
-    NSLog(@"appDidEnterBackground:");
-    
     _isAuthenticated = NO;
     _didReturnFromBackground = YES;
 }
 
--(void)appWillEnterForeground:(NSNotification*)notification{
-    NSLog(@"appWillEnterForeground -> %d, %d", _didReturnFromBackground, _isShowLogin);
-    
+-(void)appWillEnterForeground:(NSNotification*)notification{  
     if (_didReturnFromBackground && !_isShowLogin) {
         if ([SmileAuthenticator hasPassword]) {
             //show login vc
@@ -267,8 +263,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 
 +(BOOL)hasPassword {
-
-    NSLog(@"key -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]);
     
     if ([(NSString*)[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey] length] > 0) {
         return YES;

@@ -278,8 +278,6 @@ static NSString *kUnwindSegueID = @"authReturn";
         
         _newPassword = textField.text;
         
-        NSLog(@"user input PASSWORD -> %@", _newPassword);
-        
         [self performSelector:@selector(handleUserInput) withObject:nil afterDelay:0.3];
     }
 }
