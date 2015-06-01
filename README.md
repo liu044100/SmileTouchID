@@ -117,6 +117,25 @@ For example below image show a switch to turn the passcode on/off, when the swit
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
 
 
+Update your interactive UI parts in `viewWillAppear`.
+
+For example, below code show update the switch and button based on `[SmileAuthenticator hasPassword]`.
+
+```
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if ([SmileAuthenticator hasPassword]) {
+        self.mySwitch.on = YES;
+        self.changePasswordButton.hidden = NO;
+    } else {
+        self.mySwitch.on = NO;
+        self.changePasswordButton.hidden = YES;
+    }
+}
+```
+
+
 **Step 5.** Build your project, very simple :)
 
 #About Customization & Delegate callback
