@@ -33,7 +33,6 @@
     } else {
         self.mySwitch.on = NO;
         self.changePasswordButton.hidden = YES;
-        self.changePasswordButton.hidden = YES;
     }
 }
 

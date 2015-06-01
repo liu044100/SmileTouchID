@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 Apple. All rights reserved.
 //
 
-#import "KeychainWrapper.h"
+#import "SmileKeychainWrapper.h"
 
 //Unique string used to identify the keychain item:
 static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
 
-@interface KeychainWrapper ()
+@interface SmileKeychainWrapper ()
 
 @property (nonatomic, strong) NSMutableDictionary *keychainData;
 @property (nonatomic, strong) NSMutableDictionary *genericPasswordQuery;
 
 @end
 
-@interface KeychainWrapper (PrivateMethods)
+@interface SmileKeychainWrapper (PrivateMethods)
 
 //The following two methods translate dictionaries between the format used by
 // the view controller (NSString *) and the Keychain Services API:
@@ -30,7 +30,7 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
 @end
 
 
-@implementation KeychainWrapper
+@implementation SmileKeychainWrapper
 
 - (instancetype)init
 {
@@ -125,12 +125,12 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
     }
     
     // Default generic data for Keychain Item:
-    [_keychainData setObject:@"Item label" forKey:(__bridge id)kSecAttrLabel];
-    [_keychainData setObject:@"Item description" forKey:(__bridge id)kSecAttrDescription];
-    [_keychainData setObject:@"Account" forKey:(__bridge id)kSecAttrAccount];
-    [_keychainData setObject:@"Service" forKey:(__bridge id)kSecAttrService];
-    [_keychainData setObject:@"Your comment here." forKey:(__bridge id)kSecAttrComment];
-    [_keychainData setObject:@"password" forKey:(__bridge id)kSecValueData];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrLabel];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrDescription];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrAccount];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrService];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrComment];
+    [_keychainData setObject:@"" forKey:(__bridge id)kSecValueData];
 }
 
 

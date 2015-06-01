@@ -10,7 +10,7 @@
 		243C05151B12B0070035E066 /* TouchIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C05141B12B0070035E066 /* TouchIDTests.m */; };
 		B7096C531B1B02ED001456BC /* Touch ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7096C451B1B02ED001456BC /* Touch ID@2x.png */; };
 		B7096C541B1B02ED001456BC /* Touch ID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7096C461B1B02ED001456BC /* Touch ID@3x.png */; };
-		B7096C551B1B02ED001456BC /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C491B1B02ED001456BC /* KeychainWrapper.m */; };
+		B7096C551B1B02ED001456BC /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */; };
 		B7096C561B1B02ED001456BC /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4B1B1B02ED001456BC /* SmileAuthenticator.m */; };
 		B7096C571B1B02ED001456BC /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4D1B1B02ED001456BC /* SmilePasswordContainerView.m */; };
 		B7096C581B1B02ED001456BC /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4F1B1B02ED001456BC /* SmilePasswordView.m */; };
@@ -37,8 +37,8 @@
 		243C05141B12B0070035E066 /* TouchIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDTests.m; sourceTree = "<group>"; };
 		B7096C451B1B02ED001456BC /* Touch ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@2x.png"; sourceTree = "<group>"; };
 		B7096C461B1B02ED001456BC /* Touch ID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@3x.png"; sourceTree = "<group>"; };
-		B7096C481B1B02ED001456BC /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		B7096C491B1B02ED001456BC /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		B7096C481B1B02ED001456BC /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
+		B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
 		B7096C4A1B1B02ED001456BC /* SmileAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
 		B7096C4B1B1B02ED001456BC /* SmileAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
 		B7096C4C1B1B02ED001456BC /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		B7096C471B1B02ED001456BC /* KeychainWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				B7096C481B1B02ED001456BC /* KeychainWrapper.h */,
-				B7096C491B1B02ED001456BC /* KeychainWrapper.m */,
+				B7096C481B1B02ED001456BC /* SmileKeychainWrapper.h */,
+				B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */,
 			);
 			path = KeychainWrapper;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			files = (
 				B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */,
 				B7096C561B1B02ED001456BC /* SmileAuthenticator.m in Sources */,
-				B7096C551B1B02ED001456BC /* KeychainWrapper.m in Sources */,
+				B7096C551B1B02ED001456BC /* SmileKeychainWrapper.m in Sources */,
 				B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */,
 				B7096C591B1B02ED001456BC /* SmileSettingVC.m in Sources */,
 				B7096C571B1B02ED001456BC /* SmilePasswordContainerView.m in Sources */,

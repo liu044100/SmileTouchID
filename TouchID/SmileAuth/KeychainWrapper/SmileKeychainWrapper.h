@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <Security/Security.h>
 
-@interface KeychainWrapper : NSObject
+@interface SmileKeychainWrapper : NSObject
 
 - (void)mySetObject:(id)inObject forKey:(id)key;
 - (id)myObjectForKey:(id)key;
 - (void)writeToKeychain;
-
+- (void)resetKeychainItem;
 @end

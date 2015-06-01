@@ -176,7 +176,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         self.context = [[LAContext alloc] init];
         self.policy = LAPolicyDeviceOwnerAuthenticationWithBiometrics;
         self.localizedReason = kDefaultReason;
-        self.keychainWrapper = [[KeychainWrapper alloc] init];
+        self.keychainWrapper = [[SmileKeychainWrapper alloc] init];
         self.securityType = INPUT_TWICE;
         
         [self configureNotification];
@@ -268,8 +268,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 
 +(BOOL)hasPassword {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kHasPassword]) {
+    if ([(NSString*)[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey] length] > 0) {
         return YES;
     }
     
@@ -297,9 +296,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 +(void)clearPassword{
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     
-    [userDefault removeObjectForKey:kHasPassword];
+    [[SmileAuthenticator sharedInstance].keychainWrapper resetKeychainItem];
 }
 
 @end

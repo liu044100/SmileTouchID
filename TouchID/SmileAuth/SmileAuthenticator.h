@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <LocalAuthentication/LocalAuthentication.h>
-#import "KeychainWrapper.h"
+#import "SmileKeychainWrapper.h"
 #import "SmileSettingVC.h"
 
 #define kPasswordLength 4
@@ -41,7 +41,7 @@ typedef NS_ENUM(int, SecurityType) {
 @interface SmileAuthenticator : NSObject
 
 @property (nonatomic, copy) NSString * localizedReason;
-@property (nonatomic, strong) KeychainWrapper *keychainWrapper;
+@property (nonatomic, strong) SmileKeychainWrapper *keychainWrapper;
 @property (nonatomic, assign) SecurityType securityType;
 @property (nonatomic, strong) UIViewController *rootVC;
 
