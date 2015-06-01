@@ -10,7 +10,6 @@
 
 static NSString *kDefaultReason = @"Unlock to access";
 static NSString *kKeyChainObjectKey = @"v_Data";
-static NSString *kHasPassword = @"hasPassword";
 static NSString *kStoryBoardName = @"SmileSettingVC";
 static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
@@ -284,12 +283,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)userSetPassword:(NSString*)newPassword{
-    
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    
-    if (![userDefault boolForKey:kHasPassword]) {
-        [userDefault setBool:YES forKey:kHasPassword];
-    }
     
     [self.keychainWrapper mySetObject:newPassword forKey:(__bridge id)(kSecValueData)];
     [self.keychainWrapper writeToKeychain];
