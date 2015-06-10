@@ -38,7 +38,7 @@ if ([SmileAuthenticator hasPassword]) {
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo_color.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo_color1.png)
 
 
 
