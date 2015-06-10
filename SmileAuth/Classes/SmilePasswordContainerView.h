@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SmilePasswordView.h"
 
-IB_DESIGNABLE
+//IB_DESIGNABLE
 
 @interface SmilePasswordContainerView : UIView
-
-@property (nonatomic, strong) IBInspectable UIColor *mainColor;
+//IBInspectable
+@property (nonatomic, strong) UIColor *mainColor;
 @property (nonatomic, strong) SmilePasswordView *smilePasswordView;
 
 @end

@@ -19,8 +19,12 @@ Pod::Spec.new do |s|
   
   s.platform     = :ios, '8.0'
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/liu044100/SmileTouchID.git", tag => s.version}
-  s.source_files  = 'SmileAuth'
+  s.source       = { :git => "https://github.com/liu044100/SmileTouchID.git", :tag => s.version.to_s}
+  s.source_files  = 'SmileAuth/Classes/*'
+  s.public_header_files = 'SmileAuth/Classes/*.h'
+  s.resource_bundles = {
+    'SmileTouchID' => ['SmileAuth/Assets/*.{png,storyboard}']
+  }
   s.frameworks = 'UIKit'
 
 end

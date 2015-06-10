@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Apple. All rights reserved.
 //
 
-#import "SmileKeychainWrapper.h"
+#import <SmileKeychainWrapper.h>
 
 //Unique string used to identify the keychain item:
 static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";

@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2403863A1B1DB03400E7259F /* Launch Screen.xib */; };
 		243C05151B12B0070035E066 /* TouchIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C05141B12B0070035E066 /* TouchIDTests.m */; };
-		248452001B27FD97002CCA08 /* Touch ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248451F21B27FD97002CCA08 /* Touch ID@2x.png */; };
-		248452011B27FD97002CCA08 /* Touch ID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248451F31B27FD97002CCA08 /* Touch ID@3x.png */; };
-		248452021B27FD97002CCA08 /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */; };
-		248452031B27FD97002CCA08 /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451F81B27FD97002CCA08 /* SmileAuthenticator.m */; };
-		248452041B27FD97002CCA08 /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */; };
-		248452051B27FD97002CCA08 /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FC1B27FD97002CCA08 /* SmilePasswordView.m */; };
-		248452061B27FD97002CCA08 /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FE1B27FD97002CCA08 /* SmileSettingVC.m */; };
-		248452071B27FD97002CCA08 /* SmileSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */; };
+		2484524C1B281869002CCA08 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 2484523C1B281869002CCA08 /* .gitkeep */; };
+		2484524D1B281869002CCA08 /* SmileSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2484523D1B281869002CCA08 /* SmileSettingVC.storyboard */; };
+		2484524E1B281869002CCA08 /* Touch ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2484523E1B281869002CCA08 /* Touch ID@2x.png */; };
+		2484524F1B281869002CCA08 /* Touch ID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2484523F1B281869002CCA08 /* Touch ID@3x.png */; };
+		248452501B281869002CCA08 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 248452411B281869002CCA08 /* .gitkeep */; };
+		248452511B281869002CCA08 /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 248452431B281869002CCA08 /* SmileAuthenticator.m */; };
+		248452521B281869002CCA08 /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248452451B281869002CCA08 /* SmileKeychainWrapper.m */; };
+		248452531B281869002CCA08 /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248452471B281869002CCA08 /* SmilePasswordContainerView.m */; };
+		248452541B281869002CCA08 /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248452491B281869002CCA08 /* SmilePasswordView.m */; };
+		248452551B281869002CCA08 /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2484524B1B281869002CCA08 /* SmileSettingVC.m */; };
 		B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F3E771B12F76400AB0AD2 /* SmileMainVC.m */; };
 		B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C04FD1B12B0070035E066 /* AppDelegate.m */; };
 		B7F220531B146AE6000BB95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C04FA1B12B0070035E066 /* main.m */; };
@@ -37,19 +39,21 @@
 		243C050E1B12B0070035E066 /* TouchIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		243C05131B12B0070035E066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243C05141B12B0070035E066 /* TouchIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDTests.m; sourceTree = "<group>"; };
-		248451F21B27FD97002CCA08 /* Touch ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@2x.png"; sourceTree = "<group>"; };
-		248451F31B27FD97002CCA08 /* Touch ID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@3x.png"; sourceTree = "<group>"; };
-		248451F51B27FD97002CCA08 /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
-		248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
-		248451F71B27FD97002CCA08 /* SmileAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
-		248451F81B27FD97002CCA08 /* SmileAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
-		248451F91B27FD97002CCA08 /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
-		248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordContainerView.m; sourceTree = "<group>"; };
-		248451FB1B27FD97002CCA08 /* SmilePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordView.h; sourceTree = "<group>"; };
-		248451FC1B27FD97002CCA08 /* SmilePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordView.m; sourceTree = "<group>"; };
-		248451FD1B27FD97002CCA08 /* SmileSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileSettingVC.h; sourceTree = "<group>"; };
-		248451FE1B27FD97002CCA08 /* SmileSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileSettingVC.m; sourceTree = "<group>"; };
-		248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SmileSettingVC.storyboard; sourceTree = "<group>"; };
+		2484523C1B281869002CCA08 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		2484523D1B281869002CCA08 /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SmileSettingVC.storyboard; sourceTree = "<group>"; };
+		2484523E1B281869002CCA08 /* Touch ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@2x.png"; sourceTree = "<group>"; };
+		2484523F1B281869002CCA08 /* Touch ID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@3x.png"; sourceTree = "<group>"; };
+		248452411B281869002CCA08 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		248452421B281869002CCA08 /* SmileAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
+		248452431B281869002CCA08 /* SmileAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
+		248452441B281869002CCA08 /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
+		248452451B281869002CCA08 /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
+		248452461B281869002CCA08 /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
+		248452471B281869002CCA08 /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordContainerView.m; sourceTree = "<group>"; };
+		248452481B281869002CCA08 /* SmilePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordView.h; sourceTree = "<group>"; };
+		248452491B281869002CCA08 /* SmilePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordView.m; sourceTree = "<group>"; };
+		2484524A1B281869002CCA08 /* SmileSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileSettingVC.h; sourceTree = "<group>"; };
+		2484524B1B281869002CCA08 /* SmileSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileSettingVC.m; sourceTree = "<group>"; };
 		B7F2205B1B146AE6000BB95B /* Smile TouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smile TouchID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,7 +78,7 @@
 		243C04EC1B12B0070035E066 = {
 			isa = PBXGroup;
 			children = (
-				248451F01B27FD97002CCA08 /* SmileAuth */,
+				2484523A1B281869002CCA08 /* SmileAuth */,
 				243C04F71B12B0070035E066 /* TouchID */,
 				243C05111B12B0070035E066 /* TouchIDTests */,
 				243C04F61B12B0070035E066 /* Products */,
@@ -131,40 +135,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		248451F01B27FD97002CCA08 /* SmileAuth */ = {
+		2484523A1B281869002CCA08 /* SmileAuth */ = {
 			isa = PBXGroup;
 			children = (
-				248451F11B27FD97002CCA08 /* icon */,
-				248451F41B27FD97002CCA08 /* KeychainWrapper */,
-				248451F71B27FD97002CCA08 /* SmileAuthenticator.h */,
-				248451F81B27FD97002CCA08 /* SmileAuthenticator.m */,
-				248451F91B27FD97002CCA08 /* SmilePasswordContainerView.h */,
-				248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */,
-				248451FB1B27FD97002CCA08 /* SmilePasswordView.h */,
-				248451FC1B27FD97002CCA08 /* SmilePasswordView.m */,
-				248451FD1B27FD97002CCA08 /* SmileSettingVC.h */,
-				248451FE1B27FD97002CCA08 /* SmileSettingVC.m */,
-				248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */,
+				2484523B1B281869002CCA08 /* Assets */,
+				248452401B281869002CCA08 /* Classes */,
 			);
 			path = SmileAuth;
 			sourceTree = "<group>";
 		};
-		248451F11B27FD97002CCA08 /* icon */ = {
+		2484523B1B281869002CCA08 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				248451F21B27FD97002CCA08 /* Touch ID@2x.png */,
-				248451F31B27FD97002CCA08 /* Touch ID@3x.png */,
+				2484523C1B281869002CCA08 /* .gitkeep */,
+				2484523D1B281869002CCA08 /* SmileSettingVC.storyboard */,
+				2484523E1B281869002CCA08 /* Touch ID@2x.png */,
+				2484523F1B281869002CCA08 /* Touch ID@3x.png */,
 			);
-			path = icon;
+			path = Assets;
 			sourceTree = "<group>";
 		};
-		248451F41B27FD97002CCA08 /* KeychainWrapper */ = {
+		248452401B281869002CCA08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				248451F51B27FD97002CCA08 /* SmileKeychainWrapper.h */,
-				248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */,
+				248452411B281869002CCA08 /* .gitkeep */,
+				248452421B281869002CCA08 /* SmileAuthenticator.h */,
+				248452431B281869002CCA08 /* SmileAuthenticator.m */,
+				248452441B281869002CCA08 /* SmileKeychainWrapper.h */,
+				248452451B281869002CCA08 /* SmileKeychainWrapper.m */,
+				248452461B281869002CCA08 /* SmilePasswordContainerView.h */,
+				248452471B281869002CCA08 /* SmilePasswordContainerView.m */,
+				248452481B281869002CCA08 /* SmilePasswordView.h */,
+				248452491B281869002CCA08 /* SmilePasswordView.m */,
+				2484524A1B281869002CCA08 /* SmileSettingVC.h */,
+				2484524B1B281869002CCA08 /* SmileSettingVC.m */,
 			);
-			path = KeychainWrapper;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,12 +256,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248452001B27FD97002CCA08 /* Touch ID@2x.png in Resources */,
 				B7F220561B146AE6000BB95B /* Main.storyboard in Resources */,
-				248452011B27FD97002CCA08 /* Touch ID@3x.png in Resources */,
+				2484524D1B281869002CCA08 /* SmileSettingVC.storyboard in Resources */,
 				B7F220571B146AE6000BB95B /* Images.xcassets in Resources */,
 				2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */,
-				248452071B27FD97002CCA08 /* SmileSettingVC.storyboard in Resources */,
+				2484524E1B281869002CCA08 /* Touch ID@2x.png in Resources */,
+				2484524F1B281869002CCA08 /* Touch ID@3x.png in Resources */,
+				2484524C1B281869002CCA08 /* .gitkeep in Resources */,
+				248452501B281869002CCA08 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,14 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248452021B27FD97002CCA08 /* SmileKeychainWrapper.m in Sources */,
-				248452031B27FD97002CCA08 /* SmileAuthenticator.m in Sources */,
+				248452511B281869002CCA08 /* SmileAuthenticator.m in Sources */,
 				B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */,
 				B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */,
-				248452061B27FD97002CCA08 /* SmileSettingVC.m in Sources */,
-				248452041B27FD97002CCA08 /* SmilePasswordContainerView.m in Sources */,
 				B7F220531B146AE6000BB95B /* main.m in Sources */,
-				248452051B27FD97002CCA08 /* SmilePasswordView.m in Sources */,
+				248452551B281869002CCA08 /* SmileSettingVC.m in Sources */,
+				248452531B281869002CCA08 /* SmilePasswordContainerView.m in Sources */,
+				248452521B281869002CCA08 /* SmileKeychainWrapper.m in Sources */,
+				248452541B281869002CCA08 /* SmilePasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
