@@ -20,7 +20,9 @@
     // Override point for customization after application launch.
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
-    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+    
+    //customize the color to fit your app.
+//    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
     
     return YES;
 }
