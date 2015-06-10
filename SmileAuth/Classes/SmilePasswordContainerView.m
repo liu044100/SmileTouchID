@@ -14,7 +14,7 @@
 @end
 
 @implementation SmilePasswordContainerView {
-    BOOL _flag;
+
 }
 
 /*
@@ -43,6 +43,10 @@
     self.smilePasswordView = [[SmilePasswordView alloc] initWithCircleColor:self.mainColor circleCount:count frame:self.bounds];
     
     [self addSubview:self.smilePasswordView];
+    
+    if (self.delegate) {
+        [self.delegate smileContainerLayoutSubview];
+    }
 }
 
 #if TARGET_INTERFACE_BUILDER

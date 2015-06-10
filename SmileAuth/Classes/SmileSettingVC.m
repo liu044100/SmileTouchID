@@ -13,7 +13,7 @@
 
 static NSString *kUnwindSegueID = @"authReturn";
 
-@interface SmileSettingVC () <UITextFieldDelegate>
+@interface SmileSettingVC () <UITextFieldDelegate, SmileContainerLayoutDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
@@ -29,6 +29,11 @@ static NSString *kUnwindSegueID = @"authReturn";
     NSString *_newPassword;
     NSInteger _passLength;
     NSInteger _failCount;
+}
+
+#pragma mark - SmileContainerLayoutDelegate
+-(void)smileContainerLayoutSubview{
+    self.passwordView.smilePasswordView.dotCount = self.passwordField.text.length;
 }
 
 - (IBAction)dismissSelf:(id)sender {
@@ -62,6 +67,8 @@ static NSString *kUnwindSegueID = @"authReturn";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.passwordView.delegate = self;
     
     if ([SmileAuthenticator sharedInstance].tintColor) {
         self.navigationController.navigationBar.tintColor = [SmileAuthenticator sharedInstance].tintColor;
