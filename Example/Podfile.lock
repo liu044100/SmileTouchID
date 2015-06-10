@@ -2,11 +2,16 @@ PODS:
   - SmileTouchID (0.0.1)
 
 DEPENDENCIES:
-  - SmileTouchID (from `~/Documents/my_practice/security/SmileTouchID`)
+  - SmileTouchID (from `https://github.com/liu044100/SmileTouchID.git`)
 
 EXTERNAL SOURCES:
   SmileTouchID:
-    :path: ~/Documents/my_practice/security/SmileTouchID
+    :git: https://github.com/liu044100/SmileTouchID.git
+
+CHECKOUT OPTIONS:
+  SmileTouchID:
+    :commit: 03312cdf00fa2703c929dcad12e9fee93838b6f6
+    :git: https://github.com/liu044100/SmileTouchID.git
 
 SPEC CHECKSUMS:
   SmileTouchID: b9a18c4f39d9782a064ea5cd1527437ba6cffd50

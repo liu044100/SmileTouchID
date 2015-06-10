@@ -122,7 +122,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         
         _isShowLogin = YES;
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle:nil];
+   
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle: nil];
         
         UINavigationController *naviVC = [storyboard instantiateViewControllerWithIdentifier:kSmileSettingNaviID];
         

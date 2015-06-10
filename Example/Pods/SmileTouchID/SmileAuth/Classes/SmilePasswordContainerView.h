@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "SmilePasswordView.h"
 
+
+@protocol SmileContainerLayoutDelegate;
+
 //IB_DESIGNABLE
 
 @interface SmilePasswordContainerView : UIView
 //IBInspectable
 @property (nonatomic, strong) UIColor *mainColor;
 @property (nonatomic, strong) SmilePasswordView *smilePasswordView;
+@property (nonatomic, weak) id <SmileContainerLayoutDelegate> delegate;
 
+@end
+
+@protocol SmileContainerLayoutDelegate <NSObject>
+@required
+-(void)smileContainerLayoutSubview;
 @end

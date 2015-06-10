@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/liu044100/SmileTouchID"
-  s.screenshots  = "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif", "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif"
+  s.screenshots  = "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo1.gif", "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo2.gif"
   s.license      = "MIT"
 
   s.author             = { 'Rain' => 'liu044100@gmail.com' }
