@@ -105,9 +105,15 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         
         [self logPresentAuthVCReason];
         
+        BOOL isAnimated = YES;
+        
+        if (self.securityType == INPUT_TOUCHID) {
+            isAnimated = NO;
+        }
+        
         //dimiss all presentedViewController, for example, if user is editing password
         if (self.rootVC.presentedViewController) {
-            [self.rootVC.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+            [self.rootVC.presentedViewController dismissViewControllerAnimated:NO completion:nil];
         }
         
         if ([self.delegate respondsToSelector:@selector(AuthViewControllerPresented)]) {
@@ -120,7 +126,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         
         UINavigationController *naviVC = [storyboard instantiateViewControllerWithIdentifier:kSmileSettingNaviID];
         
-        [self.rootVC presentViewController:naviVC animated:YES completion:nil];
+        [self.rootVC presentViewController:naviVC animated:isAnimated completion:nil];
     }
 }
 

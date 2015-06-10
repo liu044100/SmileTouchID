@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2403863A1B1DB03400E7259F /* Launch Screen.xib */; };
 		243C05151B12B0070035E066 /* TouchIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C05141B12B0070035E066 /* TouchIDTests.m */; };
-		B7096C531B1B02ED001456BC /* Touch ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7096C451B1B02ED001456BC /* Touch ID@2x.png */; };
-		B7096C541B1B02ED001456BC /* Touch ID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7096C461B1B02ED001456BC /* Touch ID@3x.png */; };
-		B7096C551B1B02ED001456BC /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */; };
-		B7096C561B1B02ED001456BC /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4B1B1B02ED001456BC /* SmileAuthenticator.m */; };
-		B7096C571B1B02ED001456BC /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4D1B1B02ED001456BC /* SmilePasswordContainerView.m */; };
-		B7096C581B1B02ED001456BC /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C4F1B1B02ED001456BC /* SmilePasswordView.m */; };
-		B7096C591B1B02ED001456BC /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B7096C511B1B02ED001456BC /* SmileSettingVC.m */; };
-		B7096C5A1B1B02ED001456BC /* SmileSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7096C521B1B02ED001456BC /* SmileSettingVC.storyboard */; };
+		248452001B27FD97002CCA08 /* Touch ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248451F21B27FD97002CCA08 /* Touch ID@2x.png */; };
+		248452011B27FD97002CCA08 /* Touch ID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248451F31B27FD97002CCA08 /* Touch ID@3x.png */; };
+		248452021B27FD97002CCA08 /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */; };
+		248452031B27FD97002CCA08 /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451F81B27FD97002CCA08 /* SmileAuthenticator.m */; };
+		248452041B27FD97002CCA08 /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */; };
+		248452051B27FD97002CCA08 /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FC1B27FD97002CCA08 /* SmilePasswordView.m */; };
+		248452061B27FD97002CCA08 /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 248451FE1B27FD97002CCA08 /* SmileSettingVC.m */; };
+		248452071B27FD97002CCA08 /* SmileSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */; };
 		B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F3E771B12F76400AB0AD2 /* SmileMainVC.m */; };
 		B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C04FD1B12B0070035E066 /* AppDelegate.m */; };
 		B7F220531B146AE6000BB95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C04FA1B12B0070035E066 /* main.m */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2403863A1B1DB03400E7259F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		242F3E761B12F76400AB0AD2 /* SmileMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileMainVC.h; sourceTree = "<group>"; };
 		242F3E771B12F76400AB0AD2 /* SmileMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileMainVC.m; sourceTree = "<group>"; };
 		243C04F91B12B0070035E066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,19 +37,19 @@
 		243C050E1B12B0070035E066 /* TouchIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		243C05131B12B0070035E066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243C05141B12B0070035E066 /* TouchIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDTests.m; sourceTree = "<group>"; };
-		B7096C451B1B02ED001456BC /* Touch ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@2x.png"; sourceTree = "<group>"; };
-		B7096C461B1B02ED001456BC /* Touch ID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@3x.png"; sourceTree = "<group>"; };
-		B7096C481B1B02ED001456BC /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
-		B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
-		B7096C4A1B1B02ED001456BC /* SmileAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
-		B7096C4B1B1B02ED001456BC /* SmileAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
-		B7096C4C1B1B02ED001456BC /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
-		B7096C4D1B1B02ED001456BC /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordContainerView.m; sourceTree = "<group>"; };
-		B7096C4E1B1B02ED001456BC /* SmilePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordView.h; sourceTree = "<group>"; };
-		B7096C4F1B1B02ED001456BC /* SmilePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordView.m; sourceTree = "<group>"; };
-		B7096C501B1B02ED001456BC /* SmileSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileSettingVC.h; sourceTree = "<group>"; };
-		B7096C511B1B02ED001456BC /* SmileSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileSettingVC.m; sourceTree = "<group>"; };
-		B7096C521B1B02ED001456BC /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SmileSettingVC.storyboard; sourceTree = "<group>"; };
+		248451F21B27FD97002CCA08 /* Touch ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@2x.png"; sourceTree = "<group>"; };
+		248451F31B27FD97002CCA08 /* Touch ID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID@3x.png"; sourceTree = "<group>"; };
+		248451F51B27FD97002CCA08 /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
+		248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
+		248451F71B27FD97002CCA08 /* SmileAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
+		248451F81B27FD97002CCA08 /* SmileAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
+		248451F91B27FD97002CCA08 /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
+		248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordContainerView.m; sourceTree = "<group>"; };
+		248451FB1B27FD97002CCA08 /* SmilePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilePasswordView.h; sourceTree = "<group>"; };
+		248451FC1B27FD97002CCA08 /* SmilePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordView.m; sourceTree = "<group>"; };
+		248451FD1B27FD97002CCA08 /* SmileSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileSettingVC.h; sourceTree = "<group>"; };
+		248451FE1B27FD97002CCA08 /* SmileSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileSettingVC.m; sourceTree = "<group>"; };
+		248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SmileSettingVC.storyboard; sourceTree = "<group>"; };
 		B7F2205B1B146AE6000BB95B /* Smile TouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smile TouchID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 		243C04EC1B12B0070035E066 = {
 			isa = PBXGroup;
 			children = (
+				248451F01B27FD97002CCA08 /* SmileAuth */,
 				243C04F71B12B0070035E066 /* TouchID */,
 				243C05111B12B0070035E066 /* TouchIDTests */,
 				243C04F61B12B0070035E066 /* Products */,
@@ -95,7 +98,7 @@
 				242F3E761B12F76400AB0AD2 /* SmileMainVC.h */,
 				242F3E771B12F76400AB0AD2 /* SmileMainVC.m */,
 				243C05021B12B0070035E066 /* Main.storyboard */,
-				B7096C431B1B02ED001456BC /* SmileAuth */,
+				2403863A1B1DB03400E7259F /* Launch Screen.xib */,
 				243C05051B12B0070035E066 /* Images.xcassets */,
 				243C04F81B12B0070035E066 /* Supporting Files */,
 			);
@@ -128,38 +131,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B7096C431B1B02ED001456BC /* SmileAuth */ = {
+		248451F01B27FD97002CCA08 /* SmileAuth */ = {
 			isa = PBXGroup;
 			children = (
-				B7096C441B1B02ED001456BC /* icon */,
-				B7096C471B1B02ED001456BC /* KeychainWrapper */,
-				B7096C4A1B1B02ED001456BC /* SmileAuthenticator.h */,
-				B7096C4B1B1B02ED001456BC /* SmileAuthenticator.m */,
-				B7096C4C1B1B02ED001456BC /* SmilePasswordContainerView.h */,
-				B7096C4D1B1B02ED001456BC /* SmilePasswordContainerView.m */,
-				B7096C4E1B1B02ED001456BC /* SmilePasswordView.h */,
-				B7096C4F1B1B02ED001456BC /* SmilePasswordView.m */,
-				B7096C501B1B02ED001456BC /* SmileSettingVC.h */,
-				B7096C511B1B02ED001456BC /* SmileSettingVC.m */,
-				B7096C521B1B02ED001456BC /* SmileSettingVC.storyboard */,
+				248451F11B27FD97002CCA08 /* icon */,
+				248451F41B27FD97002CCA08 /* KeychainWrapper */,
+				248451F71B27FD97002CCA08 /* SmileAuthenticator.h */,
+				248451F81B27FD97002CCA08 /* SmileAuthenticator.m */,
+				248451F91B27FD97002CCA08 /* SmilePasswordContainerView.h */,
+				248451FA1B27FD97002CCA08 /* SmilePasswordContainerView.m */,
+				248451FB1B27FD97002CCA08 /* SmilePasswordView.h */,
+				248451FC1B27FD97002CCA08 /* SmilePasswordView.m */,
+				248451FD1B27FD97002CCA08 /* SmileSettingVC.h */,
+				248451FE1B27FD97002CCA08 /* SmileSettingVC.m */,
+				248451FF1B27FD97002CCA08 /* SmileSettingVC.storyboard */,
 			);
 			path = SmileAuth;
 			sourceTree = "<group>";
 		};
-		B7096C441B1B02ED001456BC /* icon */ = {
+		248451F11B27FD97002CCA08 /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				B7096C451B1B02ED001456BC /* Touch ID@2x.png */,
-				B7096C461B1B02ED001456BC /* Touch ID@3x.png */,
+				248451F21B27FD97002CCA08 /* Touch ID@2x.png */,
+				248451F31B27FD97002CCA08 /* Touch ID@3x.png */,
 			);
 			path = icon;
 			sourceTree = "<group>";
 		};
-		B7096C471B1B02ED001456BC /* KeychainWrapper */ = {
+		248451F41B27FD97002CCA08 /* KeychainWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				B7096C481B1B02ED001456BC /* SmileKeychainWrapper.h */,
-				B7096C491B1B02ED001456BC /* SmileKeychainWrapper.m */,
+				248451F51B27FD97002CCA08 /* SmileKeychainWrapper.h */,
+				248451F61B27FD97002CCA08 /* SmileKeychainWrapper.m */,
 			);
 			path = KeychainWrapper;
 			sourceTree = "<group>";
@@ -247,11 +250,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248452001B27FD97002CCA08 /* Touch ID@2x.png in Resources */,
 				B7F220561B146AE6000BB95B /* Main.storyboard in Resources */,
-				B7096C5A1B1B02ED001456BC /* SmileSettingVC.storyboard in Resources */,
-				B7096C541B1B02ED001456BC /* Touch ID@3x.png in Resources */,
-				B7096C531B1B02ED001456BC /* Touch ID@2x.png in Resources */,
+				248452011B27FD97002CCA08 /* Touch ID@3x.png in Resources */,
 				B7F220571B146AE6000BB95B /* Images.xcassets in Resources */,
+				2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */,
+				248452071B27FD97002CCA08 /* SmileSettingVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248452021B27FD97002CCA08 /* SmileKeychainWrapper.m in Sources */,
+				248452031B27FD97002CCA08 /* SmileAuthenticator.m in Sources */,
 				B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */,
-				B7096C561B1B02ED001456BC /* SmileAuthenticator.m in Sources */,
-				B7096C551B1B02ED001456BC /* SmileKeychainWrapper.m in Sources */,
 				B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */,
-				B7096C591B1B02ED001456BC /* SmileSettingVC.m in Sources */,
-				B7096C571B1B02ED001456BC /* SmilePasswordContainerView.m in Sources */,
+				248452061B27FD97002CCA08 /* SmileSettingVC.m in Sources */,
+				248452041B27FD97002CCA08 /* SmilePasswordContainerView.m in Sources */,
 				B7F220531B146AE6000BB95B /* main.m in Sources */,
-				B7096C581B1B02ED001456BC /* SmilePasswordView.m in Sources */,
+				248452051B27FD97002CCA08 /* SmilePasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
