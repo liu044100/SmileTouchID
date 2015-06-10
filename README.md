@@ -1,7 +1,7 @@
 # SmileTouchID
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/promo_s.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_s.png)
 
 #What can it do for you?
 
@@ -115,7 +115,7 @@ For example below image show a switch to turn the passcode on/off, when the swit
 
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step4.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/step4.png)
 
 
 Update your interactive UI parts in `viewWillAppear`.
