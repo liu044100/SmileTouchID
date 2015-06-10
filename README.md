@@ -26,16 +26,16 @@ if ([SmileAuthenticator hasPassword]) {
 ##### 2. Get elegant animation automatically and adaptive UI.
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif)
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif)
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/rotate.gif)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo1.gif)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo2.gif)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/rotate.gif)
 
 
 
 ##### 3. Can use storyboard customize the color to fit your app.
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo44.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo44.png)
 
 
 
@@ -44,7 +44,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo66.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo66.png)
 
 
 #Theoretical Introduction
@@ -71,7 +71,7 @@ Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present
 
 **Step 1.** Drop the fold `SmileAuth` to your project.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step1.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/step1.png)
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add below line to `didFinishLaunchingWithOptions`.
 
@@ -79,7 +79,7 @@ Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present
 [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step2.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/step2.png)
 
 **Step 3.** In your project root view controller,  add below line to `viewDidAppear:`.
 
@@ -91,7 +91,7 @@ if ([SmileAuthenticator hasPassword]) {
 ```
 
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/step3.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/step3.png)
 
 **Step 4.** Configure with your interactive UI parts,  set appropriate `securityType`, then call `presentAuthViewController`. 
 
