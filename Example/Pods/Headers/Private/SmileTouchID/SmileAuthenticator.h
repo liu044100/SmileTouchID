@@ -1,0 +1,1 @@
+../../../../../SmileAuth/Classes/SmileAuthenticator.h

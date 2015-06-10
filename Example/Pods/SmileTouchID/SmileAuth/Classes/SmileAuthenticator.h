@@ -44,23 +44,31 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, strong) SmileKeychainWrapper *keychainWrapper;
 @property (nonatomic, assign) SecurityType securityType;
 @property (nonatomic, strong) UIViewController *rootVC;
+
 @property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
-@property (nonatomic, strong) UIColor *tintColor;
 
 +(SmileAuthenticator*)sharedInstance;
+
 + (BOOL)canAuthenticateWithError:(NSError **) error;
+
+-(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
+
 +(BOOL)hasPassword;
+
 +(BOOL)isSamePassword:(NSString *)userInput;
-+(void)clearPassword;
 
 -(void)userSetPassword:(NSString*)newPassword;
--(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
+
++(void)clearPassword;
+
 -(void)presentAuthViewController;
+
 -(void)authViewControllerDismissed;
+
 -(void)touchID_OR_PasswordAuthSuccess;
 -(void)touchID_OR_PasswordAuthFail:(NSInteger)failCount;
-
 @end
+
 
 @protocol AuthenticatorDelegate <NSObject>
 @optional

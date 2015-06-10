@@ -1,0 +1,30 @@
+{
+  "name": "SmileTouchID",
+  "version": "0.0.1",
+  "summary": "A Library for configure Touch ID & passcode conveniently",
+  "description": "                   1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.\n                   2. Get elegant animation automatically and adaptive UI.\n                   3. Can customize the passcode input circle color to fit your app.\n                   4. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.\n",
+  "homepage": "https://github.com/liu044100/SmileTouchID",
+  "screenshots": [
+    "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo1.gif",
+    "https://raw.githubusercontent.com/liu044100/SmileTouchID/master/demo_gif/demo2.gif"
+  ],
+  "license": "MIT",
+  "authors": {
+    "Rain": "liu044100@gmail.com"
+  },
+  "social_media_url": "https://dribbble.com/yuchenliu",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "https://github.com/liu044100/SmileTouchID.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "SmileAuth/Classes/*",
+  "public_header_files": "SmileAuth/Classes/*.h",
+  "resources": [
+    "SmileAuth/Assets/*"
+  ],
+  "frameworks": "UIKit"
+}

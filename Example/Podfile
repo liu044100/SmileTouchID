@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Smile TouchID' do
+
+pod 'SmileTouchID', :path => '~/Documents/my_practice/security/SmileTouchID'
+
+end
+
+target 'TouchIDTests' do
+
+end
+

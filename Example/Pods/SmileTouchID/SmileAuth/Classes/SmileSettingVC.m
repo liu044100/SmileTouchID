@@ -63,10 +63,6 @@ static NSString *kUnwindSegueID = @"authReturn";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if ([SmileAuthenticator sharedInstance].tintColor) {
-        self.navigationController.navigationBar.tintColor = [SmileAuthenticator sharedInstance].tintColor;
-    }
-    
     // Do any additional setup after loading the view.
     self.descLabel.text = [NSString stringWithFormat:@"Enter %ld digit password", (long)kPasswordLength];
     

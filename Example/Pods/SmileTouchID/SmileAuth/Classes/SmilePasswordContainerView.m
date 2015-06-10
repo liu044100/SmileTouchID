@@ -36,10 +36,6 @@
     
     NSInteger count = kPasswordLength;
     
-    if ([SmileAuthenticator sharedInstance].tintColor) {
-        self.mainColor = [SmileAuthenticator sharedInstance].tintColor;
-    }
-    
     self.smilePasswordView = [[SmilePasswordView alloc] initWithCircleColor:self.mainColor circleCount:count frame:self.bounds];
     
     [self addSubview:self.smilePasswordView];
