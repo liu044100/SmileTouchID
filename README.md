@@ -32,19 +32,14 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 3. Can use storyboard customize the color to fit your app.
+##### 3. Can customize the color to fit your app.
 
+```
+[SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo44.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo_color.png)
 
-
-
-
-##### 4. Can customize passcode digit to 4 digit, 7 digit passcode or any digit, and automatically configure for you.
-
-
-
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo66.png)
 
 
 #Theoretical Introduction
@@ -69,9 +64,14 @@ Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present
 
 #How to use it for your project?
 
-**Step 1.** Drop the fold `SmileAuth` to your project.
+**Step 1.** SmileTouchID is available through use Pods. To install
+it, simply add the following line to your Podfile:
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/step1.png)
+```
+pod 'SmileTouchID', :git => 'https://github.com/liu044100/SmileTouchID.git'
+
+```
+
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add below line to `didFinishLaunchingWithOptions`.
 
@@ -139,11 +139,7 @@ For example, below code show update the switch and button based on `[SmileAuthen
 
 **Step 5.** Build your project, very simple :)
 
-#About Customization & Delegate callback
-
-Open `SmileSettingVC.storyboard` customize the color.
-
-Open `SmileAuthenticator.h` , change `kPasswordLength` to customize passcode digit.
+#About Delegate callback
 
 `SmileAuthenticator` has a delegate that can get more information about the process of authentication.
 
