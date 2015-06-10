@@ -120,8 +120,8 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
         NSMutableDictionary *tmpDictionary =
         [self dictionaryToSecItemFormat:_keychainData];
         // Delete the keychain item in preparation for resetting the values:
-        OSStatus errorcode = SecItemDelete((__bridge CFDictionaryRef)tmpDictionary);
-        NSLog(@"keychain error code -> %d", (int)errorcode);
+//        OSStatus errorcode = SecItemDelete((__bridge CFDictionaryRef)tmpDictionary);
+//        NSLog(@"keychain error code -> %d", (int)errorcode);
 //        NSAssert(errorcode == noErr, @"Problem deleting current keychain item." );
     }
     

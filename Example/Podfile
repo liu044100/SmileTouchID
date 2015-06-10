@@ -3,7 +3,7 @@
 
 target 'Smile TouchID' do
 
-pod 'SmileTouchID', :git => 'https://github.com/liu044100/SmileTouchID.git'
+pod 'SmileTouchID', :path => '~/Documents/my_practice/security/SmileTouchID'
 
 end
 
