@@ -5,7 +5,9 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.
                    2. Get elegant animation automatically and adaptive UI.
-                   3. Can customize the passcode input circle color to fit your app.
+                   3. Can customize the color，touch id icon and background image to fit your app style.
+                   4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
+                   5. Support iOS7 and later.
                    DESC
 
   s.homepage     = "https://github.com/liu044100/SmileTouchID"
@@ -22,6 +24,6 @@ Pod::Spec.new do |s|
   s.source_files  = 'SmileAuth/Classes/*'
   s.public_header_files = 'SmileAuth/Classes/*.h'
   s.resource = ['SmileAuth/Assets/*']
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'LocalAuthentication'
 
 end
