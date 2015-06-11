@@ -46,7 +46,7 @@ if ([SmileAuthenticator hasPassword]) {
 ##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
 
 ```
-[SmileAuthenticator sharedInstance].passwordLength = 6;
+[SmileAuthenticator sharedInstance].passcodeDigit = 6;
 ```
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/passlength.png)
@@ -54,7 +54,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 ##### 5. Support iOS7 and later. 
 
-In iOS7, because Apple had not given the TouchID API, only use Passcode for authentication. 
+In iOS7, because Apple had not given the TouchID API to developers, only use Passcode for authentication. 
 
 In iOS7 you should add `LocalAuthentication.framework` to your project and change status to `Optional`.
 

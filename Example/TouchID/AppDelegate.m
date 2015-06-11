@@ -22,7 +22,7 @@
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
     //if you want to customize the password length to 6 or 10, or any number, use this line.
-    [SmileAuthenticator sharedInstance].passwordLength = 6;
+    [SmileAuthenticator sharedInstance].passcodeDigit = 6;
     
     //if you want to customize the color to fit your app, use this line.
     [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];

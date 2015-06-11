@@ -50,7 +50,7 @@ static NSString *kUnwindSegueID = @"authReturn";
 - (IBAction)useTouchID:(id)sender {
     [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
         [[SmileAuthenticator sharedInstance] touchID_OR_PasswordAuthSuccess];
-        self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passwordLength;
+        self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(dismissSelf:) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
         self.descLabel.hidden = NO;
@@ -83,7 +83,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     UIImage *iconImage = [UIImage imageNamed:[SmileAuthenticator sharedInstance].touchIDIcon];
     [self.touchIDButton setImage:iconImage forState:UIControlStateNormal];
     
-    self.descLabel.text = [NSString stringWithFormat:@"Enter %ld digit passcode", (long)[SmileAuthenticator sharedInstance].passwordLength];
+    self.descLabel.text = [NSString stringWithFormat:@"Enter %ld digit passcode", (long)[SmileAuthenticator sharedInstance].passcodeDigit];
     
     switch ([SmileAuthenticator sharedInstance].securityType) {
         case INPUT_ONCE:
@@ -101,7 +101,7 @@ static NSString *kUnwindSegueID = @"authReturn";
         case INPUT_THREE:
             
             self.navigationItem.title = @"Change Passcode";
-            self.descLabel.text = [NSString stringWithFormat:@"Enter your old %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passwordLength];
+            self.descLabel.text = [NSString stringWithFormat:@"Enter your old %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passcodeDigit];
             
             break;
             
@@ -139,7 +139,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     self.passwordField.delegate = self;
     [self.passwordField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
-    _passLength =[SmileAuthenticator sharedInstance].passwordLength;
+    _passLength =[SmileAuthenticator sharedInstance].passcodeDigit;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -194,7 +194,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     
     [self.passwordView.smilePasswordView slideToLeftAnimation];
     
-    self.descLabel.text = [NSString stringWithFormat:@"Re-enter your %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passwordLength];
+    self.descLabel.text = [NSString stringWithFormat:@"Re-enter your %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)enterNewPassword{
@@ -202,7 +202,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     
     [self.passwordView.smilePasswordView slideToLeftAnimation];
     
-    self.descLabel.text = [NSString stringWithFormat:@"Enter your new %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passwordLength];
+    self.descLabel.text = [NSString stringWithFormat:@"Enter your new %ld digit Passcode", (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)handleINPUT_TOUCHID{

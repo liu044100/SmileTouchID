@@ -46,7 +46,7 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic, strong) NSString *touchIDIcon;
-@property (nonatomic) NSInteger passwordLength;
+@property (nonatomic) NSInteger passcodeDigit;
 
 +(SmileAuthenticator*)sharedInstance;
 + (BOOL)canAuthenticateWithError:(NSError **) error;

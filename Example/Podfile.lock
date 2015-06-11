@@ -1,0 +1,14 @@
+PODS:
+  - SmileTouchID (0.0.3)
+
+DEPENDENCIES:
+  - SmileTouchID (from `~/Documents/my_practice/security/SmileTouchID`)
+
+EXTERNAL SOURCES:
+  SmileTouchID:
+    :path: ~/Documents/my_practice/security/SmileTouchID
+
+SPEC CHECKSUMS:
+  SmileTouchID: a04ce01f7390c84412251e4b35439d75ad4ba5aa
+
+COCOAPODS: 0.37.2

@@ -32,11 +32,11 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 #pragma mark -getter
 
--(NSInteger)passwordLength{
-    if (!_passwordLength || _passwordLength < 0) {
+-(NSInteger)passcodeDigit{
+    if (!_passcodeDigit || _passcodeDigit < 0) {
         return kPasswordLength;
     } else {
-        return _passwordLength;
+        return _passcodeDigit;
     }
 }
 
