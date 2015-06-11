@@ -163,10 +163,6 @@ static CGFloat kDotRadiusConst = 5.0;
     CGFloat height = CGRectGetHeight(self.bounds);
     CGFloat width = CGRectGetWidth(self.bounds);
 
-    if (height < 50) {
-        NSLog(@"container view height maybe too small.");
-    }
-    
     if (self.count * height + (self.count - 1) * height/4 > width) {
         myRadius = floor((width/(2*self.count + (self.count - 1)/2)));
     } else {

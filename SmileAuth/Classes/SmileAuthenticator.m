@@ -40,11 +40,11 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
--(NSString *)touchIDIcon{
-    if (!_touchIDIcon.length) {
+-(NSString *)touchIDIconName{
+    if (!_touchIDIconName.length) {
         return kTouchIDIcon;
     } else {
-        return _touchIDIcon;
+        return _touchIDIconName;
     }
 }
 

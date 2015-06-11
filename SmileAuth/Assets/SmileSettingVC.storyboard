@@ -16,8 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9q-Ek-qul">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-ty-FlL">
-                                <rect key="frame" x="285.5" y="217" width="30" height="34"/>
+                                <rect key="frame" x="285" y="217" width="30" height="34"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,10 +63,14 @@
                             <constraint firstItem="pQ0-3p-zCf" firstAttribute="top" secondItem="P1b-xr-dK8" secondAttribute="bottom" id="1tX-gW-9nh"/>
                             <constraint firstItem="cLX-BN-r5x" firstAttribute="top" secondItem="mHp-ZT-N3c" secondAttribute="bottom" constant="20" id="Hvh-Xc-Ur8"/>
                             <constraint firstItem="cLX-BN-r5x" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" id="JuH-1s-JMd"/>
+                            <constraint firstItem="F9q-Ek-qul" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" id="K5E-Ut-e3a"/>
+                            <constraint firstItem="N5a-hG-zG3" firstAttribute="top" secondItem="F9q-Ek-qul" secondAttribute="bottom" id="Orv-qL-uFb"/>
                             <constraint firstAttribute="trailing" secondItem="pQ0-3p-zCf" secondAttribute="trailing" constant="16" id="SNg-26-hSK"/>
+                            <constraint firstAttribute="trailing" secondItem="F9q-Ek-qul" secondAttribute="trailing" id="SYE-FY-dQM"/>
                             <constraint firstAttribute="trailing" secondItem="cLX-BN-r5x" secondAttribute="trailing" id="Sab-jM-csq"/>
                             <constraint firstAttribute="centerX" secondItem="LL4-ty-FlL" secondAttribute="centerX" id="Yt7-jp-0vG"/>
                             <constraint firstItem="mHp-ZT-N3c" firstAttribute="top" secondItem="P1b-xr-dK8" secondAttribute="bottom" constant="20" id="bMY-WO-Pzc"/>
+                            <constraint firstItem="F9q-Ek-qul" firstAttribute="top" secondItem="Vt2-N3-pA6" secondAttribute="top" id="kKB-Ih-D5f"/>
                             <constraint firstItem="mHp-ZT-N3c" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" id="qE1-td-lDE"/>
                             <constraint firstAttribute="trailing" secondItem="mHp-ZT-N3c" secondAttribute="trailing" id="uPP-hC-vb3"/>
                             <constraint firstItem="LL4-ty-FlL" firstAttribute="top" secondItem="cLX-BN-r5x" secondAttribute="bottom" constant="35" id="yPs-nZ-GLa"/>
@@ -71,6 +78,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u4d-gk-mdU">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ofS-Jd-sqA">
                             <connections>
                                 <action selector="dismissSelf:" destination="Z1n-Hz-JrD" id="63Q-P3-C6P"/>
@@ -78,6 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bgImageView" destination="F9q-Ek-qul" id="C8k-0I-mZi"/>
                         <outlet property="descLabel" destination="mHp-ZT-N3c" id="wrd-a5-kAW"/>
                         <outlet property="passwordField" destination="pQ0-3p-zCf" id="1Zy-Mq-yg9"/>
                         <outlet property="passwordView" destination="cLX-BN-r5x" id="97t-xb-QnM"/>

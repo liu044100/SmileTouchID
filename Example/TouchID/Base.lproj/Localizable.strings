@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  TouchID
+
+  Created by ryu-ushin on 6/11/15.
+  Copyright (c) 2015 rain. All rights reserved.
+*/
+
+/*
+ UNIVERSAL PARTS
+ */
+"SMILE_REASON" = "Are you device owner?";
+"SMILE_INPUT_FAILED" = "%ld Failed Passcode Attempt. Try again.";
+"SMILE_INPUT_DESCRIPTION" = "Enter %ld digit passcode";
+"SMILE_INPUT_NOT_MATCH" = "Passcode not match. Try again.";
+"SMILE_INPUT_RE-ENTER" = "Re-enter your %ld digit Passcode";
+
+/*
+ INPUT_TOUCHID
+ */
+"SMILE_INPUT_TOUCHID_TITLE" = "Enter Passcode";
+
+
+/*
+ INPUT_ONCE
+ */
+"SMILE_INPUT_ONCE_TITLE" = "Turn off Passcode";
+
+
+/*
+ INPUT_TWICE
+ */
+"SMILE_INPUT_TWICE_TITLE" = "Set Passcode";
+
+
+/*
+ INPUT_THREE
+ */
+"SMILE_INPUT_THREE_TITLE" = "Change Passcode";
+"SMILE_INPUT_THREE_STEP_1" = "Enter your new %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_2" = "Enter your old %ld digit Passcode";

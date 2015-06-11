@@ -21,14 +21,16 @@
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
-    //if you want to customize the password length to 6 or 10, or any number, use this line.
+    //the reason for use Touch ID
+    [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_REASON", nil);
+    
+    //customize
     [SmileAuthenticator sharedInstance].passcodeDigit = 6;
-    
-    //if you want to customize the color to fit your app, use this line.
     [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
-    
-    //customize touch id icon
-    [SmileAuthenticator sharedInstance].touchIDIcon = @"my_Touch_ID";
+    [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
+    [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
+    [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
+    [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
     
     return YES;
 }
