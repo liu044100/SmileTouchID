@@ -63,19 +63,19 @@
 #pragma mark - AuthenticatorDelegate
 
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount{
-    
+    NSLog(@"userFailAuthenticationWithCount: %ld", (long)failCount);
 }
 
 -(void)userSuccessAuthentication{
-    
+    NSLog(@"userSuccessAuthentication");
 }
 
--(void)AuthenticatorPresent{
-    
+-(void)AuthViewControllerPresented{
+    NSLog(@"presentAuthViewController");
 }
 
--(void)AuthenticatorDimssed{
-    
+-(void)AuthViewControllerDismssed{
+    NSLog(@"dismissAuthViewController");
 }
 
 - (void)didReceiveMemoryWarning {

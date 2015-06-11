@@ -75,18 +75,15 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         default:
             break;
     }
-    NSLog(@"presentAuthViewController --- %@", reason);
 }
 
 -(void)touchID_OR_PasswordAuthSuccess{
-    NSLog(@"userSuccessAuthentication");
     if ([self.delegate respondsToSelector:@selector(userSuccessAuthentication)]) {
         [self.delegate userSuccessAuthentication];
     }
 }
 
 -(void)touchID_OR_PasswordAuthFail:(NSInteger)failCount{
-    NSLog(@"userFailAuthenticationWithCount: %ld", (long)failCount);
     if ([self.delegate respondsToSelector:@selector(userFailAuthenticationWithCount:)]) {
         [self.delegate userFailAuthenticationWithCount:failCount];
     }
@@ -114,7 +111,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     default:
         break;
     }
-    NSLog(@"presentAuthViewController --- %@", reason);
 }
 
 -(void)presentAuthViewController{
