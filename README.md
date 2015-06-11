@@ -1,7 +1,7 @@
 # SmileTouchID
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_s.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_banner.png)
 
 #What can it do for you?
 
@@ -23,7 +23,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 2. Get elegant animation automatically and adaptive UI.
+##### 2. Get elegant animation and adaptive UI automatically.
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo1.gif)
@@ -32,7 +32,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 3. Can customize the color， touch id icon and background image to fit your app style.
+##### 3. Can customize the color，touch id icon and background image to fit your app style. For example, you can customize like the below image.
 
 ```
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
