@@ -34,7 +34,7 @@
     
     self.backgroundColor = [UIColor clearColor];
     
-    NSInteger count = kPasswordLength;
+    NSInteger count = [SmileAuthenticator sharedInstance].passwordLength;
     
     if ([SmileAuthenticator sharedInstance].tintColor) {
         self.mainColor = [SmileAuthenticator sharedInstance].tintColor;

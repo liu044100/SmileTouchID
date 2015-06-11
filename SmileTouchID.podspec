@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://dribbble.com/yuchenliu"
 
   
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.source       = { :git => "https://github.com/liu044100/SmileTouchID.git", :tag => s.version.to_s}
   s.source_files  = 'SmileAuth/Classes/*'

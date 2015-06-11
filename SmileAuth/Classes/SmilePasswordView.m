@@ -51,7 +51,7 @@ static CGFloat kDotRadiusConst = 5.0;
 //    CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
     [self.circleColor setStroke];
 
-    NSInteger lineWidth = self.radius/kLineWidthConst;
+    CGFloat lineWidth = self.radius/kLineWidthConst;
     CGFloat outLineRadius = self.radius - lineWidth;
     
     BOOL isOdd = self.count%2;
@@ -153,7 +153,7 @@ static CGFloat kDotRadiusConst = 5.0;
 
 -(CGFloat)spacing{
     
-    return self.radius/2;
+    return self.radius/(self.count/2);
 }
 
 #pragma mark - set up

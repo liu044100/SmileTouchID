@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mnh-gi-U9y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mnh-gi-U9y">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -24,7 +25,6 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-N7-Igs">
                                 <rect key="frame" x="276" y="185" width="51" height="31"/>
-                                <color key="onTintColor" red="0.98039215690000003" green="0.33227113829999999" blue="0.60447057520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="passwordSwitch:" destination="sh3-I4-VqR" eventType="valueChanged" id="8ZF-xd-pyz"/>
                                 </connections>
@@ -38,7 +38,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drB-62-9ZW">
                                 <rect key="frame" x="237" y="246" width="126" height="30"/>
                                 <state key="normal" title="Change Password">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.3322711383080782" blue="0.60447057520301239" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -87,5 +86,5 @@
             <point key="canvasLocation" x="-519" y="-344"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.98039215690000003" green="0.33227113829999999" blue="0.60447057520000003" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.73077792610000003" green="0.33995157580000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

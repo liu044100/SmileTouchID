@@ -113,17 +113,17 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
     {
         self.keychainData = [[NSMutableDictionary alloc] init];
     }
-    else if (_keychainData)
-    {
-        // Format the data in the keychainData dictionary into the format needed for a query
-        //  and put it into tmpDictionary:
-        NSMutableDictionary *tmpDictionary =
-        [self dictionaryToSecItemFormat:_keychainData];
-        // Delete the keychain item in preparation for resetting the values:
+//    else if (_keychainData)
+//    {
+//        // Format the data in the keychainData dictionary into the format needed for a query
+//        //  and put it into tmpDictionary:
+//        NSMutableDictionary *tmpDictionary =
+//        [self dictionaryToSecItemFormat:_keychainData];
+//        // Delete the keychain item in preparation for resetting the values:
 //        OSStatus errorcode = SecItemDelete((__bridge CFDictionaryRef)tmpDictionary);
 //        NSLog(@"keychain error code -> %d", (int)errorcode);
-//        NSAssert(errorcode == noErr, @"Problem deleting current keychain item." );
-    }
+////        NSAssert(errorcode == noErr, @"Problem deleting current keychain item." );
+//    }
     
     // Default generic data for Keychain Item:
     [_keychainData setObject:@"" forKey:(__bridge id)kSecAttrLabel];

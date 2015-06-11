@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Smile TouchID-->
+        <!--Smile SettingVC-->
         <scene sceneID="KkD-wm-2G7">
             <objects>
                 <viewController id="Z1n-Hz-JrD" customClass="SmileSettingVC" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-ty-FlL">
-                                <rect key="frame" x="274" y="217" width="53" height="53"/>
-                                <state key="normal" image="Touch ID">
+                                <rect key="frame" x="285.5" y="217" width="30" height="34"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -70,7 +70,7 @@
                             <constraint firstItem="pQ0-3p-zCf" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" constant="16" id="yfy-4d-pgZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Smile TouchID" id="u4d-gk-mdU">
+                    <navigationItem key="navigationItem" id="u4d-gk-mdU">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ofS-Jd-sqA">
                             <connections>
                                 <action selector="dismissSelf:" destination="Z1n-Hz-JrD" id="63Q-P3-C6P"/>
@@ -107,8 +107,5 @@
             <point key="canvasLocation" x="2049" y="634"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Touch ID" width="53" height="53"/>
-    </resources>
     <color key="tintColor" red="0.98039215690000003" green="0.33227113829999999" blue="0.60447057520000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

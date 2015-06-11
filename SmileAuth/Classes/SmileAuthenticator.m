@@ -8,6 +8,9 @@
 
 #import "SmileAuthenticator.h"
 
+#define kPasswordLength 4
+#define kTouchIDIcon @"smile_Touch_ID"
+
 static NSString *kDefaultReason = @"Unlock to access";
 static NSString *kKeyChainObjectKey = @"v_Data";
 static NSString *kStoryBoardName = @"SmileSettingVC";
@@ -26,6 +29,25 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     BOOL _didReturnFromBackground;
     BOOL _isShowLogin;
 }
+
+#pragma mark -getter
+
+-(NSInteger)passwordLength{
+    if (!_passwordLength || _passwordLength < 0) {
+        return kPasswordLength;
+    } else {
+        return _passwordLength;
+    }
+}
+
+-(NSString *)touchIDIcon{
+    if (!_touchIDIcon.length) {
+        return kTouchIDIcon;
+    } else {
+        return _touchIDIcon;
+    }
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -173,6 +195,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     
     return sharedInstance;
 }
+
 
 -(instancetype)init{
     if (self = [super init]) {

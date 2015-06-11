@@ -11,7 +11,6 @@
 #import "SmileKeychainWrapper.h"
 #import "SmileSettingVC.h"
 
-#define kPasswordLength 4
 
 #define DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 typedef void(^AuthCompletionBlock)();
@@ -46,6 +45,8 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, strong) UIViewController *rootVC;
 @property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
 @property (nonatomic, strong) UIColor *tintColor;
+@property (nonatomic, strong) NSString *touchIDIcon;
+@property (nonatomic) NSInteger passwordLength;
 
 +(SmileAuthenticator*)sharedInstance;
 + (BOOL)canAuthenticateWithError:(NSError **) error;

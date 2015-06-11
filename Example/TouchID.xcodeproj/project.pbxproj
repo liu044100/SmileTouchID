@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2403863A1B1DB03400E7259F /* Launch Screen.xib */; };
 		243C05151B12B0070035E066 /* TouchIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C05141B12B0070035E066 /* TouchIDTests.m */; };
+		248B176B1B292A3100E992AB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B176A1B292A3100E992AB /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		518296C51684971AA97FED5C /* libPods-Smile TouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CBBCBB7DE9444C4A4C4E1 /* libPods-Smile TouchID.a */; };
 		B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F3E771B12F76400AB0AD2 /* SmileMainVC.m */; };
 		B7F220511B146AE6000BB95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C04FD1B12B0070035E066 /* AppDelegate.m */; };
@@ -18,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2403863A1B1DB03400E7259F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		242F3E761B12F76400AB0AD2 /* SmileMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileMainVC.h; sourceTree = "<group>"; };
 		242F3E771B12F76400AB0AD2 /* SmileMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileMainVC.m; sourceTree = "<group>"; };
 		243C04F91B12B0070035E066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		243C050E1B12B0070035E066 /* TouchIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		243C05131B12B0070035E066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243C05141B12B0070035E066 /* TouchIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDTests.m; sourceTree = "<group>"; };
+		248B176A1B292A3100E992AB /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		4750D20E4CAA18DA1D582D06 /* Pods-Smile TouchID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smile TouchID.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smile TouchID/Pods-Smile TouchID.release.xcconfig"; sourceTree = "<group>"; };
 		9FBF8774998696CCB6711C6C /* Pods-Smile TouchID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smile TouchID.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smile TouchID/Pods-Smile TouchID.debug.xcconfig"; sourceTree = "<group>"; };
 		B7F2205B1B146AE6000BB95B /* Smile TouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smile TouchID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248B176B1B292A3100E992AB /* LocalAuthentication.framework in Frameworks */,
 				518296C51684971AA97FED5C /* libPods-Smile TouchID.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +84,6 @@
 				242F3E761B12F76400AB0AD2 /* SmileMainVC.h */,
 				242F3E771B12F76400AB0AD2 /* SmileMainVC.m */,
 				243C05021B12B0070035E066 /* Main.storyboard */,
-				2403863A1B1DB03400E7259F /* Launch Screen.xib */,
 				243C05051B12B0070035E066 /* Images.xcassets */,
 				243C04F81B12B0070035E066 /* Supporting Files */,
 			);
@@ -119,6 +119,7 @@
 		53946AC874C07FD2EAFB885F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				248B176A1B292A3100E992AB /* LocalAuthentication.framework */,
 				BA2CBBCBB7DE9444C4A4C4E1 /* libPods-Smile TouchID.a */,
 			);
 			name = Frameworks;
@@ -220,7 +221,6 @@
 			files = (
 				B7F220561B146AE6000BB95B /* Main.storyboard in Resources */,
 				B7F220571B146AE6000BB95B /* Images.xcassets in Resources */,
-				2403863B1B1DB03400E7259F /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +413,11 @@
 			baseConfigurationReference = 9FBF8774998696CCB6711C6C /* Pods-Smile TouchID.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TouchID/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Smile TouchID";
 				PROVISIONING_PROFILE = "";
@@ -428,10 +429,11 @@
 			baseConfigurationReference = 4750D20E4CAA18DA1D582D06 /* Pods-Smile TouchID.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TouchID/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Smile TouchID";
 				PROVISIONING_PROFILE = "";

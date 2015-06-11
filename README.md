@@ -32,14 +32,33 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 3. Can customize the color to fit your app.
+##### 3. Can customize the color and touch id icon to fit your app style.
 
 ```
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+[SmileAuthenticator sharedInstance].touchIDIcon = @"my_Touch_ID";
+
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo_color1.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/customize.png)
 
+
+##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
+
+```
+[SmileAuthenticator sharedInstance].passwordLength = 6;
+```
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/passlength.png)
+
+
+##### 5. Support iOS7 and later. 
+
+In iOS7, because Apple had not given the TouchID API, only use Passcode for authentication. 
+
+In iOS7 you should add `LocalAuthentication.framework` to your project and change status to `Optional`.
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/ios7.png)
 
 
 #Theoretical Introduction

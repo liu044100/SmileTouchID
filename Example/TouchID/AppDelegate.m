@@ -21,8 +21,14 @@
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
-    //customize the color to fit your app.
-//    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+    //if you want to customize the password length to 6 or 10, or any number, use this line.
+    [SmileAuthenticator sharedInstance].passwordLength = 6;
+    
+    //if you want to customize the color to fit your app, use this line.
+    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+    
+    //customize touch id icon
+    [SmileAuthenticator sharedInstance].touchIDIcon = @"my_Touch_ID";
     
     return YES;
 }
