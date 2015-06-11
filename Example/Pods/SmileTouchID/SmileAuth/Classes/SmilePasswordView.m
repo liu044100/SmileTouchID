@@ -51,7 +51,7 @@ static CGFloat kDotRadiusConst = 5.0;
 //    CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
     [self.circleColor setStroke];
 
-    NSInteger lineWidth = self.radius/kLineWidthConst;
+    CGFloat lineWidth = self.radius/kLineWidthConst;
     CGFloat outLineRadius = self.radius - lineWidth;
     
     BOOL isOdd = self.count%2;
@@ -153,7 +153,7 @@ static CGFloat kDotRadiusConst = 5.0;
 
 -(CGFloat)spacing{
     
-    return self.radius/2;
+    return self.radius/(self.count/2);
 }
 
 #pragma mark - set up
@@ -163,10 +163,6 @@ static CGFloat kDotRadiusConst = 5.0;
     CGFloat height = CGRectGetHeight(self.bounds);
     CGFloat width = CGRectGetWidth(self.bounds);
 
-    if (height < 50) {
-        NSLog(@"container view height maybe too small.");
-    }
-    
     if (self.count * height + (self.count - 1) * height/4 > width) {
         myRadius = floor((width/(2*self.count + (self.count - 1)/2)));
     } else {

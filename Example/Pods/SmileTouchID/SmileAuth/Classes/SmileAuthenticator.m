@@ -8,6 +8,9 @@
 
 #import "SmileAuthenticator.h"
 
+#define kPasswordLength 4
+#define kTouchIDIcon @"smile_Touch_ID"
+
 static NSString *kDefaultReason = @"Unlock to access";
 static NSString *kKeyChainObjectKey = @"v_Data";
 static NSString *kStoryBoardName = @"SmileSettingVC";
@@ -26,6 +29,25 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     BOOL _didReturnFromBackground;
     BOOL _isShowLogin;
 }
+
+#pragma mark -getter
+
+-(NSInteger)passcodeDigit{
+    if (!_passcodeDigit || _passcodeDigit < 0) {
+        return kPasswordLength;
+    } else {
+        return _passcodeDigit;
+    }
+}
+
+-(NSString *)touchIDIconName{
+    if (!_touchIDIconName.length) {
+        return kTouchIDIcon;
+    } else {
+        return _touchIDIconName;
+    }
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -53,18 +75,15 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         default:
             break;
     }
-    NSLog(@"presentAuthViewController --- %@", reason);
 }
 
 -(void)touchID_OR_PasswordAuthSuccess{
-    NSLog(@"userSuccessAuthentication");
     if ([self.delegate respondsToSelector:@selector(userSuccessAuthentication)]) {
         [self.delegate userSuccessAuthentication];
     }
 }
 
 -(void)touchID_OR_PasswordAuthFail:(NSInteger)failCount{
-    NSLog(@"userFailAuthenticationWithCount: %ld", (long)failCount);
     if ([self.delegate respondsToSelector:@selector(userFailAuthenticationWithCount:)]) {
         [self.delegate userFailAuthenticationWithCount:failCount];
     }
@@ -92,7 +111,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     default:
         break;
     }
-    NSLog(@"presentAuthViewController --- %@", reason);
 }
 
 -(void)presentAuthViewController{
@@ -173,6 +191,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     
     return sharedInstance;
 }
+
 
 -(instancetype)init{
     if (self = [super init]) {

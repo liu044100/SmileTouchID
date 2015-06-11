@@ -1,1 +1,1 @@
-../../../../../SmileAuth/Classes/SmileKeychainWrapper.h
+../../../SmileTouchID/SmileAuth/Classes/SmileKeychainWrapper.h

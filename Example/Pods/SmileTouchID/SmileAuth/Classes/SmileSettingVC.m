@@ -10,15 +10,13 @@
 #import "SmileAuthenticator.h"
 #import "SmilePasswordContainerView.h"
 
-
-static NSString *kUnwindSegueID = @"authReturn";
-
 @interface SmileSettingVC () <UITextFieldDelegate, SmileContainerLayoutDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UIButton *touchIDButton;
 @property (weak, nonatomic) IBOutlet SmilePasswordContainerView *passwordView;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 
 @end
 
@@ -46,7 +44,7 @@ static NSString *kUnwindSegueID = @"authReturn";
 - (IBAction)useTouchID:(id)sender {
     [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
         [[SmileAuthenticator sharedInstance] touchID_OR_PasswordAuthSuccess];
-        self.passwordView.smilePasswordView.dotCount = kPasswordLength;
+        self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(dismissSelf:) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
         self.descLabel.hidden = NO;
@@ -68,38 +66,59 @@ static NSString *kUnwindSegueID = @"authReturn";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if ([SmileAuthenticator sharedInstance].navibarTranslucent) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        [self.navigationController.navigationBar setTranslucent:YES];
+    }
+    
+    
+    if ([SmileAuthenticator sharedInstance].backgroundImage) {
+        self.bgImageView.image = [SmileAuthenticator sharedInstance].backgroundImage;
+    }
+    
     self.passwordView.delegate = self;
     
+    //for tint color
     if ([SmileAuthenticator sharedInstance].tintColor) {
         self.navigationController.navigationBar.tintColor = [SmileAuthenticator sharedInstance].tintColor;
     }
     
-    // Do any additional setup after loading the view.
-    self.descLabel.text = [NSString stringWithFormat:@"Enter %ld digit password", (long)kPasswordLength];
+    //for touchid image
+    UIImage *iconImage = [UIImage imageNamed:[SmileAuthenticator sharedInstance].touchIDIconName];
+    [self.touchIDButton setImage:iconImage forState:UIControlStateNormal];
+    
+    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_DESCRIPTION", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
     
     switch ([SmileAuthenticator sharedInstance].securityType) {
         case INPUT_ONCE:
             
-            self.navigationItem.title = @"Turn off Password";
+            self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_ONCE_TITLE", nil);
             
             break;
             
         case INPUT_TWICE:
             
-            self.navigationItem.title = @"Set Password";
+            self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_TWICE_TITLE", nil);
             
             break;
             
         case INPUT_THREE:
             
-            self.navigationItem.title = @"Change Password";
-            self.descLabel.text = @"Enter your old 4 digit password";
+            self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_THREE_TITLE", nil);
+            self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_2", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
             
             break;
             
         case INPUT_TOUCHID:
             
             self.touchIDButton.hidden = NO;
+            
+            if (![SmileAuthenticator sharedInstance].appLogoName.length) {
+                self.navigationItem.title = NSLocalizedString(@"INPUT_TOUCHID_TITLE", nil);
+            } else {
+                self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[SmileAuthenticator sharedInstance].appLogoName]];
+            }
             
             break;
             
@@ -130,7 +149,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     self.passwordField.delegate = self;
     [self.passwordField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
-    _passLength = kPasswordLength;
+    _passLength =[SmileAuthenticator sharedInstance].passcodeDigit;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,8 +184,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     
     [[SmileAuthenticator sharedInstance] touchID_OR_PasswordAuthFail:_failCount];
     
-    self.descLabel.text = [NSString stringWithFormat:@"%ld Failed Password Attempt. Try again.", (long)_failCount];
-//    self.descLabel.textColor = [self.view tintColor];
+    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_FAILED", nil), (long)_failCount];
 }
 
 -(void)passwordNotMatch{
@@ -176,7 +194,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     [self clearText];
     [self.passwordView.smilePasswordView shakeAnimation];
     
-    self.descLabel.text = @"Password not match. Try again.";
+    self.descLabel.text = NSLocalizedString(@"SMILE_INPUT_NOT_MATCH", nil);
 }
 
 -(void)reEnterPassword{
@@ -185,7 +203,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     
     [self.passwordView.smilePasswordView slideToLeftAnimation];
     
-    self.descLabel.text = [NSString stringWithFormat:@"Re-enter your %ld digit password", (long)kPasswordLength];
+    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_RE-ENTER", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)enterNewPassword{
@@ -193,7 +211,7 @@ static NSString *kUnwindSegueID = @"authReturn";
     
     [self.passwordView.smilePasswordView slideToLeftAnimation];
     
-    self.descLabel.text = [NSString stringWithFormat:@"Enter your new %ld digit password", (long)kPasswordLength];
+    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_1", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)handleINPUT_TOUCHID{

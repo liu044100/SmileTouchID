@@ -1,7 +1,7 @@
 # SmileTouchID
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_s.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_banner.png)
 
 #What can it do for you?
 
@@ -23,7 +23,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 2. Get elegant animation automatically and adaptive UI.
+##### 2. Get elegant animation and adaptive UI automatically.
 
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo1.gif)
@@ -32,14 +32,36 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 3. Can customize the color to fit your app.
+##### 3. Can customize the color，touch id icon and background image to fit your app style. For example, you can customize like the below image.
 
 ```
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+[SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
+[SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
+[SmileAuthenticator sharedInstance].navibarTranslucent = YES;
+[SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
+
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo_color1.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/customize1.png)
 
+
+##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
+
+```
+[SmileAuthenticator sharedInstance].passcodeDigit = 6;
+```
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/passlength.png)
+
+
+##### 5. Support iOS7 and later. 
+
+In iOS7, because Apple had not given the TouchID API to developers, only use Passcode for authentication. 
+
+**For the project that deployment target is iOS7, you should add `LocalAuthentication.framework` to your project and change status to `Optional`.**
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/ios7.png)
 
 
 #Theoretical Introduction
@@ -161,6 +183,49 @@ The delegate name is `AuthenticatorDelegate`. It has four optional method.
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount;
 @end
 ```
+# Localization
+Sorry about it, but you have to do it yourself. Add below line to your `Localizable.strings`. For detail please see the example demo app.
+
+```
+/*
+ UNIVERSAL PARTS
+ */
+"SMILE_REASON" = "Are you device owner?";
+"SMILE_INPUT_FAILED" = "%ld Failed Passcode Attempt. Try again.";
+"SMILE_INPUT_DESCRIPTION" = "Enter %ld digit passcode";
+"SMILE_INPUT_NOT_MATCH" = "Passcode not match. Try again.";
+"SMILE_INPUT_RE-ENTER" = "Re-enter your %ld digit Passcode";
+
+/*
+ INPUT_TOUCHID
+ */
+"SMILE_INPUT_TOUCHID_TITLE" = "Enter Passcode";
+
+
+/*
+ INPUT_ONCE
+ */
+"SMILE_INPUT_ONCE_TITLE" = "Turn off Passcode";
+
+
+/*
+ INPUT_TWICE
+ */
+"SMILE_INPUT_TWICE_TITLE" = "Set Passcode";
+
+
+/*
+ INPUT_THREE
+ */
+"SMILE_INPUT_THREE_TITLE" = "Change Passcode";
+"SMILE_INPUT_THREE_STEP_1" = "Enter your new %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_2" = "Enter your old %ld digit Passcode";
+
+```
+
+# Contributions
+
+* Warmly welcome to submit a pull request.
 
 # Contact
 
