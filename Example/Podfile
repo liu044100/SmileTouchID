@@ -2,7 +2,8 @@ platform :ios, '7.0'
 
 target 'Smile TouchID' do
 
-#pod 'SmileTouchID', :path => '~/Documents/my_practice/security/SmileTouchID'
+#pod 'SmileTouchID', :path => '~/Documents/developer_learning/Security/SmileTouchID'
+
 pod 'SmileTouchID'
 
 end
