@@ -115,7 +115,7 @@
             self.touchIDButton.hidden = NO;
             
             if (![SmileAuthenticator sharedInstance].appLogoName.length) {
-                self.navigationItem.title = NSLocalizedString(@"INPUT_TOUCHID_TITLE", nil);
+                self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_TOUCHID_TITLE", nil);
             } else {
                 self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[SmileAuthenticator sharedInstance].appLogoName]];
             }
