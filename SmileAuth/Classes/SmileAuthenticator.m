@@ -186,7 +186,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SmileAuthenticator alloc] init];
+        sharedInstance = [[self alloc] init];
     });
     
     return sharedInstance;
