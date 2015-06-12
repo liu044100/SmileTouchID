@@ -7,274 +7,224 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0194957117D85E3677A19C4E /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566391CCBB0D85AE91029A6E /* SmilePasswordContainerView.m */; };
-		06C7DE71CC26250C5F6039FC /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DCEB564433722768D50538 /* SmileAuthenticator.m */; };
-		1432BA001511CB9FF4D20171 /* Pods-Smile TouchID-SmileTouchID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF89ED6C241FC0C8B1DE523 /* Pods-Smile TouchID-SmileTouchID-dummy.m */; };
-		15F9CD7E6D678F02C30F9A2A /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C490F397ABC27ABD2FF134D /* SmileKeychainWrapper.m */; };
-		1B7A2A47FC3D95EEF04D3754 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57194221415ECC8BC68442B8 /* Foundation.framework */; };
-		1FC8EC23E19063A32072392E /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8B71BE4F6CA891EAC3FA /* SmileSettingVC.m */; };
-		2366BE3FC7254F1C0EB1A267 /* Pods-Smile TouchID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF64607D1AE10FA8F785355C /* Pods-Smile TouchID-dummy.m */; };
-		31587D695681A7B60A1EF3AF /* SmileKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F6BEFFCB1A09A871EB577001 /* SmileKeychainWrapper.h */; };
-		35C625F0FF30929E0AF56267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0275D75E4030B74E0E80D69 /* UIKit.framework */; };
-		6402AE9B01E7765A817020F5 /* SmileAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = FF9259EE0A6DBDD844DA46A1 /* SmileAuthenticator.h */; };
-		685F027EF4DCC8A12523077C /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1153CCDD929642637D7C3DD /* SmilePasswordView.m */; };
-		7F6D20ECFE415463168C654A /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF45E4394DA4541C8AE7A87D /* LocalAuthentication.framework */; };
-		E352B9FBB6D016399107FAA6 /* SmilePasswordView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5676B9FA6DEA1DDBD354DD /* SmilePasswordView.h */; };
-		E6B245A731B2709138CE28FE /* SmilePasswordContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D8D3D25420B914EB636FD24 /* SmilePasswordContainerView.h */; };
-		F3F5D58BD05843A4FA42D6C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57194221415ECC8BC68442B8 /* Foundation.framework */; };
-		F45ADA1294A56840ED8DDFDF /* SmileSettingVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 414D16D5FEC82309A7FD558B /* SmileSettingVC.h */; };
+		30C4AB08DF548508FC9A5356 /* SmileAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = D7215D2F0F3FFEFE455E51A7 /* SmileAuthenticator.m */; };
+		344E522CB25B411D367DBA34 /* SmilePasswordContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D34D17ACB7BC2BD50063F /* SmilePasswordContainerView.h */; };
+		3DA44070E7FE2BEDC924D418 /* SmilePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD917CA8C6B8E15998511AA /* SmilePasswordView.m */; };
+		5E980143EB46B1F71EF6AB3D /* SmilePasswordView.h in Headers */ = {isa = PBXBuildFile; fileRef = 082E54636FBC4C0A3FAA87D4 /* SmilePasswordView.h */; };
+		90700994AD6AD0AE6D284792 /* SmilePasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D216450AE4511461EBF4E /* SmilePasswordContainerView.m */; };
+		934D72313F361EE16193D1EF /* SmileSettingVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A673AD49933B55A86F558C /* SmileSettingVC.h */; };
+		9AE5CC4C8AF63A8A62587460 /* SmileAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFF889DAC6509314893D89A /* SmileAuthenticator.h */; };
+		A3528DFD0D0B86E9BE444833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E6A1EC56863C3907DBBB05 /* Foundation.framework */; };
+		AE73065849E6321684126831 /* SmileKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DD1C0FB9612C613AC4C2453 /* SmileKeychainWrapper.h */; };
+		B7949078F87085B007861791 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E546B9ED8D178E1EE481F698 /* LocalAuthentication.framework */; };
+		CAE4CBD8975A87E682F00AEB /* Pods-Smile TouchID-SmileTouchID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E14DC52EECEB7DBF8DE839D /* Pods-Smile TouchID-SmileTouchID-dummy.m */; };
+		DA43021FCA4528EFD8330A10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD2D1482ACA6751A4DE4197 /* UIKit.framework */; };
+		E259930F78984C797FEDBC8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E6A1EC56863C3907DBBB05 /* Foundation.framework */; };
+		E96D007FE272C142866EC47B /* SmileSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93F37F2946CA39A8754F14 /* SmileSettingVC.m */; };
+		ED342E13DE564AE93CCC84E9 /* SmileKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4935E66054DA44AB8C18C60 /* SmileKeychainWrapper.m */; };
+		FBCD56720E81B7E7393A0D3B /* Pods-Smile TouchID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5400BD15234D0FD1A9945AB5 /* Pods-Smile TouchID-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ED9287C66F2DCCA93B2611F8 /* PBXContainerItemProxy */ = {
+		EE457BA4E5AB9D453644F577 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EF9C234C981109E8F7EF8327 /* Project object */;
+			containerPortal = DFA0CDB698E643A316E3B523 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 276AEADBC2D81FE117D6247A;
+			remoteGlobalIDString = 2B40EE5B6DF867CEBB64EE1E;
 			remoteInfo = "Pods-Smile TouchID-SmileTouchID";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EF89ED6C241FC0C8B1DE523 /* Pods-Smile TouchID-SmileTouchID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smile TouchID-SmileTouchID-dummy.m"; sourceTree = "<group>"; };
-		1CC745CB8E5CCEFEEA34F303 /* Pods-Smile TouchID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID.release.xcconfig"; sourceTree = "<group>"; };
-		22B7D2E87DEE644DD66D32B3 /* Pods-Smile TouchID-SmileTouchID-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smile TouchID-SmileTouchID-prefix.pch"; sourceTree = "<group>"; };
-		2575E02B01F9F668946BBBB2 /* Pods-Smile TouchID-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smile TouchID-acknowledgements.plist"; sourceTree = "<group>"; };
-		2D8D3D25420B914EB636FD24 /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmilePasswordContainerView.h; sourceTree = "<group>"; };
-		3E8E25C416CD0306793B1A4C /* smile_Touch_ID@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "smile_Touch_ID@2x.png"; sourceTree = "<group>"; };
-		414D16D5FEC82309A7FD558B /* SmileSettingVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmileSettingVC.h; sourceTree = "<group>"; };
-		4931AC3302417CAD4F608FB1 /* libPods-Smile TouchID-SmileTouchID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smile TouchID-SmileTouchID.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B2023962A4AB439A21128E7 /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = SmileSettingVC.storyboard; sourceTree = "<group>"; };
-		566391CCBB0D85AE91029A6E /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordContainerView.m; sourceTree = "<group>"; };
-		57194221415ECC8BC68442B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		621E8B71BE4F6CA891EAC3FA /* SmileSettingVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmileSettingVC.m; sourceTree = "<group>"; };
-		6235C9E2CA5AF98DBBDB60CC /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID-SmileTouchID-Private.xcconfig"; sourceTree = "<group>"; };
-		80829B1756DBFA43DCFE8378 /* Pods-Smile TouchID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID.debug.xcconfig"; sourceTree = "<group>"; };
-		85576857C1548AD9E2037A98 /* libPods-Smile TouchID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smile TouchID.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85DCEB564433722768D50538 /* SmileAuthenticator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmileAuthenticator.m; sourceTree = "<group>"; };
-		8A98F48270B9F1E1FF66B2E3 /* smile_Touch_ID@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "smile_Touch_ID@3x.png"; sourceTree = "<group>"; };
-		995ACB43FADDF2FBEF4B9B5F /* Pods-Smile TouchID-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smile TouchID-environment.h"; sourceTree = "<group>"; };
-		9C490F397ABC27ABD2FF134D /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmileKeychainWrapper.m; sourceTree = "<group>"; };
-		A1153CCDD929642637D7C3DD /* SmilePasswordView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmilePasswordView.m; sourceTree = "<group>"; };
-		C0275D75E4030B74E0E80D69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D19B017480727AA55DD38A5D /* Pods-Smile TouchID-SmileTouchID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID-SmileTouchID.xcconfig"; sourceTree = "<group>"; };
-		DC5676B9FA6DEA1DDBD354DD /* SmilePasswordView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmilePasswordView.h; sourceTree = "<group>"; };
-		DF64607D1AE10FA8F785355C /* Pods-Smile TouchID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smile TouchID-dummy.m"; sourceTree = "<group>"; };
-		E8009444471FD45375789CC2 /* Pods-Smile TouchID-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smile TouchID-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EF88BA6E0197461B344B4518 /* Pods-Smile TouchID-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smile TouchID-resources.sh"; sourceTree = "<group>"; };
-		F6BEFFCB1A09A871EB577001 /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmileKeychainWrapper.h; sourceTree = "<group>"; };
-		FF45E4394DA4541C8AE7A87D /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
-		FF6FE446A96B236F91B3582C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FF9259EE0A6DBDD844DA46A1 /* SmileAuthenticator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmileAuthenticator.h; sourceTree = "<group>"; };
+		082E54636FBC4C0A3FAA87D4 /* SmilePasswordView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SmilePasswordView.h; path = SmileAuth/Classes/SmilePasswordView.h; sourceTree = "<group>"; };
+		08E6A1EC56863C3907DBBB05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		14A673AD49933B55A86F558C /* SmileSettingVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SmileSettingVC.h; path = SmileAuth/Classes/SmileSettingVC.h; sourceTree = "<group>"; };
+		182BA856AAFE36DCCCE57B3A /* SmileSettingVC.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = SmileSettingVC.storyboard; path = SmileAuth/Assets/SmileSettingVC.storyboard; sourceTree = "<group>"; };
+		25BCA7CFB6FD77A82A516FD3 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		27670EED9D66DAD6066986B2 /* Pods-Smile TouchID-SmileTouchID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID-SmileTouchID.xcconfig"; sourceTree = "<group>"; };
+		2C54AA5308DB1F4682862B5E /* smile_Touch_ID@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "smile_Touch_ID@2x.png"; path = "SmileAuth/Assets/smile_Touch_ID@2x.png"; sourceTree = "<group>"; };
+		2CFF889DAC6509314893D89A /* SmileAuthenticator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SmileAuthenticator.h; path = SmileAuth/Classes/SmileAuthenticator.h; sourceTree = "<group>"; };
+		34981714C9299BCF95B43365 /* Pods-Smile TouchID-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smile TouchID-environment.h"; sourceTree = "<group>"; };
+		375D02A5B1155CCB56B127D9 /* smile_Touch_ID@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "smile_Touch_ID@3x.png"; path = "SmileAuth/Assets/smile_Touch_ID@3x.png"; sourceTree = "<group>"; };
+		3D88996C116D33929986A24C /* Pods-Smile TouchID-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smile TouchID-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D93F37F2946CA39A8754F14 /* SmileSettingVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SmileSettingVC.m; path = SmileAuth/Classes/SmileSettingVC.m; sourceTree = "<group>"; };
+		3DD2D1482ACA6751A4DE4197 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4AA07410EA67BBE13A195B6A /* libPods-Smile TouchID-SmileTouchID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smile TouchID-SmileTouchID.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5400BD15234D0FD1A9945AB5 /* Pods-Smile TouchID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smile TouchID-dummy.m"; sourceTree = "<group>"; };
+		5F2EA047AAC1BEE2F15E084D /* Pods-Smile TouchID-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smile TouchID-resources.sh"; sourceTree = "<group>"; };
+		6BB690308F2D2237D5D03FE1 /* libPods-Smile TouchID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smile TouchID.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD1C0FB9612C613AC4C2453 /* SmileKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SmileKeychainWrapper.h; path = SmileAuth/Classes/SmileKeychainWrapper.h; sourceTree = "<group>"; };
+		6E14DC52EECEB7DBF8DE839D /* Pods-Smile TouchID-SmileTouchID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smile TouchID-SmileTouchID-dummy.m"; sourceTree = "<group>"; };
+		719D34D17ACB7BC2BD50063F /* SmilePasswordContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SmilePasswordContainerView.h; path = SmileAuth/Classes/SmilePasswordContainerView.h; sourceTree = "<group>"; };
+		821607891EABD85033FC45D9 /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID-SmileTouchID-Private.xcconfig"; sourceTree = "<group>"; };
+		A75D924B1742C3177F3F61B5 /* Pods-Smile TouchID-SmileTouchID-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smile TouchID-SmileTouchID-prefix.pch"; sourceTree = "<group>"; };
+		B53B90740E34A9119936FC7D /* Pods-Smile TouchID-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smile TouchID-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4935E66054DA44AB8C18C60 /* SmileKeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SmileKeychainWrapper.m; path = SmileAuth/Classes/SmileKeychainWrapper.m; sourceTree = "<group>"; };
+		C9B46E35BAFDFE8885CFD177 /* Pods-Smile TouchID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID.release.xcconfig"; sourceTree = "<group>"; };
+		D0CE1B08CB45B1736BE319D6 /* Pods-Smile TouchID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smile TouchID.debug.xcconfig"; sourceTree = "<group>"; };
+		D7215D2F0F3FFEFE455E51A7 /* SmileAuthenticator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SmileAuthenticator.m; path = SmileAuth/Classes/SmileAuthenticator.m; sourceTree = "<group>"; };
+		E546B9ED8D178E1EE481F698 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
+		F71D216450AE4511461EBF4E /* SmilePasswordContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SmilePasswordContainerView.m; path = SmileAuth/Classes/SmilePasswordContainerView.m; sourceTree = "<group>"; };
+		FBD917CA8C6B8E15998511AA /* SmilePasswordView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SmilePasswordView.m; path = SmileAuth/Classes/SmilePasswordView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F6753429074EF8798D8F2ED /* Frameworks */ = {
+		921B97A0B831E18C05A7C234 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7A2A47FC3D95EEF04D3754 /* Foundation.framework in Frameworks */,
-				7F6D20ECFE415463168C654A /* LocalAuthentication.framework in Frameworks */,
-				35C625F0FF30929E0AF56267 /* UIKit.framework in Frameworks */,
+				E259930F78984C797FEDBC8D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE58AA7DBAA224BDBCCFB571 /* Frameworks */ = {
+		EADBD4FAE10D39910EEE41A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F5D58BD05843A4FA42D6C6 /* Foundation.framework in Frameworks */,
+				A3528DFD0D0B86E9BE444833 /* Foundation.framework in Frameworks */,
+				B7949078F87085B007861791 /* LocalAuthentication.framework in Frameworks */,
+				DA43021FCA4528EFD8330A10 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B6E8B3AE699E99BF9B1C2A5 /* Support Files */ = {
+		0B59CF221B802524AE886D99 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D19B017480727AA55DD38A5D /* Pods-Smile TouchID-SmileTouchID.xcconfig */,
-				6235C9E2CA5AF98DBBDB60CC /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */,
-				0EF89ED6C241FC0C8B1DE523 /* Pods-Smile TouchID-SmileTouchID-dummy.m */,
-				22B7D2E87DEE644DD66D32B3 /* Pods-Smile TouchID-SmileTouchID-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Pods-Smile TouchID-SmileTouchID";
-			sourceTree = "<group>";
-		};
-		567227C73BEF7F1E146997FC /* SmileAuth */ = {
-			isa = PBXGroup;
-			children = (
-				9F8D80BFB42F3BDF4365962F /* Assets */,
-			);
-			path = SmileAuth;
-			sourceTree = "<group>";
-		};
-		6DECCAFAB9042A57F4585444 /* SmileAuth */ = {
-			isa = PBXGroup;
-			children = (
-				97BED97A636253CCC2184A3D /* Classes */,
-			);
-			path = SmileAuth;
-			sourceTree = "<group>";
-		};
-		7155B989983A99107ABF463B /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				989B6EC59713B2EA5EE57735 /* Pods-Smile TouchID */,
+				5D7E053502E614ADF86655B5 /* Pods-Smile TouchID */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8BA940EE1104502041BF23CA /* Products */ = {
+		19B4DE324C8ACFCC31B01B87 /* SmileTouchID */ = {
 			isa = PBXGroup;
 			children = (
-				85576857C1548AD9E2037A98 /* libPods-Smile TouchID.a */,
-				4931AC3302417CAD4F608FB1 /* libPods-Smile TouchID-SmileTouchID.a */,
+				2CFF889DAC6509314893D89A /* SmileAuthenticator.h */,
+				D7215D2F0F3FFEFE455E51A7 /* SmileAuthenticator.m */,
+				6DD1C0FB9612C613AC4C2453 /* SmileKeychainWrapper.h */,
+				C4935E66054DA44AB8C18C60 /* SmileKeychainWrapper.m */,
+				719D34D17ACB7BC2BD50063F /* SmilePasswordContainerView.h */,
+				F71D216450AE4511461EBF4E /* SmilePasswordContainerView.m */,
+				082E54636FBC4C0A3FAA87D4 /* SmilePasswordView.h */,
+				FBD917CA8C6B8E15998511AA /* SmilePasswordView.m */,
+				14A673AD49933B55A86F558C /* SmileSettingVC.h */,
+				3D93F37F2946CA39A8754F14 /* SmileSettingVC.m */,
+				99599FE1425914F2E06DB1A0 /* Resources */,
+				DD76E9564D7D3CE25D53FDE7 /* Support Files */,
+			);
+			path = SmileTouchID;
+			sourceTree = "<group>";
+		};
+		1D0FE41F87395199150608A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4A7FF99646A6A6A8B8280D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FEC6347129FE0F4CA3AFAA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BB690308F2D2237D5D03FE1 /* libPods-Smile TouchID.a */,
+				4AA07410EA67BBE13A195B6A /* libPods-Smile TouchID-SmileTouchID.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97BED97A636253CCC2184A3D /* Classes */ = {
+		5D7E053502E614ADF86655B5 /* Pods-Smile TouchID */ = {
 			isa = PBXGroup;
 			children = (
-				FF9259EE0A6DBDD844DA46A1 /* SmileAuthenticator.h */,
-				85DCEB564433722768D50538 /* SmileAuthenticator.m */,
-				F6BEFFCB1A09A871EB577001 /* SmileKeychainWrapper.h */,
-				9C490F397ABC27ABD2FF134D /* SmileKeychainWrapper.m */,
-				2D8D3D25420B914EB636FD24 /* SmilePasswordContainerView.h */,
-				566391CCBB0D85AE91029A6E /* SmilePasswordContainerView.m */,
-				DC5676B9FA6DEA1DDBD354DD /* SmilePasswordView.h */,
-				A1153CCDD929642637D7C3DD /* SmilePasswordView.m */,
-				414D16D5FEC82309A7FD558B /* SmileSettingVC.h */,
-				621E8B71BE4F6CA891EAC3FA /* SmileSettingVC.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		989B6EC59713B2EA5EE57735 /* Pods-Smile TouchID */ = {
-			isa = PBXGroup;
-			children = (
-				E8009444471FD45375789CC2 /* Pods-Smile TouchID-acknowledgements.markdown */,
-				2575E02B01F9F668946BBBB2 /* Pods-Smile TouchID-acknowledgements.plist */,
-				DF64607D1AE10FA8F785355C /* Pods-Smile TouchID-dummy.m */,
-				995ACB43FADDF2FBEF4B9B5F /* Pods-Smile TouchID-environment.h */,
-				EF88BA6E0197461B344B4518 /* Pods-Smile TouchID-resources.sh */,
-				80829B1756DBFA43DCFE8378 /* Pods-Smile TouchID.debug.xcconfig */,
-				1CC745CB8E5CCEFEEA34F303 /* Pods-Smile TouchID.release.xcconfig */,
+				3D88996C116D33929986A24C /* Pods-Smile TouchID-acknowledgements.markdown */,
+				B53B90740E34A9119936FC7D /* Pods-Smile TouchID-acknowledgements.plist */,
+				5400BD15234D0FD1A9945AB5 /* Pods-Smile TouchID-dummy.m */,
+				34981714C9299BCF95B43365 /* Pods-Smile TouchID-environment.h */,
+				5F2EA047AAC1BEE2F15E084D /* Pods-Smile TouchID-resources.sh */,
+				D0CE1B08CB45B1736BE319D6 /* Pods-Smile TouchID.debug.xcconfig */,
+				C9B46E35BAFDFE8885CFD177 /* Pods-Smile TouchID.release.xcconfig */,
 			);
 			name = "Pods-Smile TouchID";
 			path = "Target Support Files/Pods-Smile TouchID";
 			sourceTree = "<group>";
 		};
-		9F8D80BFB42F3BDF4365962F /* Assets */ = {
+		8B4A7FF99646A6A6A8B8280D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4B2023962A4AB439A21128E7 /* SmileSettingVC.storyboard */,
-				3E8E25C416CD0306793B1A4C /* smile_Touch_ID@2x.png */,
-				8A98F48270B9F1E1FF66B2E3 /* smile_Touch_ID@3x.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		B2BE7A542E42D6C0A93C85B0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EAF3F849A17E39E4D28D0849 /* SmileTouchID */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		B7EF96EADE15A4502BD720A5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D3CBCC08BEDC56FFBFE0B2D2 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D3CBCC08BEDC56FFBFE0B2D2 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				57194221415ECC8BC68442B8 /* Foundation.framework */,
-				FF45E4394DA4541C8AE7A87D /* LocalAuthentication.framework */,
-				C0275D75E4030B74E0E80D69 /* UIKit.framework */,
+				08E6A1EC56863C3907DBBB05 /* Foundation.framework */,
+				E546B9ED8D178E1EE481F698 /* LocalAuthentication.framework */,
+				3DD2D1482ACA6751A4DE4197 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D51A2E137AA14248045692EF /* Resources */ = {
+		99599FE1425914F2E06DB1A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				567227C73BEF7F1E146997FC /* SmileAuth */,
+				182BA856AAFE36DCCCE57B3A /* SmileSettingVC.storyboard */,
+				2C54AA5308DB1F4682862B5E /* smile_Touch_ID@2x.png */,
+				375D02A5B1155CCB56B127D9 /* smile_Touch_ID@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		E94894CF941C5ACA5BC17BB2 = {
+		B60A825398ACF28648819882 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FF6FE446A96B236F91B3582C /* Podfile */,
-				B2BE7A542E42D6C0A93C85B0 /* Development Pods */,
-				B7EF96EADE15A4502BD720A5 /* Frameworks */,
-				8BA940EE1104502041BF23CA /* Products */,
-				7155B989983A99107ABF463B /* Targets Support Files */,
+				19B4DE324C8ACFCC31B01B87 /* SmileTouchID */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		EAF3F849A17E39E4D28D0849 /* SmileTouchID */ = {
+		DD76E9564D7D3CE25D53FDE7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D51A2E137AA14248045692EF /* Resources */,
-				6DECCAFAB9042A57F4585444 /* SmileAuth */,
-				2B6E8B3AE699E99BF9B1C2A5 /* Support Files */,
+				27670EED9D66DAD6066986B2 /* Pods-Smile TouchID-SmileTouchID.xcconfig */,
+				821607891EABD85033FC45D9 /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */,
+				6E14DC52EECEB7DBF8DE839D /* Pods-Smile TouchID-SmileTouchID-dummy.m */,
+				A75D924B1742C3177F3F61B5 /* Pods-Smile TouchID-SmileTouchID-prefix.pch */,
 			);
-			name = SmileTouchID;
-			path = "/Users/ryu-ushin/Documents/my_practice/security/SmileTouchID";
-			sourceTree = "<absolute>";
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Smile TouchID-SmileTouchID";
+			sourceTree = "<group>";
+		};
+		E96598D3CFDBDA796875493D = {
+			isa = PBXGroup;
+			children = (
+				25BCA7CFB6FD77A82A516FD3 /* Podfile */,
+				1D0FE41F87395199150608A2 /* Frameworks */,
+				B60A825398ACF28648819882 /* Pods */,
+				3FEC6347129FE0F4CA3AFAA7 /* Products */,
+				0B59CF221B802524AE886D99 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		06F88CAE3E75696C4D0AD615 /* Headers */ = {
+		526EFBDB24BBB326D33B3FA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6402AE9B01E7765A817020F5 /* SmileAuthenticator.h in Headers */,
-				31587D695681A7B60A1EF3AF /* SmileKeychainWrapper.h in Headers */,
-				E6B245A731B2709138CE28FE /* SmilePasswordContainerView.h in Headers */,
-				E352B9FBB6D016399107FAA6 /* SmilePasswordView.h in Headers */,
-				F45ADA1294A56840ED8DDFDF /* SmileSettingVC.h in Headers */,
+				9AE5CC4C8AF63A8A62587460 /* SmileAuthenticator.h in Headers */,
+				AE73065849E6321684126831 /* SmileKeychainWrapper.h in Headers */,
+				344E522CB25B411D367DBA34 /* SmilePasswordContainerView.h in Headers */,
+				5E980143EB46B1F71EF6AB3D /* SmilePasswordView.h in Headers */,
+				934D72313F361EE16193D1EF /* SmileSettingVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1F98304612C8689E542298C0 /* Pods-Smile TouchID */ = {
+		2B40EE5B6DF867CEBB64EE1E /* Pods-Smile TouchID-SmileTouchID */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EA8D47EC8A8C3098987E322 /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID" */;
+			buildConfigurationList = 28EE805500283B6C52F5C89E /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID-SmileTouchID" */;
 			buildPhases = (
-				4CAA33C048B8F24415FE680F /* Sources */,
-				FE58AA7DBAA224BDBCCFB571 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AB4F9731095A9BEA0B6F283 /* PBXTargetDependency */,
-			);
-			name = "Pods-Smile TouchID";
-			productName = "Pods-Smile TouchID";
-			productReference = 85576857C1548AD9E2037A98 /* libPods-Smile TouchID.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		276AEADBC2D81FE117D6247A /* Pods-Smile TouchID-SmileTouchID */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5A15335B921FF38E7B0B53D /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID-SmileTouchID" */;
-			buildPhases = (
-				072A6442A8A3DAC58F678B34 /* Sources */,
-				1F6753429074EF8798D8F2ED /* Frameworks */,
-				06F88CAE3E75696C4D0AD615 /* Headers */,
+				62194A183390B0B01F3518FC /* Sources */,
+				EADBD4FAE10D39910EEE41A9 /* Frameworks */,
+				526EFBDB24BBB326D33B3FA9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -282,88 +232,105 @@
 			);
 			name = "Pods-Smile TouchID-SmileTouchID";
 			productName = "Pods-Smile TouchID-SmileTouchID";
-			productReference = 4931AC3302417CAD4F608FB1 /* libPods-Smile TouchID-SmileTouchID.a */;
+			productReference = 4AA07410EA67BBE13A195B6A /* libPods-Smile TouchID-SmileTouchID.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CEABDAC4CB275647368C8DA1 /* Pods-Smile TouchID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A932B62602A9E7A0EE4DB0B9 /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID" */;
+			buildPhases = (
+				E40E95CB98052110672FDA7B /* Sources */,
+				921B97A0B831E18C05A7C234 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A741FE099FCAB7E5BC0D1C4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Smile TouchID";
+			productName = "Pods-Smile TouchID";
+			productReference = 6BB690308F2D2237D5D03FE1 /* libPods-Smile TouchID.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EF9C234C981109E8F7EF8327 /* Project object */ = {
+		DFA0CDB698E643A316E3B523 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = FAB862CCC27964663301BA96 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = D47CA170CDBBF93B2C5A8F19 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E94894CF941C5ACA5BC17BB2;
-			productRefGroup = 8BA940EE1104502041BF23CA /* Products */;
+			mainGroup = E96598D3CFDBDA796875493D;
+			productRefGroup = 3FEC6347129FE0F4CA3AFAA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F98304612C8689E542298C0 /* Pods-Smile TouchID */,
-				276AEADBC2D81FE117D6247A /* Pods-Smile TouchID-SmileTouchID */,
+				CEABDAC4CB275647368C8DA1 /* Pods-Smile TouchID */,
+				2B40EE5B6DF867CEBB64EE1E /* Pods-Smile TouchID-SmileTouchID */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		072A6442A8A3DAC58F678B34 /* Sources */ = {
+		62194A183390B0B01F3518FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1432BA001511CB9FF4D20171 /* Pods-Smile TouchID-SmileTouchID-dummy.m in Sources */,
-				06C7DE71CC26250C5F6039FC /* SmileAuthenticator.m in Sources */,
-				15F9CD7E6D678F02C30F9A2A /* SmileKeychainWrapper.m in Sources */,
-				0194957117D85E3677A19C4E /* SmilePasswordContainerView.m in Sources */,
-				685F027EF4DCC8A12523077C /* SmilePasswordView.m in Sources */,
-				1FC8EC23E19063A32072392E /* SmileSettingVC.m in Sources */,
+				CAE4CBD8975A87E682F00AEB /* Pods-Smile TouchID-SmileTouchID-dummy.m in Sources */,
+				30C4AB08DF548508FC9A5356 /* SmileAuthenticator.m in Sources */,
+				ED342E13DE564AE93CCC84E9 /* SmileKeychainWrapper.m in Sources */,
+				90700994AD6AD0AE6D284792 /* SmilePasswordContainerView.m in Sources */,
+				3DA44070E7FE2BEDC924D418 /* SmilePasswordView.m in Sources */,
+				E96D007FE272C142866EC47B /* SmileSettingVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CAA33C048B8F24415FE680F /* Sources */ = {
+		E40E95CB98052110672FDA7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2366BE3FC7254F1C0EB1A267 /* Pods-Smile TouchID-dummy.m in Sources */,
+				FBCD56720E81B7E7393A0D3B /* Pods-Smile TouchID-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5AB4F9731095A9BEA0B6F283 /* PBXTargetDependency */ = {
+		1A741FE099FCAB7E5BC0D1C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Smile TouchID-SmileTouchID";
-			target = 276AEADBC2D81FE117D6247A /* Pods-Smile TouchID-SmileTouchID */;
-			targetProxy = ED9287C66F2DCCA93B2611F8 /* PBXContainerItemProxy */;
+			target = 2B40EE5B6DF867CEBB64EE1E /* Pods-Smile TouchID-SmileTouchID */;
+			targetProxy = EE457BA4E5AB9D453644F577 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		014A13331596FE776D608F6C /* Debug */ = {
+		2E61A2290461C671F6BD6A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6235C9E2CA5AF98DBBDB60CC /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */;
+			baseConfigurationReference = C9B46E35BAFDFE8885CFD177 /* Pods-Smile TouchID.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Smile TouchID-SmileTouchID/Pods-Smile TouchID-SmileTouchID-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		036862FCD21BAC2667C069BB /* Release */ = {
+		38968A44B31DF9B40D3312FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6235C9E2CA5AF98DBBDB60CC /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */;
+			baseConfigurationReference = 821607891EABD85033FC45D9 /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Smile TouchID-SmileTouchID/Pods-Smile TouchID-SmileTouchID-prefix.pch";
@@ -377,7 +344,39 @@
 			};
 			name = Release;
 		};
-		4B8A899EDB17184DF3DF4747 /* Release */ = {
+		3F2AC2B059E2200998F97077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CE1B08CB45B1736BE319D6 /* Pods-Smile TouchID.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		85A834B578E82500B13970B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821607891EABD85033FC45D9 /* Pods-Smile TouchID-SmileTouchID-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Smile TouchID-SmileTouchID/Pods-Smile TouchID-SmileTouchID-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BD2779F90DF91167CC0FEF85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,7 +410,7 @@
 			};
 			name = Release;
 		};
-		8AA36AFE99F5A3F7F015926F /* Debug */ = {
+		E5D6DAF00FAA2E78224F536A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -450,69 +449,37 @@
 			};
 			name = Debug;
 		};
-		CDAA2AD55CC203298A88E0A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC745CB8E5CCEFEEA34F303 /* Pods-Smile TouchID.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E3E12965F4E38201925C304D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80829B1756DBFA43DCFE8378 /* Pods-Smile TouchID.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EA8D47EC8A8C3098987E322 /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID" */ = {
+		28EE805500283B6C52F5C89E /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID-SmileTouchID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3E12965F4E38201925C304D /* Debug */,
-				CDAA2AD55CC203298A88E0A0 /* Release */,
+				85A834B578E82500B13970B7 /* Debug */,
+				38968A44B31DF9B40D3312FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5A15335B921FF38E7B0B53D /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID-SmileTouchID" */ = {
+		A932B62602A9E7A0EE4DB0B9 /* Build configuration list for PBXNativeTarget "Pods-Smile TouchID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				014A13331596FE776D608F6C /* Debug */,
-				036862FCD21BAC2667C069BB /* Release */,
+				3F2AC2B059E2200998F97077 /* Debug */,
+				2E61A2290461C671F6BD6A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAB862CCC27964663301BA96 /* Build configuration list for PBXProject "Pods" */ = {
+		D47CA170CDBBF93B2C5A8F19 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AA36AFE99F5A3F7F015926F /* Debug */,
-				4B8A899EDB17184DF3DF4747 /* Release */,
+				E5D6DAF00FAA2E78224F536A /* Debug */,
+				BD2779F90DF91167CC0FEF85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EF9C234C981109E8F7EF8327 /* Project object */;
+	rootObject = DFA0CDB698E643A316E3B523 /* Project object */;
 }
