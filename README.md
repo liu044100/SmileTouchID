@@ -1,4 +1,10 @@
 # SmileTouchID
+
+[![GitHub Issues](http://img.shields.io/github/issues/liu044100/SmileTouchID.svg?style=flat)](https://github.com/liu044100/SmileTouchID/issues)
+[![Version](https://img.shields.io/cocoapods/v/SmileTouchID.svg?style=flat)](http://cocoadocs.org/docsets/SmileTouchID)
+[![License](https://img.shields.io/cocoapods/l/SmileTouchID.svg?style=flat)](http://cocoadocs.org/docsets/SmileTouchID)
+[![Platform](https://img.shields.io/cocoapods/p/SmileTouchID.svg?style=flat)](http://cocoadocs.org/docsets/SmileTouchID)
+
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_banner_s.png)
@@ -58,10 +64,6 @@ if ([SmileAuthenticator hasPassword]) {
 ##### 5. Support iOS7 and later. 
 
 In iOS7, because Apple had not given the TouchID API to developers, only use Passcode for authentication. 
-
-**For the project that deployment target is iOS7, you should add `LocalAuthentication.framework` to your project and change status to `Optional`.**
-
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/ios7.png)
 
 
 #Theoretical Introduction
