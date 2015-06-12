@@ -86,14 +86,14 @@ Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present
 
 #How to use it for your project?
 
-**Step 1.** SmileTouchID is available through use Pods. To install
+**Step 1.** SmileTouchID is available through use [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```
-pod 'SmileTouchID', :git => 'https://github.com/liu044100/SmileTouchID.git'
+pod 'SmileTouchID'
 
 ```
-
+Or you can drag the `SmileAuth` fold to your project.
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add below line to `didFinishLaunchingWithOptions`.
 
