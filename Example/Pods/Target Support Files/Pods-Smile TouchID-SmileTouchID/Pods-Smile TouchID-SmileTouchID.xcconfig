@@ -1,1 +1,1 @@
-PODS_SMILE_TOUCHID_SMILETOUCHID_OTHER_LDFLAGS = -framework "LocalAuthentication" -framework "UIKit"
+PODS_SMILE_TOUCHID_SMILETOUCHID_OTHER_LDFLAGS = -framework "UIKit" -weak_framework "LocalAuthentication"

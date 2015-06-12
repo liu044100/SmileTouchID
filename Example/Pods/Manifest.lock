@@ -1,10 +1,10 @@
 PODS:
-  - SmileTouchID (0.0.5)
+  - SmileTouchID (0.0.6)
 
 DEPENDENCIES:
   - SmileTouchID
 
 SPEC CHECKSUMS:
-  SmileTouchID: b76b48272651da8023b12326e3f03bdd18d0a6a2
+  SmileTouchID: 00f777737eb00dafa239980fddb1cf5a5fdf6b25
 
 COCOAPODS: 0.37.2
