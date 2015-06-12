@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		243C05151B12B0070035E066 /* TouchIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C05141B12B0070035E066 /* TouchIDTests.m */; };
-		248B176B1B292A3100E992AB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B176A1B292A3100E992AB /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		248B176E1B295B9B00E992AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 248B17701B295B9B00E992AB /* Localizable.strings */; };
 		518296C51684971AA97FED5C /* libPods-Smile TouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CBBCBB7DE9444C4A4C4E1 /* libPods-Smile TouchID.a */; };
 		B7F2204E1B146AE6000BB95B /* SmileMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F3E771B12F76400AB0AD2 /* SmileMainVC.m */; };
@@ -50,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248B176B1B292A3100E992AB /* LocalAuthentication.framework in Frameworks */,
 				518296C51684971AA97FED5C /* libPods-Smile TouchID.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
