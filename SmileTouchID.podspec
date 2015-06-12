@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'SmileAuth/Classes/*'
   s.public_header_files = 'SmileAuth/Classes/*.h'
   s.resource = ['SmileAuth/Assets/*']
-  s.frameworks = 'UIKit', 'LocalAuthentication'
+  s.frameworks = 'UIKit'
+  s.weak_framework = 'LocalAuthentication'
 
 end
