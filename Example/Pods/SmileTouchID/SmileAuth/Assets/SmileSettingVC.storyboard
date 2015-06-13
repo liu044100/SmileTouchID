@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B8P-73-vvD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B8P-73-vvD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Smile SettingVC-->
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-ty-FlL">
-                                <rect key="frame" x="285" y="217" width="30" height="34"/>
+                                <rect key="frame" x="285" y="202" width="30" height="34"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,6 +44,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="dz0-v9-nJl"/>
+                                        <exclude reference="hXF-6p-GpM"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -60,6 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cLX-BN-r5x" firstAttribute="height" secondItem="Vt2-N3-pA6" secondAttribute="height" multiplier="0.1" id="0vu-Vl-ut8"/>
                             <constraint firstItem="pQ0-3p-zCf" firstAttribute="top" secondItem="P1b-xr-dK8" secondAttribute="bottom" id="1tX-gW-9nh"/>
                             <constraint firstItem="cLX-BN-r5x" firstAttribute="top" secondItem="mHp-ZT-N3c" secondAttribute="bottom" constant="20" id="Hvh-Xc-Ur8"/>
                             <constraint firstItem="cLX-BN-r5x" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" id="JuH-1s-JMd"/>
@@ -73,7 +76,7 @@
                             <constraint firstItem="F9q-Ek-qul" firstAttribute="top" secondItem="Vt2-N3-pA6" secondAttribute="top" id="kKB-Ih-D5f"/>
                             <constraint firstItem="mHp-ZT-N3c" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" id="qE1-td-lDE"/>
                             <constraint firstAttribute="trailing" secondItem="mHp-ZT-N3c" secondAttribute="trailing" id="uPP-hC-vb3"/>
-                            <constraint firstItem="LL4-ty-FlL" firstAttribute="top" secondItem="cLX-BN-r5x" secondAttribute="bottom" constant="35" id="yPs-nZ-GLa"/>
+                            <constraint firstItem="LL4-ty-FlL" firstAttribute="top" secondItem="cLX-BN-r5x" secondAttribute="bottom" constant="20" id="yPs-nZ-GLa"/>
                             <constraint firstItem="pQ0-3p-zCf" firstAttribute="leading" secondItem="Vt2-N3-pA6" secondAttribute="leading" constant="16" id="yfy-4d-pgZ"/>
                         </constraints>
                     </view>

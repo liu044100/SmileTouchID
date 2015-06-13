@@ -186,7 +186,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SmileAuthenticator alloc] init];
+        sharedInstance = [[self alloc] init];
     });
     
     return sharedInstance;
@@ -299,7 +299,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 +(BOOL)isSamePassword:(NSString *)userInput{
-    
+    //use this line to log password, if you forgot it.
+//    NSLog(@"the password -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]);
     if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]]) {
         return YES;
     }

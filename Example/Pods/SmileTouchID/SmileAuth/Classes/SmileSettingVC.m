@@ -72,7 +72,17 @@
         [self.navigationController.navigationBar setTranslucent:YES];
     }
     
+    if ([SmileAuthenticator sharedInstance].nightMode) {
+        [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+        [self.passwordField setKeyboardAppearance:UIKeyboardAppearanceDark];
+        self.view.backgroundColor = [UIColor blackColor];
+        self.descLabel.textColor = [UIColor whiteColor];
+    }
     
+    if ([SmileAuthenticator sharedInstance].descriptionTextColor) {
+        self.descLabel.textColor = [SmileAuthenticator sharedInstance].descriptionTextColor;
+    }
+
     if ([SmileAuthenticator sharedInstance].backgroundImage) {
         self.bgImageView.image = [SmileAuthenticator sharedInstance].backgroundImage;
     }
@@ -115,7 +125,7 @@
             self.touchIDButton.hidden = NO;
             
             if (![SmileAuthenticator sharedInstance].appLogoName.length) {
-                self.navigationItem.title = NSLocalizedString(@"INPUT_TOUCHID_TITLE", nil);
+                self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_TOUCHID_TITLE", nil);
             } else {
                 self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[SmileAuthenticator sharedInstance].appLogoName]];
             }

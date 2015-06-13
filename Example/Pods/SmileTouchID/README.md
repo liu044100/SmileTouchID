@@ -38,7 +38,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 
 
-##### 3. Can customize the color，touch id icon and background image to fit your app style. For example, you can customize like the below image.
+##### 3. Can customize the color，Touch ID icon and background image to fit your app style. For example, you can customize like the below image.
 
 ```
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
@@ -51,6 +51,15 @@ if ([SmileAuthenticator hasPassword]) {
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/customize1.png)
 
+You can use the property `nightMode` to change all the UI element to black style, like the below image.
+
+```
+[SmileAuthenticator sharedInstance].nightMode = YES;
+[SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
+
+```
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/night_mode1.png)
 
 ##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
 

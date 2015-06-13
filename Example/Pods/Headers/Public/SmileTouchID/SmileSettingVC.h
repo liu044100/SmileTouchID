@@ -1,1 +1,1 @@
-../../../../../SmileAuth/Classes/SmileSettingVC.h
+../../../SmileTouchID/SmileAuth/Classes/SmileSettingVC.h
