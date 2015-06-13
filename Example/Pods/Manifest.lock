@@ -1,14 +1,10 @@
 PODS:
-  - SmileTouchID (0.0.8)
+  - SmileTouchID (0.0.9)
 
 DEPENDENCIES:
-  - SmileTouchID (from `~/Documents/developer_learning/Security/SmileTouchID`)
-
-EXTERNAL SOURCES:
-  SmileTouchID:
-    :path: "~/Documents/developer_learning/Security/SmileTouchID"
+  - SmileTouchID
 
 SPEC CHECKSUMS:
-  SmileTouchID: 0324b3c0d5089884b5be25a74a21108edaf1ba51
+  SmileTouchID: 61734cfca9587bbe7347d5a713cae0e3dfd5abf9
 
 COCOAPODS: 0.37.2
