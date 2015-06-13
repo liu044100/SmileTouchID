@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SmileTouchID"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "A Library for configure Touch ID & passcode conveniently"
   s.description  = <<-DESC
                    1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.
@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
   s.source_files  = 'SmileAuth/Classes/*'
   s.public_header_files = 'SmileAuth/Classes/*.h'
   s.resource = ['SmileAuth/Assets/*']
-  s.frameworks = 'UIKit'
-  s.weak_framework = 'LocalAuthentication'
+  s.frameworks = 'UIKit', 'LocalAuthentication'
 
 end
