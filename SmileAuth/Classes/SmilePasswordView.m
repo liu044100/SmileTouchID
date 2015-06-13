@@ -8,10 +8,11 @@
 
 #import "SmilePasswordView.h"
 
-static CGFloat kLineWidthConst = 10.5;
-static CGFloat kDotRadiusConst = 5.0;
-
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+
+static CGFloat kLineWidthConst = 12.0;
+static CGFloat kDotRadiusConst = 5.0;
+static CGFloat kMAX_RadiusConst = 32.0;
 
 @interface SmilePasswordView()
 
@@ -50,7 +51,7 @@ static CGFloat kDotRadiusConst = 5.0;
     [self.circleColor setFill];
 //    CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
     [self.circleColor setStroke];
-
+    
     CGFloat lineWidth = self.radius/kLineWidthConst;
     CGFloat outLineRadius = self.radius - lineWidth;
     
@@ -160,6 +161,7 @@ static CGFloat kDotRadiusConst = 5.0;
 
 -(CGFloat)getCircleRadius{
     CGFloat myRadius;
+    
     CGFloat height = CGRectGetHeight(self.bounds);
     CGFloat width = CGRectGetWidth(self.bounds);
 
@@ -167,6 +169,12 @@ static CGFloat kDotRadiusConst = 5.0;
         myRadius = floor((width/(2*self.count + (self.count - 1)/2)));
     } else {
         myRadius = floor(height/2);
+    }
+    
+//    NSLog(@"radius -> %f", myRadius);
+    
+    if (myRadius > kMAX_RadiusConst) {
+        myRadius = kMAX_RadiusConst;
     }
     
     return myRadius;

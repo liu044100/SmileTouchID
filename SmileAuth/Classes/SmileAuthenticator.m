@@ -48,7 +48,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
-
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

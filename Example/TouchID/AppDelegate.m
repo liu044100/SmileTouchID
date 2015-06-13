@@ -32,7 +32,6 @@
     [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
     [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
     
-    
     return YES;
 }
 
