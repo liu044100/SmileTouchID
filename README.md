@@ -59,7 +59,7 @@ You can use the property 'nightMode' to change all the UI element to black style
 
 ```
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/night_mode.png)
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/night_mode1.png)
 
 ##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
 

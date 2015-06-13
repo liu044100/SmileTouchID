@@ -57,16 +57,6 @@ install_resource()
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "../../SmileAuth/Assets/smile_Touch_ID@2x.png"
-  install_resource "../../SmileAuth/Assets/smile_Touch_ID@3x.png"
-  install_resource "../../SmileAuth/Assets/SmileSettingVC.storyboard"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "../../SmileAuth/Assets/smile_Touch_ID@2x.png"
-  install_resource "../../SmileAuth/Assets/smile_Touch_ID@3x.png"
-  install_resource "../../SmileAuth/Assets/SmileSettingVC.storyboard"
-fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

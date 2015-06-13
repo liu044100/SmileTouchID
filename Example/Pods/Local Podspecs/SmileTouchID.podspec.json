@@ -23,11 +23,6 @@
   },
   "source_files": "SmileAuth/Classes/*",
   "public_header_files": "SmileAuth/Classes/*.h",
-  "resources": [
-    "SmileAuth/Assets/*"
-  ],
-  "frameworks": [
-    "UIKit",
-    "LocalAuthentication"
-  ]
+  "frameworks": "UIKit",
+  "weak_frameworks": "LocalAuthentication"
 }
