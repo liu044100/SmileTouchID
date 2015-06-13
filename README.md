@@ -51,7 +51,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/customize1.png)
 
-You can use the property 'nightMode' to change all the UI element to black style, like the below image.
+You can use the property `nightMode` to change all the UI element to black style, like the below image.
 
 ```
 [SmileAuthenticator sharedInstance].nightMode = YES;
