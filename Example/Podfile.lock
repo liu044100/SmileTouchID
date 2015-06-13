@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "~/Documents/developer_learning/Security/SmileTouchID"
 
 SPEC CHECKSUMS:
-  SmileTouchID: 311a9b3713b4fea994fe2bfbba0d806cb6a04186
+  SmileTouchID: 2942045b43b7a912e74e062382f44945cfe37fee
 
 COCOAPODS: 0.37.2

@@ -76,9 +76,13 @@
         [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
         [self.passwordField setKeyboardAppearance:UIKeyboardAppearanceDark];
         self.view.backgroundColor = [UIColor blackColor];
+        self.descLabel.textColor = [UIColor whiteColor];
     }
     
-    
+    if ([SmileAuthenticator sharedInstance].descriptionTextColor) {
+        self.descLabel.textColor = [SmileAuthenticator sharedInstance].descriptionTextColor;
+    }
+
     if ([SmileAuthenticator sharedInstance].backgroundImage) {
         self.bgImageView.image = [SmileAuthenticator sharedInstance].backgroundImage;
     }

@@ -46,6 +46,8 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
 /*!@brief <b>For customization</b>, use this property to customize tint color. The default color is pink.*/
 @property (nonatomic, strong) UIColor *tintColor;
+/*!@brief <b>For customization</b>, use this property to customize description label text color. The default color is black, if nightMode on, the color is white.*/
+@property (nonatomic, strong) UIColor *descriptionTextColor;
 /*!@brief <b>For customization</b>, use this property to customize Touch ID icon. The default icon is the Apple official pink Touch ID icon.*/
 @property (nonatomic, strong) NSString *touchIDIconName;
 /*!@brief <b>For customization</b>, use this property to set the app logo to UI.*/

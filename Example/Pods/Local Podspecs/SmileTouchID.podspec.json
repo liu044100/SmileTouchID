@@ -22,6 +22,9 @@
     "tag": "0.0.7"
   },
   "source_files": "SmileAuth/Classes/*",
+  "resources": [
+    "SmileAuth/Assets/*"
+  ],
   "public_header_files": "SmileAuth/Classes/*.h",
   "frameworks": "UIKit",
   "weak_frameworks": "LocalAuthentication"

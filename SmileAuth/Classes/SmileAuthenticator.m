@@ -299,7 +299,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 +(BOOL)isSamePassword:(NSString *)userInput{
-    
+    //use this line to log password, if you forgot it.
+//    NSLog(@"the password -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]);
     if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]]) {
         return YES;
     }

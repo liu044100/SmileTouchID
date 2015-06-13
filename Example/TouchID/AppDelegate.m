@@ -32,16 +32,6 @@
     [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
     [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
     
-    //uncomment it, if you want to see night mode
-    /*
-    [SmileAuthenticator sharedInstance].passcodeDigit = 6;
-    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
-    [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
-    [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
-    [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
-    [SmileAuthenticator sharedInstance].nightMode = YES;
-    [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
-    */
     
     return YES;
 }
@@ -66,6 +56,33 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)SMILE_testHelperMethod{
+    BOOL isCustomize = YES;
+    
+    if (isCustomize) {
+        
+        BOOL nightMode = NO;
+        
+        if (!nightMode) {
+            //customize
+            [SmileAuthenticator sharedInstance].passcodeDigit = 6;
+            [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+            [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
+            [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
+            [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
+            [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
+        } else {
+            [SmileAuthenticator sharedInstance].passcodeDigit = 6;
+            [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+            [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
+            [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
+            [SmileAuthenticator sharedInstance].navibarTranslucent = NO;
+            [SmileAuthenticator sharedInstance].nightMode = YES;
+            [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
+        }
+    }
 }
 
 @end
