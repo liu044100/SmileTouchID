@@ -44,12 +44,20 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, assign) SecurityType securityType;
 @property (nonatomic, strong) UIViewController *rootVC;
 @property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
+/*!@brief <b>For customization</b>, use this property to customize tint color. The default color is pink.*/
 @property (nonatomic, strong) UIColor *tintColor;
+/*!@brief <b>For customization</b>, use this property to customize Touch ID icon. The default icon is the Apple official pink Touch ID icon.*/
 @property (nonatomic, strong) NSString *touchIDIconName;
+/*!@brief <b>For customization</b>, use this property to set the app logo to UI.*/
 @property (nonatomic, strong) NSString *appLogoName;
+/*!@brief <b>For customization</b>, use this property to set the backgroundImage.*/
 @property (nonatomic, strong) UIImage *backgroundImage;
+/*!@brief <b>For customization</b>, use this property to change passcode digit. The default digit is 4.*/
 @property (nonatomic) NSInteger passcodeDigit;
+/*!@brief <b>For customization</b>, change UINavigationBar to transparent, if set it to Yes.*/
 @property (nonatomic) BOOL navibarTranslucent;
+/*!@brief <b>For customization</b>, change to a black style UI, if set it to Yes.*/
+@property (nonatomic) BOOL nightMode;
 
 +(SmileAuthenticator*)sharedInstance;
 + (BOOL)canAuthenticateWithError:(NSError **) error;
