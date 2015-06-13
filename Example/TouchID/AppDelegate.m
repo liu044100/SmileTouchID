@@ -32,6 +32,17 @@
     [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
     [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
     
+    //uncomment it, if you want to see night mode
+    /*
+    [SmileAuthenticator sharedInstance].passcodeDigit = 6;
+    [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
+    [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
+    [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
+    [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
+    [SmileAuthenticator sharedInstance].nightMode = YES;
+    [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
+    */
+    
     return YES;
 }
 

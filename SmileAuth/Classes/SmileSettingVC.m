@@ -72,6 +72,12 @@
         [self.navigationController.navigationBar setTranslucent:YES];
     }
     
+    if ([SmileAuthenticator sharedInstance].nightMode) {
+        [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+        [self.passwordField setKeyboardAppearance:UIKeyboardAppearanceDark];
+        self.view.backgroundColor = [UIColor blackColor];
+    }
+    
     
     if ([SmileAuthenticator sharedInstance].backgroundImage) {
         self.bgImageView.image = [SmileAuthenticator sharedInstance].backgroundImage;
