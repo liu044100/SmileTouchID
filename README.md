@@ -67,6 +67,8 @@ You can use the property `nightMode` to change all the UI element to black style
 [SmileAuthenticator sharedInstance].passcodeDigit = 6;
 ```
 
+If you want to try this feature in the demo app, before you try to change `passcodeDigit` to new number, make sure turn off the passcode switch, because the keychain will save your old passcode even you delete the app, so you have to clear the old passcode in keychain, and then change new digit for test.
+
 ![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/passlength.png)
 
 
