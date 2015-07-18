@@ -178,10 +178,10 @@ For example, below code show update the switch and button based on `[SmileAuthen
 
 `SmileAuthenticator` has a delegate that can get more information about the process of authentication.
 
-The delegate name is `AuthenticatorDelegate`. It has four optional method.
+The delegate name is `SmileAuthenticatorDelegate`. It has four optional method.
 
 ```
-@protocol AuthenticatorDelegate <NSObject>
+@protocol SmileAuthenticatorDelegate <NSObject>
 @optional
 /*!The method is called when AuthViewController be presented*/
 -(void)AuthViewControllerPresented;
@@ -194,7 +194,15 @@ The delegate name is `AuthenticatorDelegate`. It has four optional method.
 @optional
 /*!The method is called when authentication failed*/
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount;
-@end
+@optional
+/*!The method is called when user turn password on.*/
+-(void)userTurnPasswordOn;
+@optional
+/*!The method is called when user turn password off.*/
+-(void)userTurnPasswordOff;
+@optional
+/*!The method is called when user change password.*/
+-(void)userChangePassword;
 ```
 # Localization
 Sorry about it, but you have to do it yourself. Add below line to your `Localizable.strings`. For detail please see the example demo app.
@@ -231,8 +239,8 @@ Sorry about it, but you have to do it yourself. Add below line to your `Localiza
  INPUT_THREE
  */
 "SMILE_INPUT_THREE_TITLE" = "Change Passcode";
-"SMILE_INPUT_THREE_STEP_1" = "Enter your new %ld digit Passcode";
-"SMILE_INPUT_THREE_STEP_2" = "Enter your old %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_1_DESCRIPTION" = "Enter your old %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_2_DESCRIPTION" = "Enter your new %ld digit Passcode";
 
 ```
 
