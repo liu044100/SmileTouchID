@@ -37,5 +37,5 @@
  INPUT_THREE
  */
 "SMILE_INPUT_THREE_TITLE" = "Change Passcode";
-"SMILE_INPUT_THREE_STEP_1" = "Enter your new %ld digit Passcode";
-"SMILE_INPUT_THREE_STEP_2" = "Enter your old %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_1_DESCRIPTION" = "Enter your old %ld digit Passcode";
+"SMILE_INPUT_THREE_STEP_2_DESCRIPTION" = "Enter your new %ld digit Passcode";

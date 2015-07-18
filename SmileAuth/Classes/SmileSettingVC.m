@@ -22,6 +22,7 @@
 
 @implementation SmileSettingVC{
     BOOL _needTouchID;
+    BOOL _isAnimating;
     NSInteger _inputCount;
     NSString *_bufferPassword;
     NSString *_newPassword;
@@ -42,17 +43,66 @@
 }
 
 - (IBAction)useTouchID:(id)sender {
+    [self touchIDHandle];
+}
+
+#pragma mark - TouchID handle
+-(void)touchIDHandle{
+    switch ([SmileAuthenticator sharedInstance].securityType) {
+        case INPUT_ONCE:
+            
+            [self touchIDForINPUT_ONCE];
+            
+            break;
+            
+        case INPUT_THREE:
+            
+            [self touchIDForINPUT_THREE];
+            
+            break;
+            
+        case INPUT_TOUCHID:
+            
+            [self touchIDForINPUT_TOUCHID];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+-(void)touchIDForINPUT_TOUCHID{
+    [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_REASON", nil);
     [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
         [[SmileAuthenticator sharedInstance] touchID_OR_PasswordAuthSuccess];
         self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(dismissSelf:) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
-        self.descLabel.hidden = NO;
-        if (errorCode == LAErrorUserFallback || errorCode == LAErrorUserCancel) {
-            [self.passwordField becomeFirstResponder];
-        }
+        [self.passwordField becomeFirstResponder];
     }];
+}
 
+-(void)touchIDForINPUT_ONCE{
+    [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_INPUT_ONCE_TITLE", nil);
+    [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
+        [[SmileAuthenticator sharedInstance] touchID_OR_PasswordTurnOff];
+        self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
+        [self performSelector:@selector(passwordCancleComplete) withObject:nil afterDelay:0.15];
+    } andFailure:^(LAError errorCode) {
+        [self.passwordField becomeFirstResponder];
+    }];
+}
+
+-(void)touchIDForINPUT_THREE{
+    [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_INPUT_THREE_TITLE", nil);
+    [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
+        self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
+        _inputCount ++;
+        [self performSelector:@selector(enterNewPassword) withObject:nil afterDelay:0.15];
+    } andFailure:^(LAError errorCode) {
+        [self.passwordField becomeFirstResponder];
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -79,6 +129,10 @@
         self.descLabel.textColor = [UIColor whiteColor];
     }
     
+    if ([SmileAuthenticator sharedInstance].parallaxMode) {
+        [self registerEffectForView:self.passwordView depth:15];
+    }
+    
     if ([SmileAuthenticator sharedInstance].descriptionTextColor) {
         self.descLabel.textColor = [SmileAuthenticator sharedInstance].descriptionTextColor;
     }
@@ -102,7 +156,7 @@
     
     switch ([SmileAuthenticator sharedInstance].securityType) {
         case INPUT_ONCE:
-            
+            self.touchIDButton.hidden = NO;
             self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_ONCE_TITLE", nil);
             
             break;
@@ -114,9 +168,9 @@
             break;
             
         case INPUT_THREE:
-            
+            self.touchIDButton.hidden = NO;
             self.navigationItem.title = NSLocalizedString(@"SMILE_INPUT_THREE_TITLE", nil);
-            self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_2", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
+            self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_1_DESCRIPTION", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
             
             break;
             
@@ -152,7 +206,19 @@
             [self.passwordField becomeFirstResponder];
         }
         
-    } else {
+    } else if ([SmileAuthenticator sharedInstance].securityType == INPUT_ONCE | [SmileAuthenticator sharedInstance].securityType == INPUT_THREE) {
+        
+        //begin check canAuthenticate
+        NSError *error = nil;
+        if ([SmileAuthenticator canAuthenticateWithError:&error]) {
+            _needTouchID = YES;
+        } else {
+            self.touchIDButton.hidden = YES;
+            [self.passwordField becomeFirstResponder];
+        }
+    }
+    
+    else {
         [self.passwordField becomeFirstResponder];
     }
     
@@ -165,6 +231,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - animation
+
+-(void)slideAnimation{
+    _isAnimating = YES;
+    
+    if (!self.touchIDButton.hidden) {
+        self.touchIDButton.hidden = YES;
+    }
+    
+    [self.passwordView.smilePasswordView slideToLeftAnimationWithCompletion:^{
+        _isAnimating = NO;
+        if(![self.passwordField isFirstResponder]){
+            [self.passwordField becomeFirstResponder];
+        };
+    }];
+    
+}
+
+-(void)shakeAnimation{
+    _isAnimating = YES;
+    [self.passwordView.smilePasswordView shakeAnimationWithCompletion:^{
+        _isAnimating = NO;
+    }];
 }
 
 #pragma mark - handle user input
@@ -190,7 +281,7 @@
     
     _failCount++;
     
-    [self.passwordView.smilePasswordView shakeAnimation];
+    [self shakeAnimation];
     
     [[SmileAuthenticator sharedInstance] touchID_OR_PasswordAuthFail:_failCount];
     
@@ -202,26 +293,25 @@
     _inputCount = _inputCount -2;
     
     [self clearText];
-    [self.passwordView.smilePasswordView shakeAnimation];
+    [self shakeAnimation];
     
     self.descLabel.text = NSLocalizedString(@"SMILE_INPUT_NOT_MATCH", nil);
 }
 
 -(void)reEnterPassword{
+    
     _bufferPassword = _newPassword;
     [self clearText];
     
-    [self.passwordView.smilePasswordView slideToLeftAnimation];
+    [self slideAnimation];
     
     self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_RE-ENTER", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)enterNewPassword{
     [self clearText];
-    
-    [self.passwordView.smilePasswordView slideToLeftAnimation];
-    
-    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_1", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
+    [self slideAnimation];
+    self.descLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SMILE_INPUT_THREE_STEP_2_DESCRIPTION", nil), (long)[SmileAuthenticator sharedInstance].passcodeDigit];
 }
 
 -(void)handleINPUT_TOUCHID{
@@ -235,6 +325,7 @@
 
 -(void)handleINPUT_ONCE{
     if ([SmileAuthenticator isSamePassword:_newPassword]) {
+        [[SmileAuthenticator sharedInstance] touchID_OR_PasswordTurnOff];
         [self passwordCancleComplete];
     } else {
         [self passwordWrong];
@@ -246,6 +337,7 @@
         [self reEnterPassword];
     } else if (_inputCount == 2) {
         if ([_bufferPassword isEqualToString:_newPassword]) {
+            [[SmileAuthenticator sharedInstance] touchID_OR_PasswordTurnOn];
             [self passwordInputComplete];
         } else {
             [self passwordNotMatch];
@@ -264,6 +356,7 @@
         [self reEnterPassword];
     } else if (_inputCount == 3) {
         if ([_bufferPassword isEqualToString:_newPassword]) {
+            [[SmileAuthenticator sharedInstance] touchID_OR_PasswordChange];
             [self passwordInputComplete];
         } else {
             [self passwordNotMatch];
@@ -327,8 +420,33 @@
         return NO;
     }
     
-    return YES;
+    return !_isAnimating;
 }
+
+
+#pragma mark - PrivateMethod - Parallax
+
+- (void)registerEffectForView:(UIView *)aView depth:(CGFloat)depth;
+{
+    UIInterpolatingMotionEffect *effectX;
+    UIInterpolatingMotionEffect *effectY;
+    effectX = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
+                                                              type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    effectY = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
+                                                              type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    
+    
+    effectX.maximumRelativeValue = @(depth);
+    effectX.minimumRelativeValue = @(-depth);
+    effectY.maximumRelativeValue = @(depth);
+    effectY.minimumRelativeValue = @(-depth);
+    
+    UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+    group.motionEffects =@[effectX, effectY];
+    
+    [aView addMotionEffect:group] ;
+}
+
 
 /*
 #pragma mark - Navigation

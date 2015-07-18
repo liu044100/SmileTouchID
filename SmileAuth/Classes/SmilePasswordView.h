@@ -18,8 +18,8 @@
 
 -(instancetype)initWithCircleColor:(UIColor*)circleColor circleCount:(NSInteger)count frame:(CGRect)frame;
 
--(void)shakeAnimation;
--(void)slideToLeftAnimation;
+-(void)shakeAnimationWithCompletion:(dispatch_block_t)completion;
+-(void)slideToLeftAnimationWithCompletion:(dispatch_block_t)completion;
 
 
 @end

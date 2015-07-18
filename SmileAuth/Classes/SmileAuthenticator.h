@@ -11,8 +11,6 @@
 #import "SmileKeychainWrapper.h"
 #import "SmileSettingVC.h"
 
-
-#define DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 typedef void(^AuthCompletionBlock)();
 typedef void(^AuthErrorBlock)(LAError);
 
@@ -35,7 +33,7 @@ typedef NS_ENUM(int, SecurityType) {
     INPUT_TOUCHID,
 };
 
-@protocol AuthenticatorDelegate;
+@protocol SmileAuthenticatorDelegate;
 
 @interface SmileAuthenticator : NSObject
 
@@ -43,7 +41,7 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, strong) SmileKeychainWrapper *keychainWrapper;
 @property (nonatomic, assign) SecurityType securityType;
 @property (nonatomic, strong) UIViewController *rootVC;
-@property (nonatomic, weak) id <AuthenticatorDelegate> delegate;
+@property (nonatomic, weak) id <SmileAuthenticatorDelegate> delegate;
 /*!@brief <b>For customization</b>, use this property to customize tint color. The default color is pink.*/
 @property (nonatomic, strong) UIColor *tintColor;
 /*!@brief <b>For customization</b>, use this property to customize description label text color. The default color is black, if nightMode on, the color is white.*/
@@ -56,10 +54,12 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, strong) UIImage *backgroundImage;
 /*!@brief <b>For customization</b>, use this property to change passcode digit. The default digit is 4.*/
 @property (nonatomic) NSInteger passcodeDigit;
-/*!@brief <b>For customization</b>, change UINavigationBar to transparent, if set it to Yes.*/
+/*!@brief <b>For customization</b>, if set it to Yes, change UINavigationBar to transparent, the default value is No.*/
 @property (nonatomic) BOOL navibarTranslucent;
-/*!@brief <b>For customization</b>, change to a black style UI, if set it to Yes.*/
+/*!@brief <b>For customization</b>, if set it to Yes, change to a black style UI, the default value is No.*/
 @property (nonatomic) BOOL nightMode;
+/*!@brief <b>For customization</b>, if set it to Yes, add parallax effect to password circle views, the default value is Yes.*/
+@property (nonatomic) BOOL parallaxMode;
 
 +(SmileAuthenticator*)sharedInstance;
 + (BOOL)canAuthenticateWithError:(NSError **) error;
@@ -69,14 +69,17 @@ typedef NS_ENUM(int, SecurityType) {
 
 -(void)userSetPassword:(NSString*)newPassword;
 -(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
+
 -(void)presentAuthViewController;
 -(void)authViewControllerDismissed;
 -(void)touchID_OR_PasswordAuthSuccess;
 -(void)touchID_OR_PasswordAuthFail:(NSInteger)failCount;
-
+-(void)touchID_OR_PasswordTurnOff;
+-(void)touchID_OR_PasswordTurnOn;
+-(void)touchID_OR_PasswordChange;
 @end
 
-@protocol AuthenticatorDelegate <NSObject>
+@protocol SmileAuthenticatorDelegate <NSObject>
 @optional
 /*!The method is called when AuthViewController be presented*/
 -(void)AuthViewControllerPresented;
@@ -89,4 +92,13 @@ typedef NS_ENUM(int, SecurityType) {
 @optional
 /*!The method is called when authentication failed*/
 -(void)userFailAuthenticationWithCount:(NSInteger)failCount;
+@optional
+/*!The method is called when user turn password on.*/
+-(void)userTurnPasswordOn;
+@optional
+/*!The method is called when user turn password off.*/
+-(void)userTurnPasswordOff;
+@optional
+/*!The method is called when user change password.*/
+-(void)userChangePassword;
 @end

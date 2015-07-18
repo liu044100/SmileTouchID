@@ -21,9 +21,6 @@
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
-    //the reason for use Touch ID
-    [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_REASON", nil);
-    
     //customize
     [SmileAuthenticator sharedInstance].passcodeDigit = 6;
     [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];

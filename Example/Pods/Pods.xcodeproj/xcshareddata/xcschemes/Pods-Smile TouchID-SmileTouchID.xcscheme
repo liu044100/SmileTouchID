@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB6F3D225E4263FEEA8192F"
+               BlueprintIdentifier = "A9CD68B19E9F46CA6F14E134"
                BuildableName = "libPods-Smile TouchID-SmileTouchID.a"
                BlueprintName = "Pods-Smile TouchID-SmileTouchID"
                ReferencedContainer = "container:Pods.xcodeproj">

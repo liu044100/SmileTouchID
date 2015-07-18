@@ -9,7 +9,7 @@
 #import "SmileMainVC.h"
 #import "SmileAuthenticator.h"
 
-@interface SmileMainVC () <AuthenticatorDelegate>
+@interface SmileMainVC () <SmileAuthenticatorDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
 @property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;
 
@@ -68,6 +68,18 @@
 
 -(void)userSuccessAuthentication{
     NSLog(@"userSuccessAuthentication");
+}
+
+-(void)userTurnPasswordOn{
+    NSLog(@"userTurnPasswordOn");
+}
+
+-(void)userTurnPasswordOff{
+    NSLog(@"userTurnPasswordOff");
+}
+
+-(void)userChangePassword{
+    NSLog(@"userChangePassword");
 }
 
 -(void)AuthViewControllerPresented{
