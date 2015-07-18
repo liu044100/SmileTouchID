@@ -1,14 +1,10 @@
 PODS:
-  - SmileTouchID (0.0.9)
+  - SmileTouchID (0.1.0)
 
 DEPENDENCIES:
-  - SmileTouchID (from `../`)
-
-EXTERNAL SOURCES:
-  SmileTouchID:
-    :path: "../"
+  - SmileTouchID
 
 SPEC CHECKSUMS:
-  SmileTouchID: 61734cfca9587bbe7347d5a713cae0e3dfd5abf9
+  SmileTouchID: 6e6afe5e2cf83ea4a897b82142caadd957d79d72
 
 COCOAPODS: 0.37.2

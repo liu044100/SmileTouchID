@@ -11,10 +11,11 @@
 #define kPasswordLength 4
 #define kTouchIDIcon @"smile_Touch_ID"
 
-static NSString *kDefaultReason = @"Unlock to access";
 static NSString *kKeyChainObjectKey = @"v_Data";
 static NSString *kStoryBoardName = @"SmileSettingVC";
 static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
+
+#define SmileTouchID_DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 
 @interface SmileAuthenticator()
 
@@ -48,33 +49,13 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
+#pragma mark - dealloc
+
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void)logDismissAuthVCReason{
-    NSString *reason;
-    switch (self.securityType) {
-        case INPUT_ONCE:
-            reason = @"user turn password off";
-            break;
-            
-        case INPUT_TWICE:
-            reason = @"user turn password on";
-            break;
-            
-        case INPUT_THREE:
-            reason = @"user change password";
-            break;
-            
-        case INPUT_TOUCHID:
-            reason = @"user launch app";
-            break;
-            
-        default:
-            break;
-    }
-}
+#pragma mark - for Delegate
 
 -(void)touchID_OR_PasswordAuthSuccess{
     if ([self.delegate respondsToSelector:@selector(userSuccessAuthentication)]) {
@@ -88,27 +69,21 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
--(void)logPresentAuthVCReason{
-    NSString *reason;
-    switch (self.securityType) {
-    case INPUT_ONCE:
-        reason = @"user turn password off";
-        break;
-        
-    case INPUT_TWICE:
-        reason = @"user turn password on";
-        break;
-        
-    case INPUT_THREE:
-        reason = @"user change password";
-        break;
-        
-    case INPUT_TOUCHID:
-        reason = @"user launch app";
-        break;
-        
-    default:
-        break;
+-(void)touchID_OR_PasswordTurnOff{
+    if ([self.delegate respondsToSelector:@selector(userTurnPasswordOff)]) {
+        [self.delegate userTurnPasswordOff];
+    }
+}
+
+-(void)touchID_OR_PasswordTurnOn{
+    if ([self.delegate respondsToSelector:@selector(userTurnPasswordOn)]) {
+        [self.delegate userTurnPasswordOn];
+    }
+}
+
+-(void)touchID_OR_PasswordChange{
+    if ([self.delegate respondsToSelector:@selector(userChangePassword)]) {
+        [self.delegate userChangePassword];
     }
 }
 
@@ -119,8 +94,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
     
     if (!_isAuthenticated) {
-        
-        [self logPresentAuthVCReason];
         
         BOOL isAnimated = YES;
         
@@ -138,8 +111,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         }
         
         _isShowLogin = YES;
-        
-   
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle: nil];
         
@@ -181,6 +152,8 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
+#pragma mark - init
+
 +(SmileAuthenticator *)sharedInstance{
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
@@ -196,15 +169,17 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     if (self = [super init]) {
         self.context = [[LAContext alloc] init];
         self.policy = LAPolicyDeviceOwnerAuthenticationWithBiometrics;
-        self.localizedReason = kDefaultReason;
+        self.localizedReason = NSLocalizedString(@"SMILE_REASON", nil);
         self.keychainWrapper = [[SmileKeychainWrapper alloc] init];
         self.securityType = INPUT_TWICE;
+        self.parallaxMode = YES;
         
         [self configureNotification];
     }
     return self;
 }
 
+#pragma mark - TouchID
 
 + (BOOL) canAuthenticateWithError:(NSError **) error
 {
@@ -226,7 +201,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     if ([SmileAuthenticator canAuthenticateWithError:&authError]) {
         [self.context evaluatePolicy:self.policy localizedReason:self.localizedReason reply:^(BOOL success, NSError *error) {
             if (success) {
-                DispatchMainThread(^(){authSuccessBlock();});
+                SmileTouchID_DispatchMainThread(^(){
+                    authSuccessBlock();
+                });
             }
             
             else {
@@ -277,7 +254,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
                         break;
                 }
                 
-                DispatchMainThread(^(){failureBlock((LAError) error.code);});
+                SmileTouchID_DispatchMainThread(^(){
+                    failureBlock((LAError) error.code);
+                });
             }
         }];
     }
@@ -287,6 +266,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     }
 }
 
+#pragma mark - Utility
 
 +(BOOL)hasPassword {
     
@@ -308,7 +288,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)userSetPassword:(NSString*)newPassword{
-    
     [self.keychainWrapper mySetObject:newPassword forKey:(__bridge id)(kSecValueData)];
     [self.keychainWrapper writeToKeychain];
 }

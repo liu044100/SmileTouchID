@@ -2,9 +2,9 @@ platform :ios, '7.0'
 
 target 'Smile TouchID' do
 
-pod 'SmileTouchID', :path => "../"
+#pod 'SmileTouchID', :path => "../"
 
-#pod 'SmileTouchID'
+pod 'SmileTouchID'
 
 end
 

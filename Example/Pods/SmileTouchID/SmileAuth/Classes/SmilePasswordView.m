@@ -10,6 +10,8 @@
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 
+#define SmileTouchID_DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
+
 static CGFloat kLineWidthConst = 12.0;
 static CGFloat kDotRadiusConst = 5.0;
 static CGFloat kMAX_RadiusConst = 32.0;
@@ -171,8 +173,6 @@ static CGFloat kMAX_RadiusConst = 32.0;
         myRadius = floor(height/2);
     }
     
-//    NSLog(@"radius -> %f", myRadius);
-    
     if (myRadius > kMAX_RadiusConst) {
         myRadius = kMAX_RadiusConst;
     }
@@ -183,7 +183,7 @@ static CGFloat kMAX_RadiusConst = 32.0;
 
 #pragma mark - animation
 
--(void)shakeAnimation{
+-(void)shakeAnimationWithCompletion:(dispatch_block_t)completion{
     
     NSInteger maxShakeCount = 5;
     
@@ -201,8 +201,6 @@ static CGFloat kMAX_RadiusConst = 32.0;
         moveX = 2 * moveX;
     }
     
-    
-    
     [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:0.01 initialSpringVelocity:0.35 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         if (!_direction) {
             self.center = CGPointMake(centerX + moveX, centerY);
@@ -218,6 +216,10 @@ static CGFloat kMAX_RadiusConst = 32.0;
             } completion:^(BOOL finished) {
                 _direction = 0;
                 _shakeCount = 0;
+                
+                SmileTouchID_DispatchMainThread(^(){
+                    completion();
+                });
             }];
             return;
         }
@@ -230,12 +232,12 @@ static CGFloat kMAX_RadiusConst = 32.0;
             _direction = 0;
         }
         
-        [self shakeAnimation];
+        [self shakeAnimationWithCompletion:completion];
         
     }];
 }
 
--(void)slideToLeftAnimation{
+-(void)slideToLeftAnimationWithCompletion:(dispatch_block_t)completion{
     
     CGFloat centerX = CGRectGetMidX(self.bounds);
     CGFloat centerY = CGRectGetMidY(self.bounds);
@@ -250,9 +252,13 @@ static CGFloat kMAX_RadiusConst = 32.0;
         if (!_direction) {
             _direction = 1;
             self.center = CGPointMake(3 * centerX, centerY);
-            [self slideToLeftAnimation];
+            [self slideToLeftAnimationWithCompletion:completion];
         } else {
             _direction = 0;
+            
+            SmileTouchID_DispatchMainThread(^(){
+                completion();
+            });
         }
     }];
 }
