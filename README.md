@@ -20,7 +20,7 @@ For example, handle the device that not support Touch ID, instead of Touch ID, u
 handle the whole process about securing the app (the user change passcode or turn passcode off),
 
 
-```
+```Objective-c
 if ([SmileAuthenticator hasPassword]) {
         [SmileAuthenticator sharedInstance].securityType = INPUT_TOUCHID;
         [[SmileAuthenticator sharedInstance] presentAuthViewController];
@@ -40,7 +40,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 ##### 3. Can customize the color，Touch ID icon and background image to fit your app style. For example, you can customize like the below image.
 
-```
+```Objective-c
 [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
 [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
 [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
@@ -53,7 +53,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 You can use the property `nightMode` to change all the UI element to black style, like the below image.
 
-```
+```Objective-c
 [SmileAuthenticator sharedInstance].nightMode = YES;
 [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
 
@@ -63,7 +63,7 @@ You can use the property `nightMode` to change all the UI element to black style
 
 ##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
 
-```
+```Objective-c
 [SmileAuthenticator sharedInstance].passcodeDigit = 6;
 ```
 
@@ -102,7 +102,7 @@ Use `[[SmileAuthenticator sharedInstance] presentAuthViewController]` to present
 **Step 1.** SmileTouchID is available through use [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```
+```Ruby
 pod 'SmileTouchID'
 
 ```
@@ -110,7 +110,7 @@ Or you can drag the `SmileAuth` fold to your project.
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add below line to `didFinishLaunchingWithOptions`.
 
-```
+```Objective-c
 [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
 ```
 
@@ -118,7 +118,7 @@ Or you can drag the `SmileAuth` fold to your project.
 
 **Step 3.** In your project root view controller,  add below line to `viewDidAppear:`.
 
-```
+```Objective-c
 if ([SmileAuthenticator hasPassword]) {
         [SmileAuthenticator sharedInstance].securityType = INPUT_TOUCHID;
         [[SmileAuthenticator sharedInstance] presentAuthViewController];
@@ -132,7 +132,7 @@ if ([SmileAuthenticator hasPassword]) {
 
 For example below image show a switch to turn the passcode on/off, when the switch turn on, the `securityType` is `INPUT_TWICE`, when turn off, the `securityType` is `INPUT_ONCE`. A button for change passcode, the `securityType` is `INPUT_THREE`.
 
-```
+```Objective-c
 - (IBAction)changePassword:(id)sender {
     [SmileAuthenticator sharedInstance].securityType = INPUT_THREE;
     [[SmileAuthenticator sharedInstance] presentAuthViewController];
@@ -157,7 +157,7 @@ Update your interactive UI parts in `viewWillAppear`.
 
 For example, below code show update the switch and button based on `[SmileAuthenticator hasPassword]`.
 
-```
+```Objective-c
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -180,7 +180,7 @@ For example, below code show update the switch and button based on `[SmileAuthen
 
 The delegate name is `SmileAuthenticatorDelegate`. It has four optional method.
 
-```
+```Objective-c
 @protocol SmileAuthenticatorDelegate <NSObject>
 @optional
 /*!The method is called when AuthViewController be presented*/
@@ -207,7 +207,7 @@ The delegate name is `SmileAuthenticatorDelegate`. It has four optional method.
 # Localization
 Sorry about it, but you have to do it yourself. Add below line to your `Localizable.strings`. For detail please see the example demo app.
 
-```
+```Objective-c
 /*
  UNIVERSAL PARTS
  */
