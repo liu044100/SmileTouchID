@@ -11,7 +11,6 @@
 #define kPasswordLength 4
 #define kTouchIDIcon @"smile_Touch_ID"
 
-static NSString *kKeyChainObjectKey = @"v_Data";
 static NSString *kStoryBoardName = @"SmileSettingVC";
 static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
@@ -33,11 +32,14 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 #pragma mark -getter
 
--(NSInteger)passcodeDigit{
-    if (!_passcodeDigit || _passcodeDigit < 0) {
-        return kPasswordLength;
-    } else {
-        return _passcodeDigit;
+-(void)setPasscodeDigit:(NSInteger)passcodeDigit{
+    NSInteger buffer = [self lengthOfPassword];
+    if (buffer > 0) {
+        _passcodeDigit = buffer;
+    } else if (!passcodeDigit || passcodeDigit < 0) {
+        _passcodeDigit = kPasswordLength;
+    } else if (_passcodeDigit != passcodeDigit) {
+        _passcodeDigit = passcodeDigit;
     }
 }
 
@@ -173,6 +175,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         self.keychainWrapper = [[SmileKeychainWrapper alloc] init];
         self.securityType = INPUT_TWICE;
         self.parallaxMode = YES;
+        self.passcodeDigit = kPasswordLength;
         
         [self configureNotification];
     }
@@ -270,17 +273,21 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 +(BOOL)hasPassword {
     
-    if ([(NSString*)[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey] length] > 0) {
+    if ([(NSString*)[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:(__bridge id)(kSecValueData)] length] > 0) {
         return YES;
     }
     
     return NO;
 }
 
+-(NSInteger)lengthOfPassword{
+    return [[self.keychainWrapper myObjectForKey:(__bridge id)(kSecValueData)] length];
+}
+
 +(BOOL)isSamePassword:(NSString *)userInput{
     //use this line to log password, if you forgot it.
 //    NSLog(@"the password -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]);
-    if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]]) {
+    if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:(__bridge id)(kSecValueData)]]) {
         return YES;
     }
     
