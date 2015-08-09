@@ -304,4 +304,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
     [[SmileAuthenticator sharedInstance].keychainWrapper writeToKeychain];
 }
 
+-(void)logout{
+    _isAuthenticated = NO;
+    _didReturnFromBackground = NO;
+}
+
 @end
