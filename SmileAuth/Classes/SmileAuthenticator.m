@@ -95,7 +95,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         _isAuthenticated = NO;
     }
     
-    if (!_isAuthenticated) {
+    if (!_isAuthenticated && !_isShowLogin) {
         
         BOOL isAnimated = YES;
         
