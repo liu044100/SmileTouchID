@@ -40,6 +40,7 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, copy) NSString * localizedReason;
 @property (nonatomic, strong) SmileKeychainWrapper *keychainWrapper;
 @property (nonatomic, assign) SecurityType securityType;
+@property (nonatomic, assign) BOOL isShowingAuthVC;
 @property (nonatomic, strong) UIViewController *rootVC;
 @property (nonatomic, weak) id <SmileAuthenticatorDelegate> delegate;
 /*!@brief <b>For customization</b>, use this property to customize tint color. The default color is pink.*/

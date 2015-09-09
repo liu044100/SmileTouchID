@@ -17,44 +17,64 @@
     UIImageView *_coverImageView;
 }
 
+#define kBG_Image @"backgroundImage"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //observer window show
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(windowDidBecomeVisible:)
+                                                 name:UIWindowDidBecomeKeyNotification
+                                               object:nil];
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
     //customize
-    [SmileAuthenticator sharedInstance].passcodeDigit = 6;
+    [SmileAuthenticator sharedInstance].passcodeDigit = 4;
     [SmileAuthenticator sharedInstance].tintColor = [UIColor purpleColor];
     [SmileAuthenticator sharedInstance].touchIDIconName = @"my_Touch_ID";
     [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
     [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
-    [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
+    [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:kBG_Image];
     
     return YES;
 }
 
+-(void)windowDidBecomeVisible:(NSNotification*)notif{
+    if ([SmileAuthenticator hasPassword]) {
+        //iOS automatically snapshot screen, so if has password, use the _coverImageView cover the UIWindow for protecting user data.
+        [self addCoverImageView];
+    }
+}
+
 -(void)addCoverImageView{
-    [self removeCoverImageView];
-    _coverImageView = [[UIImageView alloc]initWithFrame:[self.window frame]];
+    _coverImageView = [[UIImageView alloc]initWithFrame:[self.window bounds]];
     _coverImageView.contentMode = UIViewContentModeScaleAspectFill;
-    UIImage *image = [UIImage imageNamed:@"backgroundImage"];
+    UIImage *image = [UIImage imageNamed:kBG_Image];
     [_coverImageView setImage:image];
+    _coverImageView.alpha = 1.0;
     [self.window addSubview:_coverImageView];
 }
 
--(void)removeCoverImageView{
-    if(_coverImageView != nil) {
-        [_coverImageView removeFromSuperview];
-        _coverImageView = nil;
+-(void)showCoverImageView{
+    if (!_coverImageView) {
+        [self addCoverImageView];
     }
+    [UIView animateWithDuration:0.2 animations:^{
+        _coverImageView.alpha = 1.0;
+    }];
+}
+
+-(void)hideCoverImageView{
+    [UIView animateWithDuration:0.2 animations:^{
+        _coverImageView.alpha = 0.0;
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    if ([SmileAuthenticator hasPassword]) {
-        [self addCoverImageView];
+    if ([SmileAuthenticator hasPassword] && [SmileAuthenticator sharedInstance].isShowingAuthVC == NO) {
+        [self showCoverImageView];
     }
 }
 
@@ -71,7 +91,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     if ([SmileAuthenticator hasPassword]) {
-        [self removeCoverImageView];
+        [self performSelector:@selector(hideCoverImageView) withObject:nil afterDelay:0.2];
     }
 }
 

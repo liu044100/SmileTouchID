@@ -27,7 +27,6 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 @implementation SmileAuthenticator{
     BOOL _isAuthenticated;
     BOOL _didReturnFromBackground;
-    BOOL _isShowLogin;
 }
 
 #pragma mark -getter
@@ -112,7 +111,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
             [self.delegate AuthViewControllerPresented];
         }
         
-        _isShowLogin = YES;
+        self.isShowingAuthVC = YES;
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle: nil];
         
@@ -127,8 +126,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         [self.delegate AuthViewControllerDismssed];
     }
     
+    
     _isAuthenticated = true;
-    _isShowLogin = NO;
+    self.isShowingAuthVC = NO;
 }
 
 #pragma mark - NSNotificationCenter
@@ -145,7 +145,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)appWillEnterForeground:(NSNotification*)notification{  
-    if (_didReturnFromBackground && !_isShowLogin) {
+    if (_didReturnFromBackground && !self.isShowingAuthVC) {
         if ([SmileAuthenticator hasPassword]) {
             //show login vc
             self.securityType = INPUT_TOUCHID;
