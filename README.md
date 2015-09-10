@@ -243,6 +243,29 @@ Sorry about it, but you have to do it yourself. Add below line to your `Localiza
 "SMILE_INPUT_THREE_STEP_2_DESCRIPTION" = "Enter your new %ld digit Passcode";
 
 ```
+# Tips For Security
+
+Because iOS automatically snapshot screen, so when the app resign the active & the user have turned the passcode on, You can use a cover image to cover the UI for protecting user data when the user double tap home button, or the app enter the background.
+
+For more detail, please check the [example project](https://github.com/liu044100/SmileTouchID/tree/master/Example).
+
+```Objective-c
+- (void)applicationWillResignActive:(UIApplication *)application {
+    if ([SmileAuthenticator hasPassword] && [SmileAuthenticator sharedInstance].isShowingAuthVC == NO) {
+        [self showCoverImageView];
+    }
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    if ([SmileAuthenticator hasPassword]) {
+        [self performSelector:@selector(hideCoverImageView) withObject:nil afterDelay:0.2];
+    }
+}
+
+```
+
+![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo6.png)
+
 
 # Contributions
 
