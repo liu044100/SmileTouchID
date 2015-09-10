@@ -95,7 +95,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         _isAuthenticated = NO;
     }
     
-    if (!_isAuthenticated) {
+    if (!_isAuthenticated && !_isShowLogin) {
         
         BOOL isAnimated = YES;
         
@@ -303,6 +303,11 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 +(void)clearPassword{
     [[SmileAuthenticator sharedInstance].keychainWrapper resetKeychainItem];
     [[SmileAuthenticator sharedInstance].keychainWrapper writeToKeychain];
+}
+
+-(void)logout{
+    _isAuthenticated = NO;
+    _didReturnFromBackground = NO;
 }
 
 @end

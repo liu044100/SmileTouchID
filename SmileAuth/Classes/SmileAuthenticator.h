@@ -69,6 +69,9 @@ typedef NS_ENUM(int, SecurityType) {
 +(BOOL)isSamePassword:(NSString *)userInput;
 +(void)clearPassword;
 
+/// reset the authenticated property, without clearing password : next time you ask for presentAuthViewController, it will show the password event if it was already entered correctly seconds ago. (allowing you to protect for example just a part of an app)
+-(void)logout;
+
 -(void)userSetPassword:(NSString*)newPassword;
 -(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
 
