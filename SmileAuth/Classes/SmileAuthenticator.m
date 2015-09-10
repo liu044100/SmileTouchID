@@ -20,6 +20,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 @property (nonatomic, assign) LAPolicy policy;
 @property (nonatomic, strong) LAContext * context;
+@property (nonatomic, readwrite) BOOL isShowingAuthVC;
 
 @end
 

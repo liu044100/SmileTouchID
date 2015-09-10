@@ -65,9 +65,14 @@
 }
 
 -(void)hideCoverImageView{
-    [UIView animateWithDuration:0.2 animations:^{
-        _coverImageView.alpha = 0.0;
-    }];
+    if (_coverImageView) {
+        [UIView animateWithDuration:0.2 animations:^{
+            _coverImageView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [_coverImageView removeFromSuperview];
+            _coverImageView = nil;
+        }];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
