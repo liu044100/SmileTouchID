@@ -15,7 +15,6 @@
 
 @implementation AppDelegate{
     UIImageView *_coverImageView;
-    BOOL _isFirstLaunch;
 }
 
 #define kBG_Image @"backgroundImage"
@@ -41,13 +40,10 @@
 }
 
 -(void)windowDidBecomeVisible:(NSNotification*)notif{
-    if (_isFirstLaunch) {
-        return;
-    }
     if ([SmileAuthenticator hasPassword]) {
         //iOS automatically snapshot screen, so if has password, use the _coverImageView cover the UIWindow for protecting user data.
         [self addCoverImageView];
-        _isFirstLaunch = YES;
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:UIWindowDidBecomeKeyNotification object:nil];
     }
 }
 
