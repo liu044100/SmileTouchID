@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self configureForFirstLauchAddCoverImage];
+    [self configureForFirstLaunchAddCoverImage];
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
@@ -36,7 +36,7 @@
     return YES;
 }
 
--(void)configureForFirstLauchAddCoverImage{
+-(void)configureForFirstLaunchAddCoverImage{
     //add observer UIWindowDidBecomeKeyNotification for the first launch add the cover image for protecting the user's data.
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(windowDidBecomeVisible:)
