@@ -21,12 +21,12 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 @property (nonatomic, assign) LAPolicy policy;
 @property (nonatomic, strong) LAContext * context;
 @property (nonatomic, readwrite) BOOL isShowingAuthVC;
+@property (nonatomic, readwrite) BOOL isAuthenticated;
 
 @end
 
 
 @implementation SmileAuthenticator{
-    BOOL _isAuthenticated;
     BOOL _didReturnFromBackground;
 }
 
@@ -118,7 +118,9 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         
         UINavigationController *naviVC = [storyboard instantiateViewControllerWithIdentifier:kSmileSettingNaviID];
         
-        [self.rootVC presentViewController:naviVC animated:isAnimated completion:nil];
+        [self.rootVC presentViewController:naviVC animated:isAnimated completion:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:SmileTouchID_Presented_AuthVC_Notification object:nil];
+        }];
     }
 }
 

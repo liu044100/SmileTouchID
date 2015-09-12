@@ -20,11 +20,8 @@
 #define kBG_Image @"backgroundImage"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //add observer UIWindowDidBecomeKeyNotification for the first launch add the cover image for protecting the user's data.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(windowDidBecomeVisible:)
-                                                 name:UIWindowDidBecomeKeyNotification
-                                               object:nil];
+    
+    [self configureForFirstLauchAddCoverImage];
     
     [SmileAuthenticator sharedInstance].rootVC = self.window.rootViewController;
     
@@ -37,6 +34,16 @@
     [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:kBG_Image];
     
     return YES;
+}
+
+-(void)configureForFirstLauchAddCoverImage{
+    //add observer UIWindowDidBecomeKeyNotification for the first launch add the cover image for protecting the user's data.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(windowDidBecomeVisible:)
+                                                 name:UIWindowDidBecomeKeyNotification
+                                               object:nil];
+    //add observer SmileTouchID_Presented_AuthVC_Notification for only remove cover image when the the AuthVC has been presented.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCoverImageView) name:SmileTouchID_Presented_AuthVC_Notification object:nil];
 }
 
 -(void)windowDidBecomeVisible:(NSNotification*)notif{
@@ -60,14 +67,14 @@
     if (!_coverImageView) {
         [self addCoverImageView];
     }
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         _coverImageView.alpha = 1.0;
     }];
 }
 
--(void)hideCoverImageView{
+-(void)removeCoverImageView{
     if (_coverImageView) {
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:0.1 animations:^{
             _coverImageView.alpha = 0.0;
         } completion:^(BOOL finished) {
             [_coverImageView removeFromSuperview];
@@ -97,7 +104,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     if ([SmileAuthenticator hasPassword]) {
-        [self performSelector:@selector(hideCoverImageView) withObject:nil afterDelay:0.2];
+        //if now is authenticated, remove the cover image.
+        if([SmileAuthenticator sharedInstance].isAuthenticated){
+            [self removeCoverImageView];
+        }
     }
 }
 

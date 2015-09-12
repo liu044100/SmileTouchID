@@ -33,6 +33,9 @@ typedef NS_ENUM(int, SecurityType) {
     INPUT_TOUCHID,
 };
 
+/*!@brief The notification is posted when the present AuthVC completion.*/
+#define SmileTouchID_Presented_AuthVC_Notification @"SmileTouchID_Presented_AuthVC"
+
 @protocol SmileAuthenticatorDelegate;
 
 @interface SmileAuthenticator : NSObject
@@ -40,8 +43,10 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic, copy) NSString * localizedReason;
 @property (nonatomic, strong) SmileKeychainWrapper *keychainWrapper;
 @property (nonatomic, assign) SecurityType securityType;
-/*!@brief This property show whether the Auth view is showing or not.*/
+/*!@brief This property show whether the AuthVC is presenting or not.*/
 @property (nonatomic, readonly) BOOL isShowingAuthVC;
+/*!@brief This property show whether now is authenticated or not.*/
+@property (nonatomic, readonly) BOOL isAuthenticated;
 @property (nonatomic, strong) UIViewController *rootVC;
 @property (nonatomic, weak) id <SmileAuthenticatorDelegate> delegate;
 /*!@brief <b>For customization</b>, use this property to customize tint color. The default color is pink.*/
