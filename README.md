@@ -263,8 +263,7 @@ For more detail, please check the [example project](https://github.com/liu044100
 }
 
 ```
-
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/demo6.png)
+<img src="Example/demo_gif/demo6.png" width="400">
 
 
 # Contributions
