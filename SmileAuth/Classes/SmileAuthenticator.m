@@ -143,7 +143,7 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 }
 
 -(void)appDidEnterBackground:(NSNotification*)notification{
-    if _isAuthenticated {
+    if (_isAuthenticated) {
         _didReturnFromBackground = YES;
         _isAuthenticated = NO;
     }
