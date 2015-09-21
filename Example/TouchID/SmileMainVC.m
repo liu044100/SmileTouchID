@@ -41,13 +41,13 @@
     
     if ([SmileAuthenticator hasPassword]) {
         [SmileAuthenticator sharedInstance].securityType = INPUT_TOUCHID;
-        [[SmileAuthenticator sharedInstance] presentAuthViewController];
+        [[SmileAuthenticator sharedInstance] presentAuthViewControllerAnimated:NO];
     }
 }
 
 - (IBAction)changePassword:(id)sender {
     [SmileAuthenticator sharedInstance].securityType = INPUT_THREE;
-    [[SmileAuthenticator sharedInstance] presentAuthViewController];
+    [[SmileAuthenticator sharedInstance] presentAuthViewControllerAnimated:TRUE];
 }
 
 - (IBAction)passwordSwitch:(UISwitch*)passwordSwitch {
@@ -57,7 +57,7 @@
         [SmileAuthenticator sharedInstance].securityType = INPUT_ONCE;
     }
     
-    [[SmileAuthenticator sharedInstance] presentAuthViewController];
+    [[SmileAuthenticator sharedInstance] presentAuthViewControllerAnimated:TRUE];
 }
 
 #pragma mark - AuthenticatorDelegate
