@@ -180,7 +180,7 @@
 		243C04ED1B12B0070035E066 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = rain;
 				TargetAttributes = {
 					243C050D1B12B0070035E066 = {
@@ -323,6 +323,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,6 +399,7 @@
 				);
 				INFOPLIST_FILE = TouchIDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchID.app/TouchID";
 			};
@@ -413,6 +415,7 @@
 				);
 				INFOPLIST_FILE = TouchIDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchID.app/TouchID";
 			};
@@ -429,6 +432,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Smile TouchID";
 				PROVISIONING_PROFILE = "";
 			};
@@ -445,6 +449,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Smile TouchID";
 				PROVISIONING_PROFILE = "";
 			};

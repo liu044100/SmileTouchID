@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SmileTouchID"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "A Library for configure Touch ID & passcode conveniently"
   s.description  = <<-DESC
                    1. Handle all complicated things about Touch ID & Passcode. You just need to write a few simple code to integrate Touch ID & Passcode to your app.
