@@ -8,8 +8,6 @@
 
 #import "SmilePasswordView.h"
 
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-
 #define SmileTouchID_DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 
 static CGFloat kLineWidthConst = 12.0;
