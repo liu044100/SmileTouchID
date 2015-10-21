@@ -7,7 +7,7 @@
 
 A library for integrate Touch ID &amp; Passcode to iOS App conveniently.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/promo_banner_s.png)
+<img src="Example/demo_gif/promo_banner_s.png" width="600">
 
 #What can it do for you?
 
@@ -48,8 +48,7 @@ if ([SmileAuthenticator hasPassword]) {
 [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"backgroundImage"];
 
 ```
-
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/customize1.png)
+<img src="Example/demo_gif/customize1.png" width="600">
 
 You can use the property `nightMode` to change all the UI element to black style, like the below image.
 
@@ -58,8 +57,7 @@ You can use the property `nightMode` to change all the UI element to black style
 [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:@"nightMode_BG"];
 
 ```
-
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/night_mode1.png)
+<img src="Example/demo_gif/night_mode1.png" width="600">
 
 ##### 4. Can customize the passcode digit to 6 or 10, or any number, automatically handle other things for you.
 
@@ -69,8 +67,7 @@ You can use the property `nightMode` to change all the UI element to black style
 
 If you want to try this feature in the demo app, before you try to change `passcodeDigit` to new number, make sure turn off the passcode switch, because the keychain will save your old passcode even you delete the app, so you have to clear the old passcode in keychain, and then change new digit for test.
 
-![](https://raw.githubusercontent.com/liu044100/SmileTouchID/master/Example/demo_gif/passlength.png)
-
+<img src="Example/demo_gif/passlength.png" width="700">
 
 ##### 5. Support iOS7 and later. 
 
@@ -258,10 +255,12 @@ For more detail, please check the [example project](https://github.com/liu044100
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     if ([SmileAuthenticator hasPassword]) {
-        [self performSelector:@selector(hideCoverImageView) withObject:nil afterDelay:0.2];
+        //if now is authenticated, remove the cover image.
+        if([SmileAuthenticator sharedInstance].isAuthenticated){
+            [self removeCoverImageView];
+        }
     }
 }
-
 ```
 <img src="Example/demo_gif/demo6.png" width="400">
 
