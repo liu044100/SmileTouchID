@@ -103,7 +103,7 @@ it, simply add the following line to your Podfile:
 pod 'SmileTouchID'
 
 ```
-Or you can drag the `SmileAuth` fold to your project.
+Or you can drag the `SmileAuth` folder to your project.
 
 **Step 2.** Import `SmileAuthenticator.h` to your `AppDelegate.m`, and add below line to `didFinishLaunchingWithOptions`.
 
