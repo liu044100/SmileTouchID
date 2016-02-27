@@ -12,7 +12,6 @@
 #define kTouchIDIcon @"smile_Touch_ID"
 
 static NSString *kStoryBoardName = @"SmileSettingVC";
-static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
 
 #define SmileTouchID_DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 
@@ -108,9 +107,11 @@ static NSString *kSmileSettingNaviID = @"smileSettingsNavi";
         
         self.isShowingAuthVC = YES;
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle: nil];
+        NSBundle *bundle = [NSBundle bundleForClass: self.class];
         
-        UINavigationController *naviVC = [storyboard instantiateViewControllerWithIdentifier:kSmileSettingNaviID];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryBoardName bundle: bundle];
+        
+        UINavigationController *naviVC = [storyboard instantiateInitialViewController];
         
         [self.rootVC presentViewController:naviVC animated:animated completion:^{
             [[NSNotificationCenter defaultCenter] postNotificationName:SmileTouchID_Presented_AuthVC_Notification object:nil];
