@@ -73,6 +73,8 @@ typedef NS_ENUM(int, SecurityType) {
 +(BOOL)hasPassword;
 +(BOOL)isSamePassword:(NSString *)userInput;
 +(void)clearPassword;
+-(void)changeAuthentication:(BOOL)newAuth;
+
 
 -(void)userSetPassword:(NSString*)newPassword;
 -(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
