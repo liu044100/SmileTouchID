@@ -305,6 +305,6 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
 }
 
 -(void)changeAuthentication:(BOOL)newAuth {
-    _isAuthenticated = NO;
+    _isAuthenticated = newAuth;
 }
 @end
