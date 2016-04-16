@@ -123,8 +123,6 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
     if ([self.delegate respondsToSelector:@selector(AuthViewControllerDismssed)]) {
         [self.delegate AuthViewControllerDismssed];
     }
-    
-    
     _isAuthenticated = true;
     self.isShowingAuthVC = NO;
 }
