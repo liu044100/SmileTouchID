@@ -95,7 +95,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
     }
     
     if (!_isAuthenticated) {
-    
+        
         //dimiss all presentedViewController, for example, if user is editing password
         if (self.rootVC.presentedViewController) {
             [self.rootVC.presentedViewController dismissViewControllerAnimated:NO completion:nil];
@@ -240,7 +240,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
                         NSLog(@"LAErrorPasscodeNotSet");
                         
                         break;
-                    
+                        
                     case LAErrorTouchIDNotAvailable:
                         
                         NSLog(@"LAErrorTouchIDNotAvailable");
@@ -286,7 +286,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
 
 +(BOOL)isSamePassword:(NSString *)userInput{
     //use this line to log password, if you forgot it.
-//    NSLog(@"the password -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:kKeyChainObjectKey]);
+    //NSLog(@"the password -> %@", [[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:(__bridge id)(kSecValueData)]);
     if ([userInput isEqualToString:[[SmileAuthenticator sharedInstance].keychainWrapper myObjectForKey:(__bridge id)(kSecValueData)]]) {
         return YES;
     }
@@ -304,4 +304,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
     [[SmileAuthenticator sharedInstance].keychainWrapper writeToKeychain];
 }
 
+-(void)changeAuthentication:(BOOL)newAuth {
+    _isAuthenticated = newAuth;
+}
 @end
