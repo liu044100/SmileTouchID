@@ -37,9 +37,11 @@
 
 - (IBAction)dismissSelf:(id)sender {
     
-    [[SmileAuthenticator sharedInstance] authViewControllerDismissed];
+    [[SmileAuthenticator sharedInstance] authViewControllerWillDismissed];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[SmileAuthenticator sharedInstance] authViewControllerDidDismissed];
+    }];
 }
 
 - (IBAction)useTouchID:(id)sender {

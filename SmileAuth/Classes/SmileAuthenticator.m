@@ -21,6 +21,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
 @property (nonatomic, strong) LAContext * context;
 @property (nonatomic, readwrite) BOOL isShowingAuthVC;
 @property (nonatomic, readwrite) BOOL isAuthenticated;
+@property (nonatomic, strong) UIViewController *previousPresentedVC;
 
 @end
 
@@ -98,6 +99,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
         
         //dimiss all presentedViewController, for example, if user is editing password
         if (self.rootVC.presentedViewController) {
+            self.previousPresentedVC = self.rootVC.presentedViewController;
             [self.rootVC.presentedViewController dismissViewControllerAnimated:NO completion:nil];
         }
         
@@ -119,10 +121,14 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
     }
 }
 
--(void)authViewControllerDismissed{
-    if ([self.delegate respondsToSelector:@selector(AuthViewControllerDismssed)]) {
-        [self.delegate AuthViewControllerDismssed];
+-(void)authViewControllerDidDismissed{
+    if ([self.delegate respondsToSelector:@selector(AuthViewControllerDismissed:)]) {
+        [self.delegate AuthViewControllerDismissed: self.previousPresentedVC];
+        self.previousPresentedVC = nil;
     }
+}
+
+-(void)authViewControllerWillDismissed{
     _isAuthenticated = true;
     self.isShowingAuthVC = NO;
 }
