@@ -81,7 +81,8 @@ typedef NS_ENUM(int, SecurityType) {
 -(void)authenticateWithSuccess:(AuthCompletionBlock) authSuccessBlock andFailure:(AuthErrorBlock) failureBlock;
 
 -(void)presentAuthViewControllerAnimated:(BOOL)animated;
--(void)authViewControllerDismissed;
+-(void)authViewControllerWillDismissed;
+-(void)authViewControllerDidDismissed;
 -(void)touchID_OR_PasswordAuthSuccess;
 -(void)touchID_OR_PasswordAuthFail:(NSInteger)failCount;
 -(void)touchID_OR_PasswordTurnOff;
@@ -95,7 +96,7 @@ typedef NS_ENUM(int, SecurityType) {
 -(void)AuthViewControllerPresented;
 @optional
 /*!The method is called when AuthViewController be dismissed*/
--(void)AuthViewControllerDismssed;
+-(void)AuthViewControllerDismissed:(UIViewController*)previousPresentedVC;
 @optional
 /*!The method is called when user success authentication by using Touch ID & Passcode*/
 -(void)userSuccessAuthentication;
