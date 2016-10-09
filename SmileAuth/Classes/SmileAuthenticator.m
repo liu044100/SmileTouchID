@@ -22,6 +22,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
 @property (nonatomic, readwrite) BOOL isShowingAuthVC;
 @property (nonatomic, readwrite) BOOL isAuthenticated;
 @property (nonatomic, strong) UIViewController *previousPresentedVC;
+@property (nonatomic, strong) NSDate *previousAuthenticatedDate;
 
 @end
 
@@ -60,6 +61,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
 #pragma mark - for Delegate
 
 -(void)touchID_OR_PasswordAuthSuccess{
+    self.previousAuthenticatedDate = [NSDate date];
     if ([self.delegate respondsToSelector:@selector(userSuccessAuthentication)]) {
         [self.delegate userSuccessAuthentication];
     }
@@ -93,6 +95,11 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
     
     if (self.securityType != INPUT_TOUCHID) {
         _isAuthenticated = NO;
+    } else {
+        if (self.previousAuthenticatedDate && !_isAuthenticated) {
+            NSTimeInterval intervalSincePreviousAuthenticated = fabs(self.previousAuthenticatedDate.timeIntervalSinceNow);
+            _isAuthenticated = (intervalSincePreviousAuthenticated < self.timeoutInterval);
+        }
     }
     
     if (!_isAuthenticated) {
@@ -180,6 +187,7 @@ static NSString *kStoryBoardName = @"SmileSettingVC";
         self.securityType = INPUT_TWICE;
         self.parallaxMode = YES;
         self.passcodeDigit = kPasswordLength;
+        self.timeoutInterval = 0;
         
         [self configureNotification];
     }

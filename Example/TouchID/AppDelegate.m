@@ -32,6 +32,7 @@
     [SmileAuthenticator sharedInstance].appLogoName = @"my_Logo";
     [SmileAuthenticator sharedInstance].navibarTranslucent = YES;
     [SmileAuthenticator sharedInstance].backgroundImage = [UIImage imageNamed:kBG_Image];
+    //[SmileAuthenticator sharedInstance].timeoutInterval = 10;
     
     return YES;
 }
