@@ -27,14 +27,6 @@ static CGFloat kMAX_RadiusConst = 32.0;
     NSInteger _shakeCount;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];

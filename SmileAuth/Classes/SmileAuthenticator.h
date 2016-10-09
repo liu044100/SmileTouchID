@@ -67,6 +67,8 @@ typedef NS_ENUM(int, SecurityType) {
 @property (nonatomic) BOOL nightMode;
 /*!@brief <b>For customization</b>, if set it to Yes, add parallax effect to password circle views, the default value is Yes.*/
 @property (nonatomic) BOOL parallaxMode;
+/*!@brief  The timeout interval, in seconds, for show password or touch ID UI again. The default timeout interval is 0 seconds, it means password or touch ID will be showed immediately. */
+@property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
 +(SmileAuthenticator*)sharedInstance;
 + (BOOL)canAuthenticateWithError:(NSError **) error;
