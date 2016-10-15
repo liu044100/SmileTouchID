@@ -81,7 +81,9 @@
         self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(dismissSelf:) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
-        [self.passwordField becomeFirstResponder];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.passwordField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.05];
+        });
     }];
 }
 
