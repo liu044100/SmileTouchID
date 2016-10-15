@@ -74,6 +74,12 @@
     }
 }
 
+-(void)showKeyboard{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.passwordField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.05];
+    });
+}
+
 -(void)touchIDForINPUT_TOUCHID{
     [SmileAuthenticator sharedInstance].localizedReason = NSLocalizedString(@"SMILE_REASON", nil);
     [[SmileAuthenticator sharedInstance] authenticateWithSuccess:^{
@@ -81,7 +87,7 @@
         self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(dismissSelf:) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
-        [self.passwordField becomeFirstResponder];
+        [self showKeyboard];
     }];
 }
 
@@ -92,7 +98,7 @@
         self.passwordView.smilePasswordView.dotCount = [SmileAuthenticator sharedInstance].passcodeDigit;
         [self performSelector:@selector(passwordCancleComplete) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
-        [self.passwordField becomeFirstResponder];
+        [self showKeyboard];
     }];
 }
 
@@ -103,7 +109,7 @@
         _inputCount ++;
         [self performSelector:@selector(enterNewPassword) withObject:nil afterDelay:0.15];
     } andFailure:^(LAError errorCode) {
-        [self.passwordField becomeFirstResponder];
+        [self showKeyboard];
     }];
 }
 
